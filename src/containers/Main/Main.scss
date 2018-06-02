@@ -1,16 +1,27 @@
 .main {
     position: relative;
-    overflow: scroll;
+    // overflow: scroll;
     &__home {
         height: 100vh;
+        position: relative;
     }
 
     &__about {
         height: 100vh;
+        position: relative;
+        &--text {
+            position: absolute;
+            width: 60%;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 
     &__skills {
         height: 100vh;
+        position: relative;
+        padding: 0 40rem
     }
 
     &__projects {
@@ -18,3 +29,33 @@
     }
 }
 
+.skills-list {
+    list-style: none;
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+      -moz-column-count: 2; /* Firefox */
+      column-count: 2;
+      -webkit-column-gap: 40rem; /* Chrome, Safari, Opera */
+      -moz-column-gap: 40rem; /* Firefox */
+      column-gap: 40rem;
+      width:80%;
+      margin: 0 auto;
+    &__item {
+        // display: inline-block;
+        // width: 50%;
+    }
+}
+
+
+// li {
+//     text-align: center;
+//     list-style-type: none;
+//   }
+//   div {
+//       -webkit-column-count: 2; /* Chrome, Safari, Opera */
+//       -moz-column-count: 2; /* Firefox */
+//       column-count: 2;
+//       -webkit-column-gap: 5px; /* Chrome, Safari, Opera */
+//       -moz-column-gap: 5px; /* Firefox */
+//       column-gap: 5px;
+//       width: 49px;
+//   }

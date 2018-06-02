@@ -1,11 +1,35 @@
 .main {
-  position: relative;
-  overflow: scroll; }
+  position: relative; }
   .main__home {
-    height: 100vh; }
+    height: 100vh;
+    position: relative; }
   .main__about {
-    height: 100vh; }
+    height: 100vh;
+    position: relative; }
+    .main__about--text {
+      position: absolute;
+      width: 60%;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
   .main__skills {
-    height: 100vh; }
+    height: 100vh;
+    position: relative;
+    padding: 0 40rem; }
   .main__projects {
     height: 100vh; }
+
+.skills-list {
+  list-style: none;
+  -webkit-column-count: 2;
+  /* Chrome, Safari, Opera */
+  -moz-column-count: 2;
+  /* Firefox */
+  column-count: 2;
+  -webkit-column-gap: 40rem;
+  /* Chrome, Safari, Opera */
+  -moz-column-gap: 40rem;
+  /* Firefox */
+  column-gap: 40rem;
+  width: 80%;
+  margin: 0 auto; }
