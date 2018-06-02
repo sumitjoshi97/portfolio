@@ -1,0 +1,20 @@
+.main {
+    position: relative;
+    overflow: scroll;
+    &__home {
+        height: 100vh;
+    }
+
+    &__about {
+        height: 100vh;
+    }
+
+    &__skills {
+        height: 100vh;
+    }
+
+    &__projects {
+        height: 100vh;
+    }
+}
+
