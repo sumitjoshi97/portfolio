@@ -1,5 +1,9 @@
 // variables
-$base-font: 12em;
+
+$font-primary: 10rem;
+$font-secondary: 4rem;
+$base-font: 2.6rem;
+$color-white: #FFF;
 
 
 // browser reset
@@ -19,12 +23,36 @@ html {
     font-size: 62.5%    //1rem = 10px   
 }
 
-
-h1 {
-    padding: 0;
-    margin: 0;
+body {
+    font-family: 'Open sans', sans-serif;
+    color: $color-white;
+    font-size: $base-font;
+    line-height: 5.3rem;
 }
 
-
-
 // utilities
+.red {
+    color: #ff0000;
+    font-weight: 700;
+}
+
+.green {
+    color: #00ff00;
+    font-weight: 700;
+}
+
+//typography
+.heading-primary {
+    font-size: $font-primary;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 0.4rem;
+}
+
+.heading-secondary {
+    font-size: $font-secondary;
+    text-align: center;
+}

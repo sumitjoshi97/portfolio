@@ -9,6 +9,28 @@
 html {
   font-size: 62.5%; }
 
-h1 {
-  padding: 0;
-  margin: 0; }
+body {
+  font-family: 'Open sans', sans-serif;
+  color: #FFF;
+  font-size: 2.6rem;
+  line-height: 5.3rem; }
+
+.red {
+  color: #ff0000;
+  font-weight: 700; }
+
+.green {
+  color: #00ff00;
+  font-weight: 700; }
+
+.heading-primary {
+  font-size: 10rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 0.4rem; }
+
+.heading-secondary {
+  font-size: 4rem;
+  text-align: center; }
