@@ -21,26 +21,46 @@
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+        width: 2rem;
+        list-style: none;
         &--item {
-            padding: 2rem 0;
-            cursor: pointer;
-            
-            &:hover div {
-                transform: scaleX(2);
-                background-color: red;
-            }
-        }
+            display: block;
+            height: 4rem;
+            width: 100%;
 
-        &--item div {
-            width: 2.5rem;
-            height: 0.30rem;
-            background-color: #fff;
-            transition: transform 0.5s;
-        
-            a:active div{
-                transform: scaleX(2);
-                background-color: red;
+            &-link{
+                // width: 2rem;
+                // height: 0.30rem;
+                // background-color: #fff;
+                // transition: transform 0.5s;
+                position: relative;
+                height: 100%;
+                display: block;
+
+
+                & span {
+                    display: block;
+                    position: absolute;
+                    width: 2rem;
+                    height: 0.32rem;
+                    top: 50%;
+                    background-color: #fff;
+                    transition:all 1s; 
+                    color: #fff;
+                    
+                }
+
+                &:hover span, &:focus span{
+                    width: 4rem;
+                    background-color: red;
+                }
             }
         }
     }
+}
+
+
+.active a span {
+    width: 4rem;
+    background-color: red;
 }
