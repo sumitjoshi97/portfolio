@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import './LeftNav.css';
+
 
 class LeftNav extends Component {
     state = {
@@ -11,12 +14,12 @@ class LeftNav extends Component {
             <div className="left-nav">
                 <div className="left-nav__profile"></div>
 
-                <div className="left-nav__link-box">
-                    <div className="left-nav__link-box--item"><div><a href="#home"></a></div></div>
-                    <div className="left-nav__link-box--item"><div><a href="#about"></a></div></div>
-                    <div className="left-nav__link-box--item"><div><a href="#skills"></a></div></div>
-                    <div className="left-nav__link-box--item"><div><a href="#projects"></a></div></div>
-                </div>
+                <ul className="left-nav__link-box">
+                    <li className="left-nav__link-box--item"><AnchorLink className="left-nav__link-box--item-link" href="#home"><span></span></AnchorLink></li>
+                    <li className="left-nav__link-box--item"><AnchorLink className="left-nav__link-box--item-link" href="#about"><span></span></AnchorLink></li>
+                    <li className="left-nav__link-box--item"><AnchorLink className="left-nav__link-box--item-link" href="#skills"><span></span></AnchorLink></li>
+                    <li className="left-nav__link-box--item"><AnchorLink className="left-nav__link-box--item-link" href="#projects"><span></span></AnchorLink></li>
+                </ul>
             </div>
         )
     }
