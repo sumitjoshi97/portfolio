@@ -1,0 +1,46 @@
+.left-nav {
+    width: 12%;
+    // background: rgba(0,0,0, 0.2);
+    height: 100vh;
+    position: fixed;
+
+    &__profile {
+        width: 8rem;
+        height: 8rem;
+        background-image: linear-gradient(to right, #fff,#fff);
+        border-radius: 50%;
+        position: absolute;
+        top: 12%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__link-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        &--item {
+            padding: 2rem 0;
+            cursor: pointer;
+            
+            &:hover div {
+                transform: scaleX(2);
+                background-color: red;
+            }
+        }
+
+        &--item div {
+            width: 2.5rem;
+            height: 0.30rem;
+            background-color: #fff;
+            transition: transform 0.5s;
+        
+            a:active div{
+                transform: scaleX(2);
+                background-color: red;
+            }
+        }
+    }
+}

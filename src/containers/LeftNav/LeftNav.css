@@ -1,0 +1,33 @@
+.left-nav {
+  width: 12%;
+  height: 100vh;
+  position: fixed; }
+  .left-nav__profile {
+    width: 8rem;
+    height: 8rem;
+    background-image: linear-gradient(to right, #fff, #fff);
+    border-radius: 50%;
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .left-nav__link-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+    .left-nav__link-box--item {
+      padding: 2rem 0;
+      cursor: pointer; }
+      .left-nav__link-box--item:hover div {
+        transform: scaleX(2);
+        background-color: red; }
+    .left-nav__link-box--item div {
+      width: 2.5rem;
+      height: 0.30rem;
+      background-color: #fff;
+      transition: transform 0.5s; }
+      .left-nav__link-box--item div a:active div {
+        transform: scaleX(2);
+        background-color: red; }
