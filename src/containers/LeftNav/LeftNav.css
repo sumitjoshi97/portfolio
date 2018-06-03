@@ -16,18 +16,30 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center; }
+    text-align: center;
+    width: 2rem;
+    list-style: none; }
     .left-nav__link-box--item {
-      padding: 2rem 0;
-      cursor: pointer; }
-      .left-nav__link-box--item:hover div {
-        transform: scaleX(2);
-        background-color: red; }
-    .left-nav__link-box--item div {
-      width: 2.5rem;
-      height: 0.30rem;
-      background-color: #fff;
-      transition: transform 0.5s; }
-      .left-nav__link-box--item div a:active div {
-        transform: scaleX(2);
-        background-color: red; }
+      display: block;
+      height: 4rem;
+      width: 100%; }
+      .left-nav__link-box--item-link {
+        position: relative;
+        height: 100%;
+        display: block; }
+        .left-nav__link-box--item-link span {
+          display: block;
+          position: absolute;
+          width: 2rem;
+          height: 0.32rem;
+          top: 50%;
+          background-color: #fff;
+          transition: all 1s;
+          color: #fff; }
+        .left-nav__link-box--item-link:hover span, .left-nav__link-box--item-link:focus span {
+          width: 4rem;
+          background-color: red; }
+
+.active a span {
+  width: 4rem;
+  background-color: red; }
