@@ -1,20 +1,8 @@
 import React, {Component} from 'react';
 
-import $ from 'jquery';
-import 'fullpage.js';
-
 import './Main.css';
 
 class Main extends Component {
-
-    componentDidMount() {
-        $(document)
-            .ready(function () {
-                $("#fullpage").fullpage({
-                    anchors: ["home", "about", "skills", "projects"]
-                });
-            });
-    }
 
     render() {
         return (
@@ -25,12 +13,11 @@ class Main extends Component {
 
                 <div className="main__about section">
                     <p className="main__about--text">
-                        Hi, I am
-                        <span className="green">Sumit Joshi</span>. I am a
-                        <span className="red">front-end developer/designer</span>
+                        Hi, I am <span className="green"> Sumit Joshi</span>. I am a
+                        <span className="red"> front-end developer/designer </span>
                         based on Delhi, India. I have a passion for web design and love to develop web
                         applications, websites for desktop and mobile devices. I fond of
-                        <span className="red">React js</span>
+                        <span className="red"> React js</span>
                     </p>
                 </div>
 
@@ -53,15 +40,24 @@ class Main extends Component {
                 </div>
 
                 <div className="main__projects section">
+                    <div className="main__projects__header">
+                        <h3 className="heading-tertiary">
+                            <span>Recent</span>
+                            <span>Projects</span>
+                        </h3>
+                        <a className="main__projects__header--link-all" href="">See all projects</a>
+                    </div>
+
                     <div className="main__projects--project1">
                         <div className="project-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, libero offic {/* anchr */}
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, libero offic
+                            <a className="project-link" href="">See project</a>
                         </div>
                     </div>
-                    {/*more projects LInk*/}
                     <div className="main__projects--project2">
                         <div className="project-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, libero offic {/* anchr */}
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, libero offic
+                            <a className="project-link" href="">See Project</a>
                         </div>
                     </div>
                 </div>
