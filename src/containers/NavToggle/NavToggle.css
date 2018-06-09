@@ -1,0 +1,34 @@
+.nav-toggle {
+  width: 7rem;
+  height: 7rem;
+  border: 1.4px solid #ccc;
+  border-radius: 50%;
+  position: fixed;
+  text-align: center;
+  top: 12%;
+  right: 2.1%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 1000; }
+  .nav-toggle:hover {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2); }
+  .nav-toggle span {
+    position: relative;
+    margin-top: 3.5rem; }
+    .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after {
+      width: 3rem;
+      height: .1rem;
+      background-color: #fff;
+      display: inline-block; }
+    .nav-toggle span::before, .nav-toggle span::after {
+      content: '';
+      position: absolute;
+      left: 0; }
+    .nav-toggle span::before {
+      top: -1rem; }
+    .nav-toggle span::after {
+      top: 1rem; }
+  .nav-toggle:hover .nav-toggle span::before {
+    top: -1.2rem; }
+  .nav-toggle:hover .nav-toggle span::after {
+    top: 1.2rem; }
