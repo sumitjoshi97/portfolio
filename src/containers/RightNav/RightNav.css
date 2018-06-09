@@ -1,19 +1,10 @@
 .right-nav {
-  width: 12%;
+  width: 7rem;
   position: fixed;
-  height: 100vh;
-  top: 0;
-  right: 0; }
-
-.nav-toggle {
-  width: 6rem;
-  height: 6rem;
-  border: 1px solid #ccc;
-  border-radius: 50%;
-  position: absolute;
-  top: 12%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
+  height: 30rem;
+  top: 50%;
+  right: 5rem;
+  transform: translateY(-50%); }
 
 .social {
   position: absolute;
@@ -22,10 +13,10 @@
   transform: translate(-50%, -50%);
   text-align: center; }
   .social--item {
+    display: block; }
+  .social__icon {
     width: 3rem;
     height: 3rem;
-    border-radius: 50%;
-    background-color: #fff;
-    margin: 5.5rem 0;
+    margin: 1.5rem 0;
     cursor: pointer;
-    transition: transform 0.5s; }
+    fill: white; }
