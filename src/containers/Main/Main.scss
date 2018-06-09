@@ -1,11 +1,11 @@
 .main {
     position: relative;
-    // overflow: scroll;
+    width: 76%;
+    margin: 0 auto;
     &__home {
         height: 100vh;
-        position: relative;
+        // position: relative;
     }
-
     &__about {
         height: 100vh;
         position: relative;
@@ -17,45 +17,146 @@
             transform: translate(-50%, -50%);
         }
     }
-
     &__skills {
         height: 100vh;
         position: relative;
-        padding: 0 40rem
+        padding: 0 12.4rem;
     }
-
     &__projects {
         height: 100vh;
+        position: relative;
+        font-size: 1.5rem;
+        &__header {
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            &--link-all {
+                color: #fff;
+                text-decoration: none;
+                border: 2px solid #fff;
+                padding: 1rem 1.4rem 1rem 2rem;
+                & .icon-projects {
+                    fill: #fff;
+                    height: 3rem;
+                    width: 3rem;
+                    vertical-align: middle;
+                    margin-left: 1rem;
+                }
+                &:hover .icon-projects {
+                    animation: arrow-bounce infinite;
+                    animation-duration: 0.6s;
+                    animation-timing-function: ease-in-out;
+                }
+            }
+        }
+        &--project1 {
+            position: absolute;
+            top: 15%;
+            left: 15%;
+            width: 20rem;
+            height: 20rem;
+            background-color: #fff;
+
+            &:hover .project-text {
+                height: 100%;
+                // transform: translateY(0);
+                color: #fff;
+                visibility: visible;
+                opacity: 1;
+                background-color: rgba(#000000, 0.6);
+            }
+
+            &:hover .project-link {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        &--project2 {
+            position: absolute;
+            bottom: 15%;
+            right: 15%;
+            width: 20rem;
+            height: 20rem;
+            background-color: #fff;
+
+            &:hover .project-text {
+                height: 100%;
+                // transform: translateY(0);
+                color: #fff;
+                visibility: visible;
+                opacity: 1;
+                background-color: rgba(#000000, 0.6);
+            }
+
+            &:hover .project-link {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
     }
 }
 
 .skills-list {
     list-style: none;
-    -webkit-column-count: 2; /* Chrome, Safari, Opera */
-      -moz-column-count: 2; /* Firefox */
-      column-count: 2;
-      -webkit-column-gap: 40rem; /* Chrome, Safari, Opera */
-      -moz-column-gap: 40rem; /* Firefox */
-      column-gap: 40rem;
-      width:80%;
-      margin: 0 auto;
-    &__item {
-        // display: inline-block;
-        // width: 50%;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 30rem;
+    -moz-column-gap: 30rem;
+    column-gap: 30rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.project {
+    &-text {
+        display: block;
+        position: absolute;
+        background-color: transparent;
+        color: transparent;
+        // height: 100%;
+        z-index: 100;
+        line-height: 2.5rem;
+        bottom: 0;
+        padding: 1.5rem;
+        height: 0;
+        // transform: translateY(100%);
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s;
+    }
+    &-link {
+        display: block;
+        text-align: center;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        color: #fff;
+        border: 2px solid #fff;
+        margin: 0 auto;
+        margin-top: 2.5rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s ease-out;
+        &:hover {
+            color: #000;
+            background-color: #FFF;
+        }
     }
 }
 
+// @keyframes translate-text-up {
+//     0% {
+//         transform: translateY(100%);
+//         opacity: 0;
+//     }
 
-// li {
-//     text-align: center;
-//     list-style-type: none;
-//   }
-//   div {
-//       -webkit-column-count: 2; /* Chrome, Safari, Opera */
-//       -moz-column-count: 2; /* Firefox */
-//       column-count: 2;
-//       -webkit-column-gap: 5px; /* Chrome, Safari, Opera */
-//       -moz-column-gap: 5px; /* Firefox */
-//       column-gap: 5px;
-//       width: 49px;
-//   }
+//     40% {
+//         opacity: 0.2;
+//     }
+//     100% {
+//         transform: translateY(0);
+//         opacity: 1;
+//     }
+// }
