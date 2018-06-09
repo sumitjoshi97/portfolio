@@ -7,8 +7,6 @@ class RightNav extends Component {
     render() {
         return (
             <div className="right-nav">
-                {/* <NavToggle /> */}
-
                 <div className="social">
                     <a href="mailto:dev.sumitjoshi@gmail.com" className="social--item">
                         <svg className="social__icon">
