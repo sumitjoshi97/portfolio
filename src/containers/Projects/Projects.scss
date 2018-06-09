@@ -1,0 +1,115 @@
+.icon-back {
+    position: fixed;
+    top: 6rem;
+    left: 6rem;
+    width: 6rem;
+    height: 6rem;
+    z-index: 2000;
+    &-logo {
+        position: absolute;
+        width: 6rem;
+        height: 6rem; // fill: black; 
+        fill: #fff;
+    }
+}
+
+.backdrop {
+    background-color: blue;
+    position: fixed;
+    width: 100%;
+    height: 80vh;
+    z-index: 1000;
+    animation-name: translate-backdrop;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out
+}
+
+@keyframes translate-backdrop {
+    0% {
+        transform: translateY(100%)
+    }
+    100% {
+        transform: translateY(-100%)
+    }
+}
+
+.fp-tableCell {
+    position: relative;
+}
+.project {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    &__thumbnail {
+        width: 30rem;
+        height: 20rem;
+        background-color: white;
+    }
+    &__info {
+        width: 30rem;
+        height: 15rem;
+        margin-top: -6rem;
+        margin-left: 20rem;
+        background-color: black;
+        margin-bottom: 3rem;
+    }
+    &__link {
+        text-align: center;
+        position: relative;
+        & a {
+            &:link,
+            &:visited {
+                display: inline-block;
+                font-size: 1.8rem;
+                color: #fff;
+                text-align: center;
+                text-decoration: none;
+                border: 2px solid #fff;
+                padding: 0.8rem 0.8rem 0.8rem 2rem;
+                line-height: 1rem;
+            }
+            & .icon-link {
+                height: 3rem;
+                width: 4rem;
+                vertical-align: middle;
+                fill: #fff;
+                margin-left: 1rem;
+            }
+            &:hover .icon-link {
+                animation: arrow-bounce infinite;
+                animation-duration: 0.6s;
+                animation-timing-function: ease-in-out
+            }
+        }
+    }
+}
+
+@keyframes arrow-bounce {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(0.6rem);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.back {
+    &-blue {
+        background-color: #4a4dfc
+    }
+    &-red {
+        background-color: #c73232;
+    }
+    &-yellow {
+        background-color: #e6c718;
+    }
+    &-green {
+        background-color: #1fa566;
+    }
+}
