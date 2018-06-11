@@ -1,35 +1,36 @@
+///////////////////////////////////////////////
 // variables
-
-$font-primary: 10rem;
+$font-primary: 7.65rem;
 $font-secondary: 4rem;
 $base-font: 2.6rem;
 $color-white: #FFF;
 
-
+///////////////////////////////////////////////
 // browser reset
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
-    &::after, &::before {
+    &::after,
+    &::before {
         padding: 0;
         margin: 0;
     }
 }
 
+//font size set 
 html {
-    font-size: 62.5%    //1rem = 10px   
+    font-size: 62.5%; //1rem = 10px   
 }
 
 body {
-    font-family: 'Open sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: $color-white;
     font-size: $base-font;
     line-height: 5.3rem;
 }
 
+/////////////////////////////////////////////////
 // utilities
 .red {
     color: #ff0000;
@@ -41,18 +42,33 @@ body {
     font-weight: 700;
 }
 
+///////////////////////////////////////////////
 //typography
+//heading h1
 .heading-primary {
     font-size: $font-primary;
-
     position: absolute;
+    font-weight: 400;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     letter-spacing: 0.4rem;
 }
 
+//heading h2
 .heading-secondary {
     font-size: $font-secondary;
     text-align: center;
+}
+
+//heading h3 
+.heading-tertiary {
+    font-size: 3.5rem;
+    span {
+        display: block;
+
+        &:last-of-type {
+            margin-bottom:3.4rem; 
+        }
+    }
 }
