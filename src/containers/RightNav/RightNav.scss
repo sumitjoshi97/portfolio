@@ -3,11 +3,9 @@
     position: fixed;
     height: 30rem;
     top: 50%;
-    right: 5rem;
+    right: 4.1%;
     transform: translateY(-50%);
 }
-
-
 
 .social {
     position: absolute;
@@ -17,12 +15,31 @@
     text-align: center;
         &--item {
             display: block;
+        
+            &:hover {
+                animation: bounce-icon infinite;
+                animation-duration: 0.4s;
+            }
+
         }
     &__icon {
         width: 3rem;
         height: 3rem;
         margin: 1.5rem 0;
         cursor: pointer;
-        fill: white;
+        fill: #fff;
+        stroke-width: 0;
+    }
+}
+
+@keyframes bounce-icon {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+    100% {
+        transform: translateY(0px);
     }
 }
