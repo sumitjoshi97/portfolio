@@ -14,7 +14,7 @@ class LeftNav extends Component {
                     <NavLink link="home" anchor="home"/>
                     <NavLink link="about" anchor="about"/>
                     <NavLink link="skills" anchor="skills"/>
-                    <NavLink link="projects" anchor="projects"/>
+                    <NavLink link="recents" anchor="recents"/>
                 </ul>
             </div>
         )
