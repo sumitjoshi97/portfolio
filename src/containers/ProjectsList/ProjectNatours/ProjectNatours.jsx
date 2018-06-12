@@ -28,7 +28,7 @@ class ProjectNatours extends Component {
                         </p>
 
                     </div>
-                    <div className="project-full__header--image back-green"></div>
+                    <div className="project-full__header--image-nat back-green"></div>
                 </div>
 
                 <div className="project-full__stack back-green">
@@ -38,7 +38,7 @@ class ProjectNatours extends Component {
                         <li>Sass </li>
                     </ul>
                 </div>
-                <div className="project-full__screenshot"></div>
+                <div className="project-full__screenshot-nat"></div>
 
                 <div className="project-full__launch">
                     <a href="#" className="project-full__launch--link">
@@ -71,7 +71,7 @@ class ProjectNatours extends Component {
 
                 <div className="project-full__navigation back-green">
                     <div className="project-full__navigation--section">
-                        <Link to="/projects-all/emaily">
+                        <Link to="/projects/emaily">
                             <svg className="icon-logo--prev">
                                 <use xlinkHref={`${Icons}#icon-arrow-left`}></use>
                             </svg>
@@ -82,7 +82,7 @@ class ProjectNatours extends Component {
                         </Link>
                     </div>
                     <div className="project-full__navigation--section">
-                        <Link to="/projects-all/natours">
+                        <Link to="/projects/natours">
                             <svg className="icon-logo--next">
                                 <use xlinkHref={`${Icons}#icon-arrow-right`}></use>
                             </svg>
