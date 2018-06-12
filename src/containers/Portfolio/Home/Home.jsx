@@ -3,7 +3,7 @@ import Icons from '../../../assets/svg/sprite.svg';
 import {Link} from 'react-router-dom';
 import './Home.css';
 
-class Main extends Component {
+class Home extends Component {
     render() {
         return (
             <div className="main" id="fullpage">
@@ -13,12 +13,18 @@ class Main extends Component {
 
                 <div className="main__about section">
                     <p className="main__about--text">
-                        Hi, I am
-                        <span className="green"> Sumit Joshi</span>. I am a
-                        <span className="red"> front-end developer/designer </span>
-                        based on Delhi, India. I have a passion for web design and love to develop web
-                        applications, websites for desktop and mobile devices. I fond of
-                        <span className="red"> React js</span>
+                        Hi, I am &nbsp;
+                        <span className="green">
+                            Sumit Joshi</span>. I am a &nbsp;
+                        <span className="red">
+                            front-end developer/designer
+                        </span>
+                        &nbsp; based on Delhi, India. I have a passion for web design and love to
+                        develop web applications, websites for desktop and mobile devices. I fond of
+                        &nbsp;
+                        <span className="red">
+                            React js
+                        </span>
                     </p>
                 </div>
 
@@ -55,15 +61,20 @@ class Main extends Component {
                     </div>
 
                     <div className="main__projects--project1">
+                        <div className="main__projects__background"></div>
                         <div className="project-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, libero offic
-                            <a className="project-link" href="">See project</a>
+                            <h2>App</h2>
+                            <h1>Emaily</h1>
+                            <Link className="project-link" to="/projects/emaily">See project</Link>
                         </div>
+
                     </div>
                     <div className="main__projects--project2">
+                        <div className="main__projects__background"></div>
                         <div className="project-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, libero offic
-                            <a className="project-link" href="">See Project</a>
+                            <h2>Website</h2>
+                            <h1>Natours</h1>
+                            <Link className="project-link" to="/projects/natours">See Project</Link>
                         </div>
                     </div>
                 </div>
@@ -72,4 +83,4 @@ class Main extends Component {
     }
 }
 
-export default Main;
+export default Home;
