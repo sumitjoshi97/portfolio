@@ -1,0 +1,10 @@
+.project-full__header--image {
+  background-image: linear-gradient(to right bottom, rgba(19, 141, 70, 0.2), rgba(54, 170, 79, 0.2)), url(../../../assets/images/natours/natours-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.project-full__screenshot {
+  height: 80vh;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 80%), url(../../../assets/images/natours/natours-screenshot.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat; }

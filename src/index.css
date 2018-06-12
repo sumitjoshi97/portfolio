@@ -10,7 +10,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: 'Open sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #FFF;
   font-size: 2.6rem;
   line-height: 5.3rem; }
@@ -24,8 +24,9 @@ body {
   font-weight: 700; }
 
 .heading-primary {
-  font-size: 10rem;
+  font-size: 7.65rem;
   position: absolute;
+  font-weight: 400;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -34,3 +35,10 @@ body {
 .heading-secondary {
   font-size: 4rem;
   text-align: center; }
+
+.heading-tertiary {
+  font-size: 3.5rem; }
+  .heading-tertiary span {
+    display: block; }
+    .heading-tertiary span:last-of-type {
+      margin-bottom: 3.4rem; }

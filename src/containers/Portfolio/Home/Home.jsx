@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import Icons from '../../assets/svg/sprite.svg';
+import Icons from '../../../assets/svg/sprite.svg';
 import {Link} from 'react-router-dom';
-import './Main.css';
+import './Home.css';
 
 class Main extends Component {
     render() {
@@ -14,15 +14,11 @@ class Main extends Component {
                 <div className="main__about section">
                     <p className="main__about--text">
                         Hi, I am
-                        <span className="green">
-                            Sumit Joshi</span>. I am a
-                        <span className="red">
-                            front-end developer/designer
-                        </span>
+                        <span className="green"> Sumit Joshi</span>. I am a
+                        <span className="red"> front-end developer/designer </span>
                         based on Delhi, India. I have a passion for web design and love to develop web
                         applications, websites for desktop and mobile devices. I fond of
-                        <span className="red">
-                            React js</span>
+                        <span className="red"> React js</span>
                     </p>
                 </div>
 

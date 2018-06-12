@@ -1,17 +1,18 @@
 import React, {Component} from 'react'
 import $ from 'jquery';
 import 'fullpage.js';
-import LeftNav from '../LeftNav/LeftNav';
-import RightNav from '../RightNav/RightNav';
-import Main from '../Main/Main';
-import NavToggle from '../NavToggle/NavToggle';
-import Navigation from '../Navigation/Navigation';
-import './Home.css';
+import LeftNav from './LeftNav/LeftNav';
+import RightNav from './RightNav/RightNav';
+import Main from './Home/Home';
+import NavToggle from './NavToggle/NavToggle';
+import Navigation from './Navigation/Navigation';
+import './PortFolio.css';
 
-export default class Home extends Component {
+class Portfolio extends Component {
     state = {
         isNavActive: false
     }
+    
     componentDidMount() {
         $(document)
             .ready(function () {
@@ -75,3 +76,5 @@ export default class Home extends Component {
         )
     }
 }
+
+export default Portfolio;

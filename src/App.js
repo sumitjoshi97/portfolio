@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import Home from './containers/Home/Home';
-import Projects from './containers/Projects/Projects';
+import Portfolio from './containers/Portfolio/PortFolio';
+import ProjectsList from './containers/ProjectsList/ProjectsList';
 import ReallySmoothScroll from 'really-smooth-scroll';
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-
+import ProjectEmaily from './containers/ProjectsList/ProjectEmaily/ProjectEmaily';
+import ProjectNatours from './containers/ProjectsList/ProjectNatours/ProjectNatours';
 ReallySmoothScroll.shim();
 
 class App extends Component {
@@ -13,8 +14,10 @@ class App extends Component {
             <Router>
                 <div className="welcome">
                     <Switch>
-                        <Route exact path="/projects-all" component={Projects}/>
-                        <Route path="/" component={Home}/>
+                        <Route exact path="/projects-all" component={ProjectsList}/>
+                        <Route exact path="/projects-all/emaily" component={ProjectEmaily}/>
+                        <Route exact path="/projects-all/natours" component={ProjectNatours}/>
+                        <Route path="/" component={Portfolio}/>
                     </Switch>
                 </div>
             </Router>

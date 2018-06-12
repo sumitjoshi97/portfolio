@@ -3,30 +3,30 @@ import {Link} from 'react-router-dom';
 import $ from 'jquery';
 import 'fullpage.js';
 import Icons from '../../assets/svg/sprite.svg';
-import './Projects.css';
+import './ProjectsList.css';
 
-export default class Projects extends Component {
+class ProjectsList extends Component {
+    
     componentDidMount() {
         $(document)
             .ready(function () {
-                $('#projects-all').fullpage({
-                    // slidesNavigation: true, 
-                    // normalScrollElements: '.slide'
-                });
+                $('#projects-all').fullpage({normalScrollElements: '.slide'});
 
                 $('.section').on('DOMMouseScroll mousewheel', function (e) {
-                    if(e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) { //alternative options for wheelData: wheelDeltaX & wheelDeltaY
-                      //scroll down
-                      $.fn.fullpage.moveSlideRight();
+                    if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
+                        $
+                            .fn
+                            .fullpage
+                            .moveSlideRight();
                     } else {
-                      //scroll up
-                      $.fn.fullpage.moveSlideLeft();
+                        $
+                            .fn
+                            .fullpage
+                            .moveSlideLeft();
                     }
-                    //prevent page fom scrolling
-                    // return false;
                 });
             });
-        }
+    }
     componentWillUnmount() {
         if (typeof $.fn.fullpage !== 'undefined') {
             $
@@ -34,8 +34,6 @@ export default class Projects extends Component {
                 .fullpage
                 .destroy('all');
         }
-        console.log('unount');
-        
     }
     render() {
         return (
@@ -55,12 +53,12 @@ export default class Projects extends Component {
                                 <div className="project__thumbnail"></div>
                                 <div className="project__info"></div>
                                 <div className="project__link">
-                                    <a href="#">
+                                    <Link to="/projects-all/emaily">
                                         See Project
                                         <svg className="icon-link">
                                             <use xlinkHref={`${Icons}#icon-arrow-right`}></use>
                                         </svg>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -79,9 +77,10 @@ export default class Projects extends Component {
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         )
     }
 }
+
+export default ProjectsList;
