@@ -33,33 +33,46 @@
 
 .project {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
+  width: 50%;
+  height: 100%;
   transform: translate(-50%, -50%);
   z-index: 100; }
   .project__thumbnail {
-    width: 30rem;
-    height: 20rem;
-    background-color: white; }
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0.5rem 4rem rgba(0, 0, 0, 0.3); }
   .project__info {
+    position: absolute;
     width: 30rem;
-    height: 15rem;
-    margin-top: -6rem;
-    margin-left: 20rem;
-    background-color: black;
-    margin-bottom: 3rem; }
+    height: 12rem;
+    right: -10%;
+    top: 65%;
+    background-color: #fff;
+    margin-bottom: 3rem;
+    color: #000;
+    text-align: center;
+    box-shadow: 0 0.5rem 4rem rgba(0, 0, 0, 0.3); }
   .project__link {
     text-align: center;
-    position: relative; }
+    position: absolute;
+    bottom: 6%;
+    left: 50%;
+    transform: translateX(-50%); }
     .project__link a:link, .project__link a:visited {
-      display: inline-block;
+      display: block;
       font-size: 1.8rem;
       color: #fff;
       text-align: center;
       text-decoration: none;
       border: 2px solid #fff;
       padding: 0.8rem 0.8rem 0.8rem 2rem;
-      line-height: 1rem; }
+      line-height: 1rem;
+      bottom: 0; }
     .project__link a .icon-link {
       height: 3rem;
       width: 4rem;
@@ -82,8 +95,14 @@
 .back-cyan {
   background-color: #16b; }
 
+.back-blue {
+  background-color: #36f; }
+
 .back-red {
   background-color: #f03; }
+
+.back-purple {
+  background-color: #6c37ff; }
 
 .back-yellow {
   background-color: #e6c718; }
