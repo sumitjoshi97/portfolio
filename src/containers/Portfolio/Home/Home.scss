@@ -4,7 +4,6 @@
     margin: 0 auto;
     &__home {
         height: 100vh;
-        // position: relative;
     }
     &__about {
         height: 100vh;
@@ -28,10 +27,10 @@
         font-size: 1.5rem;
         &__header {
             position: absolute;
-            text-align: center;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            text-align: center;
             &--link-all {
                 color: #fff;
                 text-decoration: none;
@@ -51,49 +50,75 @@
                 }
             }
         }
+        &__background {
+            position: absolute;
+            height: 5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #fafafa;
+            border: 4px transparent;
+            border-radius: 4px;
+            visibility: hidden;
+            opacity: 0;
+            width: 100%;
+            transition: all 0.6s ease-in-out;
+            z-index: 0;
+        }
         &--project1 {
             position: absolute;
             top: 15%;
             left: 15%;
             width: 20rem;
             height: 20rem;
-            background-color: #fff;
+            background-image: url(../../../assets/images/emaily/emaily-logo.svg);
+            background-position: center;
+            background-size: 60%;
+            background-repeat: no-repeat;
+            cursor: pointer;
 
             &:hover .project-text {
-                height: 100%;
-                // transform: translateY(0);
-                color: #fff;
+                transform: translateX(0px);
                 visibility: visible;
                 opacity: 1;
-                background-color: rgba(#000000, 0.6);
+               
             }
-
             &:hover .project-link {
                 opacity: 1;
                 visibility: visible;
             }
         }
+        &--project1:hover &__background {
+            height: 100%;
+            visibility: visible;
+            opacity: 1; 
+        } 
+        
         &--project2 {
             position: absolute;
             bottom: 15%;
             right: 15%;
             width: 20rem;
             height: 20rem;
-            background-color: #fff;
+            background-image: url(../../../assets/images/natours/natours-logo-w.png);
+            background-position: center;
+            background-size: 60%;
+            background-repeat: no-repeat;
 
             &:hover .project-text {
-                height: 100%;
-                // transform: translateY(0);
-                color: #fff;
+                transform: translateX(0px);
                 visibility: visible;
                 opacity: 1;
-                background-color: rgba(#000000, 0.6);
             }
-
             &:hover .project-link {
                 opacity: 1;
                 visibility: visible;
             }
+        }
+
+        &--project2:hover &__background {
+            height: 100%;
+            visibility: visible;
+            opacity: 1; 
         }
     }
 }
@@ -113,35 +138,33 @@
 .project {
     &-text {
         display: block;
-        position: absolute;
-        background-color: transparent;
-        color: transparent;
-        // height: 100%;
-        z-index: 100;
+        color: #000;
         line-height: 2.5rem;
-        bottom: 0;
-        padding: 1.5rem;
-        height: 0;
-        // transform: translateY(100%);
+        padding: 2rem 4rem;
+        line-height: 3.5rem;
+        transform: translateX(-2rem);
         visibility: hidden;
         opacity: 0;
-        transition: all 0.5s;
+        transition: all 0.2s ease-in-out 0.4s;
+        z-index: 5000;
     }
+
     &-link {
         display: block;
         text-align: center;
-        padding: 1rem 2rem;
+        margin-top:  3rem;
         text-decoration: none;
-        color: #fff;
-        border: 2px solid #fff;
-        margin: 0 auto;
-        margin-top: 2.5rem;
-        opacity: 0;
+        color: #000;
+        border: 1px solid #0c0c0c;
+        padding: 0.5rem 1rem;
+        z-index: 10000;
         visibility: hidden;
-        transition: all 0.5s ease-out;
+        opacity: 0;
+        transition: all 0.5s ease-in;
+
         &:hover {
-            color: #000;
-            background-color: #FFF;
+            color: #fff;
+            background-color: #000;
         }
     }
 }
@@ -151,7 +174,6 @@
 //         transform: translateY(100%);
 //         opacity: 0;
 //     }
-
 //     40% {
 //         opacity: 0.2;
 //     }

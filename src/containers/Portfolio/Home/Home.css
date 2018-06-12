@@ -23,10 +23,10 @@
     font-size: 1.5rem; }
     .main__projects__header {
       position: absolute;
-      text-align: center;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%); }
+      transform: translate(-50%, -50%);
+      text-align: center; }
       .main__projects__header--link-all {
         color: #fff;
         text-decoration: none;
@@ -42,38 +42,62 @@
           animation: arrow-bounce infinite;
           animation-duration: 0.6s;
           animation-timing-function: ease-in-out; }
+    .main__projects__background {
+      position: absolute;
+      height: 5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #fafafa;
+      border: 4px transparent;
+      border-radius: 4px;
+      visibility: hidden;
+      opacity: 0;
+      width: 100%;
+      transition: all 0.6s ease-in-out;
+      z-index: 0; }
     .main__projects--project1 {
       position: absolute;
       top: 15%;
       left: 15%;
       width: 20rem;
       height: 20rem;
-      background-color: #fff; }
+      background-image: url(../../../assets/images/emaily/emaily-logo.svg);
+      background-position: center;
+      background-size: 60%;
+      background-repeat: no-repeat;
+      cursor: pointer; }
       .main__projects--project1:hover .project-text {
-        height: 100%;
-        color: #fff;
+        transform: translateX(0px);
         visibility: visible;
-        opacity: 1;
-        background-color: rgba(0, 0, 0, 0.6); }
+        opacity: 1; }
       .main__projects--project1:hover .project-link {
         opacity: 1;
         visibility: visible; }
+    .main__projects--project1:hover .main__projects__background {
+      height: 100%;
+      visibility: visible;
+      opacity: 1; }
     .main__projects--project2 {
       position: absolute;
       bottom: 15%;
       right: 15%;
       width: 20rem;
       height: 20rem;
-      background-color: #fff; }
+      background-image: url(../../../assets/images/natours/natours-logo-w.png);
+      background-position: center;
+      background-size: 60%;
+      background-repeat: no-repeat; }
       .main__projects--project2:hover .project-text {
-        height: 100%;
-        color: #fff;
+        transform: translateX(0px);
         visibility: visible;
-        opacity: 1;
-        background-color: rgba(0, 0, 0, 0.6); }
+        opacity: 1; }
       .main__projects--project2:hover .project-link {
         opacity: 1;
         visibility: visible; }
+    .main__projects--project2:hover .main__projects__background {
+      height: 100%;
+      visibility: visible;
+      opacity: 1; }
 
 .skills-list {
   list-style: none;
@@ -88,30 +112,28 @@
 
 .project-text {
   display: block;
-  position: absolute;
-  background-color: transparent;
-  color: transparent;
-  z-index: 100;
+  color: #000;
   line-height: 2.5rem;
-  bottom: 0;
-  padding: 1.5rem;
-  height: 0;
+  padding: 2rem 4rem;
+  line-height: 3.5rem;
+  transform: translateX(-2rem);
   visibility: hidden;
   opacity: 0;
-  transition: all 0.5s; }
+  transition: all 0.2s ease-in-out 0.4s;
+  z-index: 5000; }
 
 .project-link {
   display: block;
   text-align: center;
-  padding: 1rem 2rem;
+  margin-top: 3rem;
   text-decoration: none;
-  color: #fff;
-  border: 2px solid #fff;
-  margin: 0 auto;
-  margin-top: 2.5rem;
-  opacity: 0;
+  color: #000;
+  border: 1px solid #0c0c0c;
+  padding: 0.5rem 1rem;
+  z-index: 10000;
   visibility: hidden;
-  transition: all 0.5s ease-out; }
+  opacity: 0;
+  transition: all 0.5s ease-in; }
   .project-link:hover {
-    color: #000;
-    background-color: #FFF; }
+    color: #fff;
+    background-color: #000; }
