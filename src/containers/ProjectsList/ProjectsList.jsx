@@ -53,7 +53,7 @@ class ProjectsList extends Component {
                                 <div className="project__thumbnail"></div>
                                 <div className="project__info"></div>
                                 <div className="project__link">
-                                    <Link to="/projects-all/emaily">
+                                    <Link to="/projects/emaily">
                                         See Project
                                         <svg className="icon-link">
                                             <use xlinkHref={`${Icons}#icon-arrow-right`}></use>
@@ -67,12 +67,12 @@ class ProjectsList extends Component {
                                 <div className="project__thumbnail"></div>
                                 <div className="project__info"></div>
                                 <div className="project__link">
-                                    <a href="#">
+                                    <Link to="projects/natours">
                                         See Project 2
                                         <svg className="icon-link">
                                             <use xlinkHref={`${Icons}#icon-arrow-right`}></use>
                                         </svg>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

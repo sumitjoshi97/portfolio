@@ -84,7 +84,7 @@ class ProjectEmaily extends Component {
 
                 <div className="project-full__navigation  back-cyan">
                     <div className="project-full__navigation--section">
-                        <Link to="/projects-all/emaily">
+                        <Link to="/projects/emaily">
                             <svg className="icon-logo--prev">
                                 <use xlinkHref={`${Icons}#icon-arrow-left`}></use>
                             </svg>
@@ -95,7 +95,7 @@ class ProjectEmaily extends Component {
                         </Link>
                     </div>
                     <div className="project-full__navigation--section">
-                        <Link to="/projects-all/natours">
+                        <Link to="/projects/natours">
                             <svg className="icon-logo--next">
                                 <use xlinkHref={`${Icons}#icon-arrow-right`}></use>
                             </svg>
