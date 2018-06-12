@@ -3,7 +3,7 @@ import $ from 'jquery';
 import 'fullpage.js';
 import LeftNav from './LeftNav/LeftNav';
 import RightNav from './RightNav/RightNav';
-import Main from './Home/Home';
+import Home from './Home/Home';
 import NavToggle from './NavToggle/NavToggle';
 import Navigation from './Navigation/Navigation';
 import './PortFolio.css';
@@ -18,7 +18,7 @@ class Portfolio extends Component {
             .ready(function () {
                 $("#fullpage").fullpage({
                     anchors: [
-                        "home", "about", "skills", "projects"
+                        "home", "about", "skills", "recents"
                     ],
                     menu: "#fixed-nav"
                 });
@@ -35,7 +35,7 @@ class Portfolio extends Component {
         }
         $("#fullpage").fullpage({
             anchors: [
-                "home", "about", "skills", "projects"
+                "home", "about", "skills", "recents"
             ],
             menu: "#fixed-nav"
         });
@@ -61,7 +61,7 @@ class Portfolio extends Component {
         return (
             <div>
                 <LeftNav/>
-                <Main/>
+                <Home/>
                 <RightNav/>
             </div>
         )
