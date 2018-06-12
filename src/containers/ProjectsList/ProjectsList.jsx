@@ -6,11 +6,17 @@ import Icons from '../../assets/svg/sprite.svg';
 import './ProjectsList.css';
 
 class ProjectsList extends Component {
-    
+
     componentDidMount() {
         $(document)
             .ready(function () {
-                $('#projects-all').fullpage({normalScrollElements: '.slide'});
+                $('#projects-all').fullpage({normalScrollElements: '.slide', 
+                
+                afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
+                    $('.nav__item.active').removeClass('active');
+                    $('.nav__item').eq(slideIndex).addClass('active');
+                  }
+            });
 
                 $('.section').on('DOMMouseScroll mousewheel', function (e) {
                     if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
@@ -50,8 +56,14 @@ class ProjectsList extends Component {
                     <div className="section">
                         <div className="slide back-red">
                             <div className="project">
-                                <div className="project__thumbnail"></div>
-                                <div className="project__info"></div>
+                                <img
+                                    className="project__thumbnail"
+                                    src={require("../../assets/images/emaily/emaily-project.jpg")}
+                                    alt="emaily project"/>
+                                <div className="project__info">
+                                    <h6>App</h6>
+                                    <h4>Emaily</h4>
+                                </div>
                                 <div className="project__link">
                                     <Link to="/projects/emaily">
                                         See Project
@@ -62,13 +74,19 @@ class ProjectsList extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="slide back-yellow">
+                        <div className="slide back-purple">
                             <div className="project">
-                                <div className="project__thumbnail"></div>
-                                <div className="project__info"></div>
+                                <img
+                                    className="project__thumbnail"
+                                    src={require("../../assets/images/natours/natour-project.jpg")}
+                                    alt="natours project"/>
+                                <div className="project__info">
+                                    <h6>Website</h6>
+                                    <h4>Natours</h4>
+                                </div>
                                 <div className="project__link">
                                     <Link to="projects/natours">
-                                        See Project 2
+                                        See Project
                                         <svg className="icon-link">
                                             <use xlinkHref={`${Icons}#icon-arrow-right`}></use>
                                         </svg>
