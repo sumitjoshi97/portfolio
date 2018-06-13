@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import NavBottom from '../../components/NavBottom/NavBottom';
 import {Link} from 'react-router-dom';
 import $ from 'jquery';
 import 'fullpage.js';
@@ -10,13 +11,17 @@ class ProjectsList extends Component {
     componentDidMount() {
         $(document)
             .ready(function () {
-                $('#projects-all').fullpage({normalScrollElements: '.slide', 
-                
-                afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
-                    $('.nav__item.active').removeClass('active');
-                    $('.nav__item').eq(slideIndex).addClass('active');
-                  }
-            });
+                $('#projects-all').fullpage({
+                    anchors: ['projects'],
+                    normalScrollElements: '.slide',
+
+                    afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
+                        $(".bottom-nav__list__item.active").removeClass("active");
+                        $(".bottom-nav__list__item")
+                            .eq(slideIndex)
+                            .addClass("active");
+                    }
+                });
 
                 $('.section').on('DOMMouseScroll mousewheel', function (e) {
                     if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
@@ -51,7 +56,7 @@ class ProjectsList extends Component {
                 </Link>
 
                 <div className="backdrop"></div>
-
+                <NavBottom/>
                 <div id="projects-all">
                     <div className="section">
                         <div className="slide back-red">
