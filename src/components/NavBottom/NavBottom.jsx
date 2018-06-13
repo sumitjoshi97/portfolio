@@ -1,18 +1,23 @@
-import React, { Component } from 'react'
+import React from 'react';
+import './NavBottom.css';
 
-export default class NavBottom extends Component {
-  render() {
-    return (
-      <div>
-        <nav>
-            <ul id="bottom-nav">
-                <li className="nav__item"><a href=""></a></li>
-                <li className="nav__item"><a href=""></a></li>
-                <li className="nav__item"><a href=""></a></li>
-                <li className="nav__item"><a href=""></a></li>
-            </ul>
-        </nav>
-      </div>
-    )
-  }
-}
+const NavBottom = () => (
+    <nav className="bottom-nav">
+        <ul className="bottom-nav__list">
+            <li className="bottom-nav__list__item active">
+                <a className="bottom-nav__list__item__link" href="#firstPage/">01</a>
+            </li>
+            <li className="bottom-nav__list__item">
+                <a className="bottom-nav__list__item__link" href="#firstPage/1">02</a>
+            </li>
+            {/* <li className="bottom-nav__list__item active">
+                <a className="bottom-nav__list__item__link" href="#firstPage/">03</a>
+            </li>
+            <li className="bottom-nav__list__item">
+                <a className="bottom-nav__list__item__link" href="#firstPage/1">04</a>
+            </li> */}
+        </ul>
+    </nav>
+)
+
+export default NavBottom;
