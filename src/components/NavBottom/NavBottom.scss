@@ -1,0 +1,55 @@
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4000;
+    
+    &__list {
+        list-style: none;
+        font-size: 2rem;
+        font-family: 'Oswald', sans-serif;
+
+        &__item {
+            display: inline-block;
+            margin: 2rem 3rem;
+
+            &__link {
+                &:link,
+                &:visited {
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.active .bottom-nav__list__item__link {
+    color: #000;
+}
+
+.fp-controlArrow {
+    border: none;
+    top: 100%;
+    margin-top: -7rem;
+    &.fp-prev{
+        border: none;
+        width: 4.5rem;
+        height: 4.5rem;
+        background-image: url(../../assets/svg/SVG/chevron-left.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        left: 6rem;
+        // margin: 1rem;
+    }
+
+    &.fp-next {
+        width: 4.5rem;
+        height: 4.5rem;
+        background-image: url(../../assets/svg/SVG/chevron-right.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        right: 6rem;
+    } 
+}
