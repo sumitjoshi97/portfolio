@@ -1,3 +1,15 @@
+@keyframes arrow-bounce {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(0.6rem);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 .icon-back {
     position: absolute;
     top: 6rem;
@@ -7,8 +19,8 @@
     z-index: 2000;
     &-logo {
         position: absolute;
-        width: 6rem;
-        height: 6rem;
+        width: 5rem;
+        height: 5rem;
         fill: #fff;
     }
 }
@@ -40,10 +52,10 @@
 
 .project {
     position: absolute;
-    top: 40%;
+    top: 38%;
     left: 50%;
     width: 50%;
-    height: 100%;
+    height: 95%;
     transform: translate(-50%, -50%);
     z-index: 100;
     &__thumbnail {
@@ -101,18 +113,6 @@
     }
 }
 
-@keyframes arrow-bounce {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(0.6rem);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
 .back {
     &-cyan {
         background-color: #16b;
@@ -130,7 +130,7 @@
         background-color: #e6c718;
     }
     &-green {
-        background-color: #1fa566;
+        background-color: #03bb56;
     }
     &-grey {
         background-image: linear-gradient(to right bottom, #3d3d3d, #2c2c2c); // background-color: #333333;
