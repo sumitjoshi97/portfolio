@@ -23,7 +23,7 @@ export default class Navigation extends Component {
                                 <span>03</span>Skills</a>
                         </li>
                         <li className="navigation__list__item">
-                            <a href="#projects" className="navigation__link" onClick={this.props.toggle}>
+                            <a href="#recents" className="navigation__link" onClick={this.props.toggle}>
                                 <span>04</span>Recent Projects</a>
                         </li>
                     </ul>

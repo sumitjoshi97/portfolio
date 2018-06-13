@@ -52,7 +52,7 @@ class Home extends Component {
                             <span>Recent</span>
                             <span>Projects</span>
                         </h3>
-                        <Link className="main__projects__header--link-all" to="/projects-all">
+                        <Link className="main__projects__header--link-all" to="/projects">
                             See all projects
                             <svg className="icon-projects">
                                 <use xlinkHref={`${Icons}#icon-arrow-right`}></use>

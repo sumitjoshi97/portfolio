@@ -7,7 +7,7 @@ class ProjectNatours extends Component {
     render() {
         return (
             <div className="project-full">
-                <Link to="/" className="icon-back">
+                <Link to="/projects" className="icon-back">
                     <svg
                         className="icon-back-logo"
                         style={{
@@ -41,7 +41,7 @@ class ProjectNatours extends Component {
                 <div className="project-full__screenshot-nat"></div>
 
                 <div className="project-full__launch">
-                    <a href="#" className="project-full__launch--link">
+                    <a href="" className="project-full__launch--link">
                         Launch Project
                         {/* <svg className="icon-logo">
                             <use xlinkHref={`${Icons}#icon-arrow-right`}></use>
