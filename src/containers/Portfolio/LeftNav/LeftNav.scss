@@ -1,14 +1,9 @@
 .left-nav {
     width: 12%;
-    // background: rgba(0,0,0, 0.2);
     height: 100vh;
     position: fixed;
 
     &__profile {
-        // width: 8rem;
-        // height: 8rem;
-        // background-image: linear-gradient(to right, #fff,#fff);
-        // border-radius: 50%;
         position: absolute;
         top: 12%;
         left: 50%;
@@ -29,14 +24,9 @@
             width: 100%;
 
             &-link{
-                // width: 2rem;
-                // height: 0.30rem;
-                // background-color: #fff;
-                // transition: transform 0.5s;
                 position: relative;
                 height: 100%;
                 display: block;
-
 
                 & span {
                     display: block;
@@ -47,7 +37,6 @@
                     background-color: #fff;
                     transition:all 1s; 
                     color: #fff;
-                    
                 }
 
                 &:hover span, &:focus span{
