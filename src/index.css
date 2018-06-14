@@ -23,22 +23,56 @@ body {
   color: #00ff00;
   font-weight: 700; }
 
+.back-cyan {
+  background-color: #16b; }
+
+.back-blue {
+  background-color: #36f; }
+
+.back-red {
+  background-color: #f03; }
+
+.back-purple {
+  background-color: #6c37ff; }
+
+.back-violet {
+  background-color: #7f00ff; }
+
+.back-orange {
+  background-color: #ff4c0a; }
+
+.back-yellow {
+  background-color: #e6c718; }
+
+.back-green {
+  background-color: #03bb56; }
+
+.back-grey {
+  background-image: linear-gradient(to right bottom, #3d3d3d, #2c2c2c); }
+
+.bar {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  width: 1px;
+  height: 60%;
+  background-color: #36f; }
+  .bar ::before {
+    content: '';
+    padding: 1rem 0.2rem;
+    background-color: #36f; }
+
 .heading-primary {
   font-size: 7.65rem;
-  position: absolute;
   font-weight: 400;
+  letter-spacing: 0.4rem;
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  letter-spacing: 0.4rem; }
+  transform: translateX(-50%) translateY(150%);
+  opacity: 0;
+  transition: transform 0.8s ease 0.8s, opacity 0.8s ease-in-out 0.8s; }
 
-.heading-secondary {
-  font-size: 4rem;
-  text-align: center; }
-
-.heading-tertiary {
-  font-size: 3.5rem; }
-  .heading-tertiary span {
-    display: block; }
-    .heading-tertiary span:last-of-type {
-      margin-bottom: 3.4rem; }
+::selection {
+  background-color: #000;
+  color: #36f; }

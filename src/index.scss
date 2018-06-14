@@ -28,6 +28,7 @@ body {
     color: $color-white;
     font-size: $base-font;
     line-height: 5.3rem;
+
 }
 
 /////////////////////////////////////////////////
@@ -42,33 +43,70 @@ body {
     font-weight: 700;
 }
 
+.back {
+    &-cyan {
+        background-color: #16b;
+    }
+    &-blue {
+        background-color: #36f;
+    }
+    &-red {
+        background-color: #f03;
+    }
+    &-purple {
+        background-color: #6c37ff;
+    }
+    &-violet {
+        background-color: #7f00ff;
+    }
+    &-orange {
+        background-color: #ff4c0a;
+    }
+    &-yellow {
+        background-color: #e6c718;
+    }
+    &-green {
+        background-color: #03bb56;
+    }
+    &-grey {
+        background-image: linear-gradient(to right bottom, #3d3d3d, #2c2c2c); // background-color: #333333;
+    }
+}
+
+.bar {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 1px;
+    height: 60%;
+    background-color: #36f;
+    ::before {
+        content: '';
+        padding: 1rem 0.2rem;
+        background-color: #36f;
+        // width: 2rem;
+    }
+}
+
 ///////////////////////////////////////////////
 //typography
 //heading h1
 .heading-primary {
     font-size: $font-primary;
+    font-weight: 400;    
+    letter-spacing: 0.4rem;
     position: absolute;
-    font-weight: 400;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    letter-spacing: 0.4rem;
+    transform: translateX(-50%) translateY(150%);
+    opacity: 0;
+    transition: transform 0.8s ease 0.8s, opacity 0.8s ease-in-out 0.8s;
 }
 
-//heading h2
-.heading-secondary {
-    font-size: $font-secondary;
-    text-align: center;
-}
 
-//heading h3 
-.heading-tertiary {
-    font-size: 3.5rem;
-    span {
-        display: block;
-
-        &:last-of-type {
-            margin-bottom:3.4rem; 
-        }
-    }
+//////////////////////////
+//text selection
+::selection{
+    background-color: #000;
+    color: #36f;
 }
