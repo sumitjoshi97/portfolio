@@ -1,0 +1,23 @@
+.fp-viewing-projects-0 #p1-info {
+  transform: translate(50%, -50%);
+  opacity: 1; }
+
+.fp-viewing-projects-0 #p1-thumbnail {
+  transform: translate(-50%, -50%);
+  opacity: 1; }
+
+.fp-viewing-projects-0 #p1-link {
+  transform: translate(-50%, -50%);
+  opacity: 1; }
+
+.fp-viewing-projects-1 #p2-info {
+  transform: translate(50%, -50%);
+  opacity: 1; }
+
+.fp-viewing-projects-1 #p2-thumbnail {
+  transform: translate(-50%, -50%);
+  opacity: 1; }
+
+.fp-viewing-projects-1 #p2-link {
+  transform: translate(-50%, -50%);
+  opacity: 1; }
