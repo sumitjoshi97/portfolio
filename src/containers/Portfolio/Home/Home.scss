@@ -1,26 +1,58 @@
 .main {
-    position: relative;
-    width: 76%;
+    position: fixed;
+    width:76%;
     margin: 0 auto;
+    
+    //////////////////////////////////////
+    // home section
     &__home {
-        height: 100vh;
-    }
+        position: relative;
+        text-align: center;
+    } 
+    
+    //////////////////////////////////
+    // about section
     &__about {
         height: 100vh;
+        text-align: left;
         position: relative;
         &--text {
+            width: 70%;
+            margin: 0 auto;
             position: absolute;
-            width: 60%;
-            top: 30%;
+            top: 40%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, 50%);
+            opacity: 0;
+            transition: transform 1s ease 0.8s, opacity 1s ease-in-out 0.8s;
+
+            &--header {
+                font-size: 6rem;
+                font-weight: 500;
+            }
         }
-    }
+    } 
+    
+    ////////////////////////////////////////////
+    // skills section
     &__skills {
         height: 100vh;
         position: relative;
-        padding: 0 12.4rem;
+
+        &__heading {
+            font-size: 5rem;
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%, 150%);
+            opacity: 0;
+            font-weight: 400;
+            transition: transform 0.8s ease 0.8s, opacity .8s ease-in-out .8s;
+        }
     }
+    
+    /////////////////////////////////////////
+    // recent projects panel
     &__projects {
         height: 100vh;
         position: relative;
@@ -31,10 +63,12 @@
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
-            &--link-all {
+            opacity: 0;
+            transition: opacity 1s ease 0.8s;
+            &--link {
                 color: #fff;
                 text-decoration: none;
-                border: 2px solid #fff;
+                border: 2px solid forestgreen;
                 padding: 1rem 1.4rem 1rem 2rem;
                 & .icon-projects {
                     fill: #fff;
@@ -63,25 +97,30 @@
             width: 100%;
             transition: all 0.6s ease-in-out;
             z-index: 0;
-        }
+        } 
+        
+        //recent project 1
         &--project1 {
             position: absolute;
-            top: 15%;
-            left: 15%;
+            top: 20%;
+            left: 20%;
+            transform: translate(-50%, -70%);
             width: 20rem;
             height: 20rem;
+            opacity: 0;
             background-image: url(../../../assets/images/emaily/emaily-logo.svg);
             background-position: center;
             background-size: 60%;
             background-repeat: no-repeat;
+            transition: transform 0.8s ease 1.6s, opacity .8s ease-in-out 1.6s;
             cursor: pointer;
 
             &:hover .project-text {
                 transform: translateX(0px);
                 visibility: visible;
                 opacity: 1;
-               
             }
+
             &:hover .project-link {
                 opacity: 1;
                 visibility: visible;
@@ -90,20 +129,23 @@
         &--project1:hover &__background {
             height: 100%;
             visibility: visible;
-            opacity: 1; 
+            opacity: 1;
         } 
         
+        // recent project 2
         &--project2 {
             position: absolute;
-            bottom: 15%;
-            right: 15%;
+            bottom: 20%;
+            right: 20%;
+            transform: translate(50%, 70%);
             width: 20rem;
             height: 20rem;
+            opacity: 0;
             background-image: url(../../../assets/images/natours/natours-logo-w.png);
             background-position: center;
             background-size: 60%;
             background-repeat: no-repeat;
-
+            transition:  transform 0.8s ease 1.6s, opacity .8s ease-in-out 1.6s;
             &:hover .project-text {
                 transform: translateX(0px);
                 visibility: visible;
@@ -114,27 +156,41 @@
                 visibility: visible;
             }
         }
-
         &--project2:hover &__background {
             height: 100%;
             visibility: visible;
-            opacity: 1; 
+            opacity: 1;
         }
     }
 }
 
+//////////////////////////////////////////////////////////////////////
+//list of skills - table
 .skills-list {
     list-style: none;
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2;
-    -webkit-column-gap: 30rem;
-    -moz-column-gap: 30rem;
-    column-gap: 30rem;
-    width: 80%;
-    margin: 0 auto;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    opacity: 0;
+    transition: transform 0.8s ease 1.2s, opacity 0.8s ease-in-out 1.2s;
+
+    &__item {
+        display: inline-block;
+        margin-right: 2rem;
+        vertical-align: text-top;
+    }
+
+    &__heading {
+        font-size: 7rem;
+        // font-weight: 700;
+        line-height: 5rem;
+    }
 }
 
+//////////////////////////////////////////////////////////////////////////
+//project container for text and link in recent projects
 .project {
     &-text {
         display: block;
@@ -148,11 +204,10 @@
         transition: all 0.2s ease-in-out 0.4s;
         z-index: 5000;
     }
-
     &-link {
         display: block;
         text-align: center;
-        margin-top:  3rem;
+        margin-top: 3rem;
         text-decoration: none;
         color: #000;
         border: 1px solid #0c0c0c;
@@ -161,7 +216,6 @@
         visibility: hidden;
         opacity: 0;
         transition: all 0.5s ease-in;
-
         &:hover {
             color: #fff;
             background-color: #000;
@@ -169,16 +223,14 @@
     }
 }
 
-// @keyframes translate-text-up {
-//     0% {
-//         transform: translateY(100%);
-//         opacity: 0;
-//     }
-//     40% {
-//         opacity: 0.2;
-//     }
-//     100% {
-//         transform: translateY(0);
-//         opacity: 1;
-//     }
-// }
+//heading for recents panel 
+.recents-heading {
+    font-size: 3.5rem;
+    span {
+        display: block;
+
+        &:last-of-type {
+            margin-bottom:3.4rem; 
+        }
+    }
+}

@@ -1,22 +1,38 @@
 .main {
-  position: relative;
+  position: fixed;
   width: 76%;
   margin: 0 auto; }
   .main__home {
-    height: 100vh; }
+    position: relative;
+    text-align: center; }
   .main__about {
     height: 100vh;
+    text-align: left;
     position: relative; }
     .main__about--text {
+      width: 70%;
+      margin: 0 auto;
       position: absolute;
-      width: 60%;
-      top: 30%;
+      top: 40%;
       left: 50%;
-      transform: translate(-50%, -50%); }
+      transform: translate(-50%, 50%);
+      opacity: 0;
+      transition: transform 1s ease 0.8s, opacity 1s ease-in-out 0.8s; }
+      .main__about--text--header {
+        font-size: 6rem;
+        font-weight: 500; }
   .main__skills {
     height: 100vh;
-    position: relative;
-    padding: 0 12.4rem; }
+    position: relative; }
+    .main__skills__heading {
+      font-size: 5rem;
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translate(-50%, 150%);
+      opacity: 0;
+      font-weight: 400;
+      transition: transform 0.8s ease 0.8s, opacity .8s ease-in-out .8s; }
   .main__projects {
     height: 100vh;
     position: relative;
@@ -26,19 +42,21 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      text-align: center; }
-      .main__projects__header--link-all {
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1s ease 0.8s; }
+      .main__projects__header--link {
         color: #fff;
         text-decoration: none;
-        border: 2px solid #fff;
+        border: 2px solid forestgreen;
         padding: 1rem 1.4rem 1rem 2rem; }
-        .main__projects__header--link-all .icon-projects {
+        .main__projects__header--link .icon-projects {
           fill: #fff;
           height: 3rem;
           width: 3rem;
           vertical-align: middle;
           margin-left: 1rem; }
-        .main__projects__header--link-all:hover .icon-projects {
+        .main__projects__header--link:hover .icon-projects {
           animation: arrow-bounce infinite;
           animation-duration: 0.6s;
           animation-timing-function: ease-in-out; }
@@ -57,14 +75,17 @@
       z-index: 0; }
     .main__projects--project1 {
       position: absolute;
-      top: 15%;
-      left: 15%;
+      top: 20%;
+      left: 20%;
+      transform: translate(-50%, -70%);
       width: 20rem;
       height: 20rem;
+      opacity: 0;
       background-image: url(../../../assets/images/emaily/emaily-logo.svg);
       background-position: center;
       background-size: 60%;
       background-repeat: no-repeat;
+      transition: transform 0.8s ease 1.6s, opacity .8s ease-in-out 1.6s;
       cursor: pointer; }
       .main__projects--project1:hover .project-text {
         transform: translateX(0px);
@@ -79,14 +100,17 @@
       opacity: 1; }
     .main__projects--project2 {
       position: absolute;
-      bottom: 15%;
-      right: 15%;
+      bottom: 20%;
+      right: 20%;
+      transform: translate(50%, 70%);
       width: 20rem;
       height: 20rem;
+      opacity: 0;
       background-image: url(../../../assets/images/natours/natours-logo-w.png);
       background-position: center;
       background-size: 60%;
-      background-repeat: no-repeat; }
+      background-repeat: no-repeat;
+      transition: transform 0.8s ease 1.6s, opacity .8s ease-in-out 1.6s; }
       .main__projects--project2:hover .project-text {
         transform: translateX(0px);
         visibility: visible;
@@ -101,14 +125,20 @@
 
 .skills-list {
   list-style: none;
-  -webkit-column-count: 2;
-  -moz-column-count: 2;
-  column-count: 2;
-  -webkit-column-gap: 30rem;
-  -moz-column-gap: 30rem;
-  column-gap: 30rem;
-  width: 80%;
-  margin: 0 auto; }
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+  opacity: 0;
+  transition: transform 0.8s ease 1.2s, opacity 0.8s ease-in-out 1.2s; }
+  .skills-list__item {
+    display: inline-block;
+    margin-right: 2rem;
+    vertical-align: text-top; }
+  .skills-list__heading {
+    font-size: 7rem;
+    line-height: 5rem; }
 
 .project-text {
   display: block;
@@ -137,3 +167,10 @@
   .project-link:hover {
     color: #fff;
     background-color: #000; }
+
+.recents-heading {
+  font-size: 3.5rem; }
+  .recents-heading span {
+    display: block; }
+    .recents-heading span:last-of-type {
+      margin-bottom: 3.4rem; }
