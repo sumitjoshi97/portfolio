@@ -2,7 +2,7 @@
 // variables
 $font-primary: 7.65rem;
 $font-secondary: 4rem;
-$base-font: 2.6rem;
+$base-font: 2.2rem;
 $color-white: #FFF;
 
 ///////////////////////////////////////////////
@@ -32,7 +32,7 @@ body {
 }
 
 /////////////////////////////////////////////////
-// utilities
+// utility -classes
 .red {
     color: #ff0000;
     font-weight: 700;
@@ -43,6 +43,7 @@ body {
     font-weight: 700;
 }
 
+//background colors 
 .back {
     &-cyan {
         background-color: #16b;
@@ -73,18 +74,19 @@ body {
     }
 }
 
-.bar {
+.bar-left {
     position: absolute;
+    font-size: 2rem;
     top: 20%;
     left: 5%;
     width: 1px;
     height: 60%;
     background-color: #36f;
-    ::before {
+    opacity: 0.65;
+    &::before {
         content: '';
-        padding: 1rem 0.2rem;
-        background-color: #36f;
-        // width: 2rem;
+        padding: 1.5rem 0.4rem;
+        background-color: #36f; 
     }
 }
 
@@ -100,7 +102,7 @@ body {
     left: 50%;
     transform: translateX(-50%) translateY(150%);
     opacity: 0;
-    transition: transform 0.8s ease 0.8s, opacity 0.8s ease-in-out 0.8s;
+    transition: transform 0.8s ease 1.2s, opacity 0.8s ease-in-out 1.2s;
 }
 
 
