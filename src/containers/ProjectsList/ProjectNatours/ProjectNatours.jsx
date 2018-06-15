@@ -4,6 +4,9 @@ import {Link} from 'react-router-dom';
 import './ProjectNatours.css';
 
 class ProjectNatours extends Component {
+    componentDidMount() {
+        window.moveTo(0,0);
+    }
     render() {
         return (
             <div className="project-full">

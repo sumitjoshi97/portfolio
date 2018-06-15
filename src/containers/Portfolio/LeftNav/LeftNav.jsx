@@ -7,7 +7,7 @@ class LeftNav extends Component {
         return (
             <div className="left-nav">
                 <div className="left-nav__profile">
-                   Sj
+                   S U M I T
                 </div>
 
                 <ul className="left-nav__link-box" id="fixed-nav">

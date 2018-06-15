@@ -28,7 +28,7 @@
         z-index: 30;
     }
     &__background {
-        background-image: linear-gradient(to right bottom, #6800DB, #00058C);
+        background-image: radial-gradient(#6800DB, #00058C, #6800DB);
         height: 6rem;
         width: 6rem;
         top: 7rem;

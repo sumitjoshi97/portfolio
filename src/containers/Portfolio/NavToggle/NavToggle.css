@@ -6,29 +6,28 @@
   position: fixed;
   text-align: center;
   top: 12%;
-  right: 2.1%;
+  right: 3rem;
   transform: translate(-50%, -50%);
   cursor: pointer;
   z-index: 1000; }
-  .nav-toggle:hover {
-    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2); }
   .nav-toggle span {
     position: relative;
     margin-top: 3.5rem; }
     .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after {
-      width: 3rem;
+      width: 2.2rem;
       height: .1rem;
       background-color: #fff;
-      display: inline-block; }
+      display: inline-block;
+      transition: all 0.2s; }
     .nav-toggle span::before, .nav-toggle span::after {
       content: '';
       position: absolute;
       left: 0; }
     .nav-toggle span::before {
-      top: -1rem; }
+      top: -0.6rem; }
     .nav-toggle span::after {
-      top: 1rem; }
-  .nav-toggle:hover .nav-toggle span::before {
-    top: -1.2rem; }
-  .nav-toggle:hover .nav-toggle span::after {
-    top: 1.2rem; }
+      top: 0.6rem; }
+  .nav-toggle:hover span::before {
+    top: -0.8rem; }
+  .nav-toggle:hover span::after {
+    top: 0.8rem; }

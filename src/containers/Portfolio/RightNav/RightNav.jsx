@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Icons from '../../../assets/svg/sprite.svg';
-// import NavToggle from './NavToggle/NavToggle';
 import './RightNav.css';
 
 class RightNav extends Component {

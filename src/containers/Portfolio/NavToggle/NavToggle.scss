@@ -6,25 +6,22 @@
     position: fixed;
     text-align: center;
     top: 12%;
-    right: 2.1%;
+    right: 3rem;
     transform: translate(-50%, -50%);
     cursor: pointer;
     z-index: 1000;
-    &:hover {
-        box-shadow: 0 1rem 3rem rgba(#000, 0.2);
-    }
 
-    
     & span {
         position: relative;
         margin-top: 3.5rem;
         &,
         &::before,
         &::after {
-            width: 3rem;
+            width: 2.2rem;
             height: .1rem;
             background-color: #fff;
             display: inline-block;
+            transition: all 0.2s;
         }
         &::before,
         &::after {
@@ -33,17 +30,17 @@
             left: 0;
         }
         &::before {
-            top: -1rem;
+            top: -0.6rem;
         }
         &::after {
-            top: 1rem;
+            top: 0.6rem;
         }
     }
 
-    &:hover & span::before {
-        top: -1.2rem;
+    &:hover span::before {
+        top: -0.8rem;
     }
-    &:hover & span::after {
-        top: 1.2rem;
+    &:hover span::after {
+        top: 0.8rem;
     }
 }

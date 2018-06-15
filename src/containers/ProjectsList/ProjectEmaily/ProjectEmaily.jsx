@@ -4,6 +4,10 @@ import './ProjectEmaily.css';
 import Icons from '../../../assets/svg/sprite.svg';
 
 class ProjectEmaily extends Component {
+    componentDidMount() {
+        window.moveTo(0,0);
+    }
+
     render() {
         return (
             <div className="project-full">
@@ -39,8 +43,12 @@ class ProjectEmaily extends Component {
                     <h3>Stack</h3>
                     <ul className="project-full__stack--list">
                         <li>React js, </li>
-                        <li>Sass, </li>
+                        <li>Redux, </li>
                         <li>React Router, </li>
+                        <li>Sass, </li>
+                        <li>Node js, </li>
+                        <li>Express js, </li>
+                        <li>Mongo DB, </li>
                         <li>Adobe XD, </li>
                         <li>Adobe illustrator</li>
                     </ul>
