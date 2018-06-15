@@ -2,57 +2,75 @@ import React, {Component} from 'react';
 import Icons from '../../../assets/svg/sprite.svg';
 import {Link} from 'react-router-dom';
 import './Home.css';
+import './HomeAnimate.css';
+
+import HeroBackground from './HeroBackground/HeroBackground';
 
 class Home extends Component {
     render() {
         return (
             <div className="main" id="fullpage">
                 <div className="main__home section">
+                    <HeroBackground/>
                     <h1 className="heading-primary">Sumit Joshi</h1>
                 </div>
 
                 <div className="main__about section">
+                    <div className="bar-left"></div>
+
                     <p className="main__about--text">
-                        Hi, I am &nbsp;
+                        <span className="main__about--text--header red">Hi!</span>, I am
                         <span className="green">
-                            Sumit Joshi</span>. I am a &nbsp;
+                            &nbsp;Sumit Joshi</span>. I am a
                         <span className="red">
-                            front-end developer/designer
+                            &nbsp;front-end developer / designer&nbsp;
                         </span>
-                        &nbsp; based on Delhi, India. I have a passion for web design and love to
-                        develop web applications, websites for desktop and mobile devices. I fond of
-                        &nbsp;
+                        based on Delhi, India. I have a passion for web design and love to develop web
+                        applications, websites for desktop and mobile devices. I fond of
                         <span className="red">
-                            React js
+                            &nbsp;React js&nbsp;
                         </span>
+                        and love to create UI/UX with it.
                     </p>
+
                 </div>
 
                 <div className="main__skills section">
-                    <h2 className="heading-secondary">Skills</h2>
+                    <div className="bar-left"></div>
+                    
+                    <h2 className="main__skills__heading">skills</h2>
+
                     <ul className="skills-list">
-                        <li className="skills-list__item">HTML and CSS</li>
-                        <li className="skills-list__item">Javascript</li>
-                        <li className="skills-list__item">Sass</li>
-                        <li className="skills-list__item">React js</li>
-                        <li className="skills-list__item">Redux</li>
-                        <li className="skills-list__item">Mongo DB</li>
-                        <li className="skills-list__item">Express js</li>
-                        <li className="skills-list__item">Node js</li>
-                        <li className="skills-list__item">Jest</li>
-                        <li className="skills-list__item">Adobe XD</li>
-                        <li className="skills-list__item">Adobe Photoshop</li>
-                        <li className="skills-list__item">Adobe Illustrator</li>
+                        <li className="skills-list__item skills-list__heading green">front</li>
+                        <li className="skills-list__item">html</li>
+                        <li className="skills-list__item">css</li>
+                        <li className="skills-list__item">sass</li>
+                        <li className="skills-list__item">javascript</li>
+                        <li className="skills-list__item">react.js</li>
+                        <li className="skills-list__item">redux</li>
+                        <li className="skills-list__item skills-list__heading red">back</li>
+                        <li className="skills-list__item">node.js</li>
+                        <li className="skills-list__item">express.js</li>
+                        <li className="skills-list__item">npm</li>
+                        <li className="skills-list__item">mongoDB</li>
+                        <li className="skills-list__item">restfulAPI</li>
+                        <li className="skills-list__item skills-list__heading green">softwares</li>
+                        <li className="skills-list__item">adobe XD</li>
+                        <li className="skills-list__item">adobe photoshop</li>
+                        <li className="skills-list__item">adobe illustrator</li>
+                        <li className="skills-list__item">visual code</li>
                     </ul>
                 </div>
 
                 <div className="main__projects section">
+                    <div className="bar-left"></div>
+                    
                     <div className="main__projects__header">
-                        <h3 className="heading-tertiary">
+                        <h3 className="recents-heading">
                             <span>Recent</span>
                             <span>Projects</span>
                         </h3>
-                        <Link className="main__projects__header--link-all" to="/projects">
+                        <Link className="main__projects__header--link" to="/projects">
                             See all projects
                             <svg className="icon-projects">
                                 <use xlinkHref={`${Icons}#icon-arrow-right`}></use>
@@ -77,6 +95,7 @@ class Home extends Component {
                             <Link className="project-link" to="/projects/natours">See Project</Link>
                         </div>
                     </div>
+
                 </div>
             </div>
         );
