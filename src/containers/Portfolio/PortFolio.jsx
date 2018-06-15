@@ -20,7 +20,8 @@ class Portfolio extends Component {
                     anchors: [
                         "home", "about", "skills", "recents"
                     ],
-                    menu: "#fixed-nav"
+                    menu: "#fixed-nav",
+                    css3: 'true'
                 });
             });
         console.log('did mount')
@@ -59,7 +60,7 @@ class Portfolio extends Component {
             return <Navigation toggle={this.handleToggle} isNavActive={this.state.isNavActive}/>
         }
         return (
-            <div>
+            <div className="portfolio">
                 <LeftNav/>
                 <Home/>
                 <RightNav/>
