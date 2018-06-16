@@ -21,3 +21,9 @@
 .fp-viewing-projects-1 #p2-link {
   transform: translate(-50%, -50%);
   opacity: 1; }
+
+.fp-viewing-projects-0 .fade {
+  opacity: 1; }
+
+.fp-viewing-projects-1 .fade {
+  opacity: 1; }

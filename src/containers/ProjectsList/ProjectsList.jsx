@@ -60,7 +60,7 @@ class ProjectsList extends Component {
                 <NavBottom/>
                 <div id="projects-all">
                     <div className="section">
-                        <div className="slide back-red">
+                        <div className="slide back-red fade">
                             <div className="project">
                                 <img
                                     className="project__thumbnail" id="p1-thumbnail"
@@ -80,7 +80,7 @@ class ProjectsList extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="slide back-violet">
+                        <div className="slide back-violet fade">
                             <div className="project">
                                 <img
                                     className="project__thumbnail" id="p2-thumbnail"

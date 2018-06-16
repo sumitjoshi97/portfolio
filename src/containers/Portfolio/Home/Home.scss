@@ -24,7 +24,7 @@
             left: 50%;
             transform: translate(-50%, 50%);
             opacity: 0;
-            transition: transform 1s ease 0.8s, opacity 1s ease-in-out 0.8s;
+            transition: transform 1s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity 1s ease-in-out 0.8s;
 
             &--header {
                 font-size: 6rem;
@@ -47,7 +47,7 @@
             transform: translate(-50%, 150%);
             opacity: 0;
             font-weight: 400;
-            transition: transform 0.8s ease 0.8s, opacity .8s ease-in-out .8s;
+            transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity .8s ease-in-out .8s;
         }
     }
     
@@ -80,7 +80,7 @@
                 &:hover .icon-projects {
                     animation: arrow-bounce infinite;
                     animation-duration: 0.6s;
-                    animation-timing-function: ease-in-out;
+                    animation-timing-function: cubic-bezier(0.16, 0.68, 0.43, 0.99);
                 }
             }
         }
@@ -112,7 +112,7 @@
             background-position: center;
             background-size: 60%;
             background-repeat: no-repeat;
-            transition: transform 0.8s ease 1.6s, opacity .8s ease-in-out 1.6s;
+            transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 1.6s, opacity .8s ease-in-out 1.6s;
             cursor: pointer;
 
             &:hover .project-text {
@@ -145,7 +145,7 @@
             background-position: center;
             background-size: 60%;
             background-repeat: no-repeat;
-            transition:  transform 0.8s ease 1.6s, opacity .8s ease-in-out 1.6s;
+            transition:  transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 1.6s, opacity .8s ease-in-out 1.6s;
             &:hover .project-text {
                 transform: translateX(0px);
                 visibility: visible;
@@ -174,7 +174,7 @@
     left: 50%;
     transform: translate(-50%, 20%);
     opacity: 0;
-    transition: transform 0.8s ease 1.2s, opacity 0.8s ease-in-out 1.2s;
+    transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 1.2s, opacity 0.8s ease-in-out 1.2s;
 
     &__item {
         display: inline-block;
@@ -201,7 +201,7 @@
         transform: translateX(-2rem);
         visibility: hidden;
         opacity: 0;
-        transition: all 0.2s ease-in-out 0.4s;
+        transition: all 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.4s;
         z-index: 5000;
     }
     &-link {
