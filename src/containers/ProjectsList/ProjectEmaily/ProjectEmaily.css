@@ -133,9 +133,6 @@
     @media only screen and (max-width: 900px) {
       .project-full__navigation {
         height: 15vh; } }
-    @media only screen and (max-width: 600px) {
-      .project-full__navigation {
-        height: 20vh; } }
     .project-full__navigation--section {
       display: inline-block;
       width: 50%;

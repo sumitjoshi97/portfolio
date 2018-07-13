@@ -126,7 +126,6 @@
     }
 
     &__screenshot {
-        // height: 80vh;
         height: 80vh;
         background-image: linear-gradient(to right, rgba(white, 0.5) 0%, rgba(white, 0.5) 100%), url(../../../assets/images/emaily/emaily-full.jpg);
         background-size: cover;
@@ -188,10 +187,7 @@
         @include respond(tabPort) {
            height: 15vh;
         }
-        @include respond(phone) {
-            height: 20vh;
-        }
-        // background-color: #2c2c2c;
+
         &--section {
             display: inline-block;
             width: 50%;
