@@ -30,23 +30,23 @@
 }
 
 .fp-controlArrow {
-    border: none;
-    top: 100%;
-    margin-top: -7rem;
+    // border: none;
+    top: 100% !important;
+    margin-top: -7rem !important;
     &.fp-prev{
         border: none;
-        width: 4.5rem;
-        height: 4.5rem;
+        width: 4.5rem !important;
+        height: 4.5rem !important;
         background-image: url(../../assets/svg/SVG/chevron-left.svg);
         background-repeat: no-repeat;
         background-size: cover;
         left: 6rem;
-        // margin: 1rem;
     }
 
     &.fp-next {
-        width: 4.5rem;
-        height: 4.5rem;
+        border: none;
+        width: 4.5rem !important;
+        height: 4.5rem !important;
         background-image: url(../../assets/svg/SVG/chevron-right.svg);
         background-repeat: no-repeat;
         background-size: cover;

@@ -5,6 +5,13 @@
   top: 50%;
   right: 6rem;
   transform: translateY(-50%); }
+  @media only screen and (max-width: 900px) {
+    .right-nav {
+      top: 93%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40rem;
+      height: 7rem; } }
 
 .social {
   position: absolute;
@@ -23,6 +30,9 @@
     .social--item:hover {
       animation-name: bounce-icon;
       animation-duration: 0.4s; }
+    @media only screen and (max-width: 900px) {
+      .social--item {
+        display: inline-block; } }
   .social__icon {
     width: 2.5rem;
     height: 2.5rem;
@@ -30,6 +40,9 @@
     cursor: pointer;
     fill: #fff;
     stroke-width: 0; }
+    @media only screen and (max-width: 900px) {
+      .social__icon {
+        margin: 0 2rem; } }
 
 @keyframes bounce-icon {
   0% {

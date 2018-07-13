@@ -1,3 +1,5 @@
+///////////////////////////////
+//animations
 @keyframes arrow-bounce {
     0% {
         transform: translateX(0);
@@ -7,6 +9,15 @@
     }
     100% {
         transform: translateX(0);
+    }
+}
+
+@keyframes translate-backdrop {
+    0% {
+        transform: translateY(100%)
+    }
+    100% {
+        transform: translateY(-100%)
     }
 }
 
@@ -35,15 +46,6 @@
     animation-duration: 0.8s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out
-}
-
-@keyframes translate-backdrop {
-    0% {
-        transform: translateY(100%)
-    }
-    100% {
-        transform: translateY(-100%)
-    }
 }
 
 .fp-tableCell {

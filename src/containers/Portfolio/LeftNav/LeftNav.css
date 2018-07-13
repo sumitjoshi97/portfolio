@@ -2,10 +2,17 @@
   width: 12%;
   height: 100vh;
   position: fixed; }
+  @media only screen and (max-width: 56.5em) {
+    .left-nav {
+      width: 0%;
+      display: none; } }
   .left-nav__profile {
     position: absolute;
     top: 8rem;
     left: 6.5rem; }
+    @media only screen and (max-width: 75em) {
+      .left-nav__profile {
+        opacity: 0; } }
   .left-nav__link-box {
     position: absolute;
     top: 50%;

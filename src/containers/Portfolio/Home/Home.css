@@ -2,6 +2,9 @@
   position: fixed;
   width: 76%;
   margin: 0 auto; }
+  @media only screen and (max-width: 900) {
+    .main {
+      width: 100%; } }
   .main__home {
     position: relative;
     text-align: center; }

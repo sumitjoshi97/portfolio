@@ -8,6 +8,15 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (min-width: 1800px) {
+    html {
+      font-size: 75%; } }
+  @media only screen and (max-width: 1200px) {
+    html {
+      font-size: 55.25%; } }
+  @media only screen and (max-width: 900px) {
+    html {
+      font-size: 42.5%; } }
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -63,17 +72,24 @@ body {
     content: '';
     padding: 1.5rem 0.4rem;
     background-color: #36f; }
+  @media only screen and (max-width: 900px) {
+    .bar-left {
+      opacity: 0; } }
 
 .heading-primary {
   font-size: 7.65rem;
   font-weight: 400;
   letter-spacing: 0.4rem;
   position: absolute;
+  line-height: 8rem;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(150%);
   opacity: 0;
   transition: transform 0.8s ease 1.2s, opacity 0.8s ease-in-out 1.2s; }
+  @media only screen and (max-width: 1200px) {
+    .heading-primary {
+      font-size: 6rem; } }
 
 ::selection {
   background-color: #000;

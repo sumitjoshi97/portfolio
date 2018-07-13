@@ -1,11 +1,49 @@
+////////////////////////////////////////////////////
+//mixin for responsive queries
+@mixin respond($breakpoint) {
+    @if($breakpoint==phone) {
+        @media only screen and (max-width: 37.5em) {
+            @content
+        }
+        ; //600px
+    }
+    @if($breakpoint==tabPort) {
+        @media only screen and (max-width: 56.5em) {
+            @content
+        }
+        ; //900px
+    }
+    @if($breakpoint==tabLand) {
+        @media only screen and (max-width: 75em) {
+            @content
+        }
+        ; //1200px
+    }
+    @if($breakpoint==bigDesk) {
+        @media only screen and (min-width: 112.5em) {
+            @content
+        }
+        ; //1800px
+    }
+}
+
 .left-nav {
     width: 12%;
     height: 100vh;
     position: fixed;
+
+    @include respond(tabPort) {
+        width: 0%;
+        display: none;
+    }
+
     &__profile {
         position: absolute;
         top: 8rem;
         left: 6.5rem;
+        @include respond (tabLand) {
+            opacity: 0;
+        }
     }
     &__link-box {
         position: absolute;
@@ -39,8 +77,7 @@
                     transition: all 1s;
                     color: #fff;
                 }
-                &:hover span
-                {
+                &:hover span {
                     width: 4rem;
                     background-color: #36f;
                 }

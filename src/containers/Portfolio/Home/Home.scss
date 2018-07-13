@@ -1,8 +1,42 @@
+////////////////////////////////////////////////////
+//mixin for responsive queries
+@mixin respond($breakpoint) {
+    @if($breakpoint==phone) {
+        @media only screen and (max-width: 600px) {
+            @content
+        }
+        ; //600px
+    }
+    @if($breakpoint==tabPort) {
+        @media only screen and (max-width: 900) {
+            @content
+        }
+        ; //900px
+    }
+    @if($breakpoint==tabLand) {
+        @media only screen and (max-width: 1200px) {
+            @content
+        }
+        ; //1200px
+    }
+    @if($breakpoint==bigDesk) {
+        @media only screen and (min-width: 1800px) {
+            @content
+        }
+        ; //1800px
+    }
+}
+
 .main {
     position: fixed;
     width:76%;
+    // height: 100%;
     margin: 0 auto;
     
+    @include respond(tabPort) {
+        width: 100%;
+        // height: 90%;
+    }
     //////////////////////////////////////
     // home section
     &__home {

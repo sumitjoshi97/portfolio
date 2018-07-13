@@ -19,20 +19,20 @@
   color: #000; }
 
 .fp-controlArrow {
-  border: none;
-  top: 100%;
-  margin-top: -7rem; }
+  top: 100% !important;
+  margin-top: -7rem !important; }
   .fp-controlArrow.fp-prev {
     border: none;
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 4.5rem !important;
+    height: 4.5rem !important;
     background-image: url(../../assets/svg/SVG/chevron-left.svg);
     background-repeat: no-repeat;
     background-size: cover;
     left: 6rem; }
   .fp-controlArrow.fp-next {
-    width: 4.5rem;
-    height: 4.5rem;
+    border: none;
+    width: 4.5rem !important;
+    height: 4.5rem !important;
     background-image: url(../../assets/svg/SVG/chevron-right.svg);
     background-repeat: no-repeat;
     background-size: cover;

@@ -24,6 +24,9 @@
   height: 60%;
   width: 60%;
   top: 20% !important; }
+  @media only screen and (max-width: 900px) {
+    #g2 {
+      top: 55% !important; } }
 
 #name {
   position: absolute !important;
@@ -32,6 +35,10 @@
   top: 20% !important;
   left: 50% !important;
   opacity: 0.65; }
+  @media only screen and (max-width: 900px) {
+    #name {
+      top: 35% !important;
+      left: 53% !important; } }
 
 @keyframes scene-opacity {
   0% {

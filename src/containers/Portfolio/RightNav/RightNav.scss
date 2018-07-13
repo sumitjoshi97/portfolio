@@ -1,3 +1,32 @@
+////////////////////////////////////////////////////
+//mixin for responsive queries
+@mixin respond($breakpoint) {
+    @if($breakpoint==phone) {
+        @media only screen and (max-width: 600px) {
+            @content
+        }
+        ; //600px
+    }
+    @if($breakpoint==tabPort) {
+        @media only screen and (max-width: 900px) {
+            @content
+        }
+        ; //900px
+    }
+    @if($breakpoint==tabLand) {
+        @media only screen and (max-width: 1200px) {
+            @content
+        }
+        ; //1200px
+    }
+    @if($breakpoint==bigDesk) {
+        @media only screen and (min-width: 1800px) {
+            @content
+        }
+        ; //1800px
+    }
+}
+
 .right-nav {
     width: 7rem; 
     position: fixed;
@@ -5,6 +34,14 @@
     top: 50%;
     right: 6rem;
     transform: translateY(-50%);
+
+    @include respond(tabPort) {
+        top: 93%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40rem;
+        height: 7rem;
+    }
 }
 
 .social {
@@ -25,7 +62,10 @@
                 animation-name: bounce-icon;
                 animation-duration: 0.4s;
             }
-
+        
+            @include respond(tabPort) {
+                display: inline-block;
+            }
         }
     &__icon {
         width: 2.5rem;
@@ -34,6 +74,10 @@
         cursor: pointer;
         fill: #fff;
         stroke-width: 0;
+
+        @include respond(tabPort) {
+            margin: 0 2rem;
+        }
     }
 }
 
