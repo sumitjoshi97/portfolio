@@ -1,3 +1,33 @@
+////////////////////////////////////////////////////
+//mixin for responsive queries
+@mixin respond($breakpoint) {
+    @if($breakpoint==phone) {
+        @media only screen and (max-width: 600px) {
+            @content
+        }
+        ; //600px
+    }
+    @if($breakpoint==tabPort) {
+        @media only screen and (max-width: 900px) {
+            @content
+        }
+        ; //900px
+    }
+    @if($breakpoint==tabLand) {
+        @media only screen and (max-width: 1200px) {
+            @content
+        }
+        ; //1200px
+    }
+    @if($breakpoint==bigDesk) {
+        @media only screen and (min-width: 1800px) {
+            @content
+        }
+        ; //1800px
+    }
+}
+
+
 ///////////////////////////////
 //animations
 @keyframes arrow-bounce {
@@ -53,15 +83,27 @@
 }
 
 .project {
+    // display: block;
     position: absolute;
     top: 38%;
     left: 50%;
-    width: 50%;
-    height: 95%;
+    width: 95rem;
+    height: 35rem;
     transform: translate(-50%, -50%);
     z-index: 100;
-    &__thumbnail {
+    margin: 0 auto;
+    @include respond(tabPort) {
+        width: 80rem;
+        height: 47rem;
+    }
+    @include respond(phone) {
         width: 100%;
+        height: 35%;
+    }
+
+    &__thumbnail {
+        width: 80rem;
+        height: 35rem;
         position: absolute;
         top: 50%;
         left: 40%;
@@ -69,14 +111,21 @@
         box-shadow: 0 0.5rem 4rem rgba(#000, 0.3);
         opacity: 0;
         transition: transform .8s ease 0.8s, opacity 0.8s ease-in-out 0.8s;
+        @include respond(tabPort) {
+            left: 50%;
+        }
+        @include respond(phone) {
+            width: 100%;
+            height: 70%;
+        }
     }
     &__info {
         position: absolute;
         width: 30rem;
         height: 12rem;
-        right: 5%;
-        top: 74%;
-        transform: translate(50%, 0%);
+        right: 15rem;
+        top: 50%;
+        // transform: translate(50%, -50%) !important;
         background-color: #fff;
         margin-bottom: 3rem;
         color: #000;
@@ -84,10 +133,21 @@
         box-shadow: 0 0.5rem 4rem rgba(#000, 0.3);
         opacity: 0;
         transition: transform 0.8s ease 0.8s, opacity 0.8s ease-in-out 0.8s;
+
+        @include respond(tabPort) {
+            width: 80rem;
+            right: 50%;
+            top: 100%;
+        }
+        @include respond(phone) {
+            width: 100%;
+            right:50%;
+            // height: 100%;
+        }
     }
     &__link {
         position: absolute;
-        bottom: 6%;
+        bottom: 16%;
         left: 50%;
         transform: translate(-50%,0);
         opacity: 0;

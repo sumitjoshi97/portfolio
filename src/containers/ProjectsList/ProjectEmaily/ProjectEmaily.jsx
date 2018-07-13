@@ -54,7 +54,7 @@ class ProjectEmaily extends Component {
                     </ul>
                 </div>
                 <div className="project-full__screenshot"></div>
-
+                <div className="project-full__blank"></div>
                 <div className="project-full__launch">
                     <a href="" className="project-full__launch--link">
                         Launch Project

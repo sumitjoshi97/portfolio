@@ -63,14 +63,16 @@ class ProjectsList extends Component {
                         <div className="slide back-red fade">
                             <div className="project">
                                 <img
-                                    className="project__thumbnail" id="p1-thumbnail"
+                                    className="project__thumbnail"
+                                    id="p1-thumbnail"
                                     src={require("../../assets/images/emaily/emaily-project.jpg")}
                                     alt="emaily project"/>
                                 <div className="project__info" id="p1-info">
                                     <h6>App</h6>
                                     <h4>Emaily</h4>
                                 </div>
-                                <div className="project__link" id="p1-link">
+                            </div>
+                            <div className="project__link" id="p1-link">
                                     <Link to="/projects/emaily">
                                         See Project
                                         <svg className="icon-link">
@@ -78,26 +80,28 @@ class ProjectsList extends Component {
                                         </svg>
                                     </Link>
                                 </div>
-                            </div>
                         </div>
                         <div className="slide back-violet fade">
                             <div className="project">
                                 <img
-                                    className="project__thumbnail" id="p2-thumbnail"
+                                    className="project__thumbnail"
+                                    id="p2-thumbnail"
                                     src={require("../../assets/images/natours/natour-project.jpg")}
-                                    alt="natours project"/>
+                                    alt="natours project"
+                                />
                                 <div className="project__info" id="p2-info">
                                     <h6>Website</h6>
                                     <h4>Natours</h4>
                                 </div>
-                                <div className="project__link" id="p2-link">
-                                    <Link to="projects/natours">
-                                        See Project
-                                        <svg className="icon-link">
-                                            <use xlinkHref={`${Icons}#icon-arrow-right`}></use>
-                                        </svg>
-                                    </Link>
-                                </div>
+
+                            </div>
+                            <div className="project__link" id="p2-link">
+                                <Link to="projects/natours">
+                                    See Project
+                                    <svg className="icon-link">
+                                        <use xlinkHref={`${Icons}#icon-arrow-right`}></use>
+                                    </svg>
+                                </Link>
                             </div>
                         </div>
                     </div>

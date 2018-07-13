@@ -7,9 +7,16 @@
   position: absolute;
   right: 0;
   height: 100%; }
+  @media only screen and (max-width: 900px) {
+    .project-full__header--image-nat {
+      height: 100vh;
+      width: 100%; } }
 
 .project-full__screenshot-nat {
   height: 80vh;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 80%), url(../../../assets/images/natours/natours-screenshot.jpg);
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat; }
+  @media only screen and (max-width: 900px) {
+    .project-full__screenshot-nat {
+      height: 100vh; } }
