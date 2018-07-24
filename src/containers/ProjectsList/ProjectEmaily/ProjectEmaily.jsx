@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
-import './ProjectEmaily.css';
-import Icons from '../../../assets/svg/sprite.svg';
+import Project from '../Project/Project';
 
 class ProjectEmaily extends Component {
     componentDidMount() {
@@ -10,111 +8,26 @@ class ProjectEmaily extends Component {
 
     render() {
         return (
-            <div className="project-full">
-                <Link to="/projects" className="icon-back">
-                    <svg
-                        className="icon-back-logo"
-                        style={{
-                        fill: 'black'
-                    }}>
-                        <use xlinkHref={`${Icons}#icon-arrow-left`}></use>
-                    </svg>
-                </Link>
-                <div className="project-full__header">
-                    <div className="project-full__header--text">
-                        <h3>
-                            App
-                        </h3>
-                        <h2>Emaily</h2>
-                        <p>
-                            A feedback app based on MERN stack. In this app, one can create and send surveys
+            <Project 
+                projectType="App"
+                projectName="Emaily"
+                projectInfo="A feedback app based on MERN stack. In this app, one can create and send surveys
                             to emails. One require to signup through google oauth to access the app. This
                             app uses sendgrid API to send emails, and stripe for adding credits in account
-                            for sending emails.
-                        </p>
-
-                    </div>
-                    <div className="project-full__header--image back-grey">
-                        <img src={require("../../../assets/images/emaily/emaily-logo.svg")} alt=""/>
-                    </div>
-                </div>
-
-                <div className="project-full__stack back-blue">
-                    <h3>Stack</h3>
-                    <ul className="project-full__stack--list">
-                        <li>React js, </li>
-                        <li>Redux, </li>
-                        <li>React Router, </li>
-                        <li>Sass, </li>
-                        <li>Node js, </li>
-                        <li>Express js, </li>
-                        <li>Mongo DB, </li>
-                        <li>Adobe XD, </li>
-                        <li>Adobe illustrator</li>
-                    </ul>
-                </div>
-                <div className="project-full__screenshot"></div>
-                <div className="project-full__blank"></div>
-                <div className="project-full__launch">
-                    <a href="" className="project-full__launch--link">
-                        Launch Project
-                        {/* <svg className="icon-logo">
-                            <use xlinkHref={`${Icons}#icon-arrow-right`}></use>
-                        </svg> */}
-                    </a>
-                </div>
-                <div>
-                    <div className="project-full__summary-shots">
-                        <img
-                            src={require('../../../assets/images/emaily/home_logged.jpg')}
-                            alt=""
-                            className="project-full__summary-shots__image"/>
-                    </div>
-                    <div className="project-full__summary-shots">
-                        <img
-                            src={require('../../../assets/images/emaily/surveys_logged_hover.jpg')}
-                            alt=""
-                            className="project-full__summary-shots__image"/>
-                    </div>
-                    <div className="project-full__summary-shots">
-                        <img
-                            src={require('../../../assets/images/emaily/new_survey.jpg')}
-                            alt=""
-                            className="project-full__summary-shots__image"/>
-                    </div>
-                    <div className="project-full__summary-shots">
-                        <img
-                            src={require('../../../assets/images/emaily/survey_summary.jpg')}
-                            alt=""
-                            className="project-full__summary-shots__image"/>
-                    </div>
-                </div>
-
-                <div className="project-full__navigation back-blue">
-                    <div className="project-full__navigation--section">
-                        <Link to="/projects/emaily">
-                            <svg className="icon-logo--prev">
-                                <use xlinkHref={`${Icons}#icon-arrow-left`}></use>
-                            </svg>
-                            <span
-                                style={{
-                                left: '7rem'
-                            }}>Prev</span>
-                        </Link>
-                    </div>
-                    <div className="project-full__navigation--section">
-                        <Link to="/projects/natours">
-                            <svg className="icon-logo--next">
-                                <use xlinkHref={`${Icons}#icon-arrow-right`}></use>
-                            </svg>
-                            <span
-                                style={{
-                                right: '7rem'
-                            }}>Next</span>
-                        </Link>
-                    </div>
-                </div>
-            </div>
+                            for sending emails."
+                headerImage={require('../../../assets/images/emaily/emaily-logo.svg')}
+                headerStyle={['#3c40c6', '#4b7bec']}
+                theme={'#3c40c6'}
+                stacks = {['React js', 'Redux', 'SASS', 'Node js', 'Express js', 'MongoDB', 'Adobe XD']}
+                backImage={require('../../../assets/images/emaily/emaily-full.jpg')}
+                linkLanuchProject="/#"
+                screenshots = {[`${require('../../../assets/images/emaily/home_logged.jpg')}`,
+                    `${require('../../../assets/images/emaily/surveys_logged_hover.jpg')}`,
+                    `${require('../../../assets/images/emaily/new_survey.jpg')}`,
+                    `${require('../../../assets/images/emaily/survey_summary.jpg')}`]}
+                projectPrev='smart-brain'
+                projectNext='natours'
+                />
         )
     }
 }
