@@ -72,7 +72,8 @@ class ProjectsList extends Component {
                                             <use xlinkHref={`${Icons}#icon-arrow-right`}></use>
                                         </svg>
                                     </Link>
-                                </div>
+                            </div>
+                            
                         </div>
 
                         {/* second projct */}

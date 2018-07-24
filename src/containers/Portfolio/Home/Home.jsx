@@ -70,12 +70,15 @@ class Home extends Component {
                             <span>Recent</span>
                             <span>Projects</span>
                         </h3>
-                        <Link className="main__projects__header--link" to="/projects">
-                            See all projects
-                            <svg className="icon-projects">
-                                <use xlinkHref={`${Icons}#icon-arrow-right`}></use>
-                            </svg>
-                        </Link>
+                        <div className="main__projects__header--link">
+                            <Link  to="/projects">
+                                See all projects
+                                <svg className="icon-projects">
+                                    <use xlinkHref={`${Icons}#icon-arrow-right`}></use>
+                                </svg>
+                            </Link>
+                        </div>
+                        
                     </div>
 
                     <div className="main__projects--project1">
@@ -95,7 +98,6 @@ class Home extends Component {
                             <Link className="project-link" to="/projects/natours">See Project</Link>
                         </div>
                     </div>
-
                 </div>
             </div>
         );
