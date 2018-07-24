@@ -49,20 +49,30 @@
       opacity: 0;
       transition: opacity 1s ease 0.8s; }
       .main__projects__header--link {
-        color: #fff;
-        text-decoration: none;
-        border: 2px solid forestgreen;
-        padding: 1rem 1.4rem 1rem 2rem; }
-        .main__projects__header--link .icon-projects {
-          fill: #fff;
-          height: 3rem;
-          width: 3rem;
-          vertical-align: middle;
-          margin-left: 1rem; }
-        .main__projects__header--link:hover .icon-projects {
-          animation: arrow-bounce infinite;
-          animation-duration: 0.6s;
-          animation-timing-function: cubic-bezier(0.16, 0.68, 0.43, 0.99); }
+        position: relative;
+        border: 2px solid #36f;
+        padding: 0rem 4.8rem 0 1.8rem; }
+        .main__projects__header--link a {
+          position: relative;
+          color: #fff;
+          text-decoration: none; }
+          .main__projects__header--link a .icon-projects {
+            position: absolute;
+            top: 50%;
+            fill: #fff;
+            height: 3rem;
+            width: 3rem;
+            vertical-align: middle;
+            margin-left: 1rem;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%); }
+          .main__projects__header--link a:hover .icon-projects {
+            animation: arrow-bounce infinite;
+            animation-duration: 0.6s;
+            animation-timing-function: cubic-bezier(0.16, 0.68, 0.43, 0.99); }
     .main__projects__background {
       position: absolute;
       height: 5rem;

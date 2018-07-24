@@ -40,7 +40,7 @@
         background-image: url(../../assets/svg/SVG/chevron-left.svg);
         background-repeat: no-repeat;
         background-size: cover;
-        left: 6rem;
+        left: 4rem !important;
     }
 
     &.fp-next {
@@ -50,6 +50,6 @@
         background-image: url(../../assets/svg/SVG/chevron-right.svg);
         background-repeat: no-repeat;
         background-size: cover;
-        right: 6rem;
+        right: 4rem !important;
     } 
 }
