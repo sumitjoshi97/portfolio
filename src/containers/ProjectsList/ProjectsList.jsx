@@ -26,25 +26,16 @@ class ProjectsList extends Component {
 
                 $('.section').on('DOMMouseScroll mousewheel', function (e) {
                     if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
-                        $
-                            .fn
-                            .fullpage
-                            .moveSlideRight();
+                        $.fn.fullpage.moveSlideRight();
                     } else {
-                        $
-                            .fn
-                            .fullpage
-                            .moveSlideLeft();
+                        $.fn.fullpage.moveSlideLeft();
                     }
                 });
             });
     }
     componentWillUnmount() {
         if (typeof $.fn.fullpage !== 'undefined') {
-            $
-                .fn
-                .fullpage
-                .destroy('all');
+            $.fn.fullpage.destroy('all');
         }
     }
     render() {
@@ -60,6 +51,8 @@ class ProjectsList extends Component {
                 <NavBottom/>
                 <div id="projects-all">
                     <div className="section">
+
+                        {/* first project */}
                         <div className="slide back-red fade">
                             <div className="project">
                                 <img
@@ -81,6 +74,8 @@ class ProjectsList extends Component {
                                     </Link>
                                 </div>
                         </div>
+
+                        {/* second projct */}
                         <div className="slide back-violet fade">
                             <div className="project">
                                 <img
@@ -97,6 +92,54 @@ class ProjectsList extends Component {
                             </div>
                             <div className="project__link" id="p2-link">
                                 <Link to="projects/natours">
+                                    See Project
+                                    <svg className="icon-link">
+                                        <use xlinkHref={`${Icons}#icon-arrow-right`}></use>
+                                    </svg>
+                                </Link>
+                            </div>
+                        </div>
+
+                        {/* third project */}
+                        <div className="slide back-yellow fade">
+                            <div className="project">
+                                <img
+                                    className="project__thumbnail"
+                                    id="p3-thumbnail"
+                                    src={require("../../assets/images/smartBrain/smart-project.png")}
+                                    alt="smartBrain project"
+                                />
+                                <div className="project__info" id="p3-info">
+                                    <h6>App</h6>
+                                    <h4>Smart-Brain</h4>
+                                </div>
+                            </div>
+                            <div className="project__link" id="p3-link">
+                                <Link to="projects/smart-brain">
+                                    See Project
+                                    <svg className="icon-link">
+                                        <use xlinkHref={`${Icons}#icon-arrow-right`}></use>
+                                    </svg>
+                                </Link>
+                            </div>
+                        </div>
+
+                         {/* fourth project */}
+                         <div className="slide back-yellow fade">
+                            <div className="project">
+                                <img
+                                    className="project__thumbnail"
+                                    id="p4-thumbnail"
+                                    src={require("../../assets/images/smartBrain/smart-project.png")}
+                                    alt="smartBrain project"
+                                />
+                                <div className="project__info" id="p4-info">
+                                    <h6>App</h6>
+                                    <h4>Smart-Brain</h4>
+                                </div>
+                            </div>
+                            <div className="project__link" id="p4-link">
+                                <Link to="projects/smart-brain">
                                     See Project
                                     <svg className="icon-link">
                                         <use xlinkHref={`${Icons}#icon-arrow-right`}></use>

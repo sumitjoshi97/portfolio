@@ -1,0 +1,8 @@
+.project-full__screenshot-sB {
+  height: 100vh;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), url(../../../assets/images/smartBrain/screenshot.png);
+  background-size: cover;
+  background-repeat: no-repeat; }
+  @media only screen and (max-width: 900px) {
+    .project-full__screenshot-sB {
+      height: 100vh; } }
