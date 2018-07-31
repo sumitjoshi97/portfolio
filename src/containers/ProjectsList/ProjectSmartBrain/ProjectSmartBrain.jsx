@@ -18,13 +18,13 @@ class ProjectSmartBrain extends Component {
                 theme={'#1e90ff'}
                 stacks = {['React js', 'Node js', 'Express js', 'PostgreSQL']}
                 backImage={require('../../../assets/images/smartBrain/screenshot.png')}
-                linkLanuchProject="/#"
+                linkLanuchProject="http://bit.ly/_faceRe"
                 screenshots = {[`${require('../../../assets/images/smartBrain/register.jpg')}`,
                     `${require('../../../assets/images/smartBrain/signIn.jpg')}`,
                     `${require('../../../assets/images/smartBrain/input.jpg')}`,
                     `${require('../../../assets/images/smartBrain/entries.jpg')}`]}
                 projectPrev='natours'
-                projectNext='emaily'
+                projectNext='burger'
                 />
         )
     }

@@ -33,6 +33,10 @@ class ProjectsList extends Component {
                 });
             });
     }
+    shouldComponentUpdate(nextProps, nextState) {
+
+        return nextProps.location.pathname !== this.props.location.pathname
+    }
     componentWillUnmount() {
         if (typeof $.fn.fullpage !== 'undefined') {
             $.fn.fullpage.destroy('all');
@@ -40,7 +44,7 @@ class ProjectsList extends Component {
     }
     render() {
         return (
-            <div className="projects-scroll">
+            <div className="projects-scroll transition-item list-page">
                 <Link to="/" className="icon-back">
                     <svg className="icon-back-logo">
                         <use xlinkHref={`${Icons}#icon-arrow-left`}></use>
@@ -77,7 +81,7 @@ class ProjectsList extends Component {
                         </div>
 
                         {/* second projct */}
-                        <div className="slide back-violet fade">
+                        <div className="slide back-purple fade">
                             <div className="project">
                                 <img
                                     className="project__thumbnail"

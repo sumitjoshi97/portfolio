@@ -24,12 +24,12 @@ class Portfolio extends Component {
                     css3: 'true'
                 });
             });
-        console.log('did mount')
     }
 
     shouldComponentUpdate(nextProps, nextState) {
         return nextState.isNavActive!==this.state.isNavActive
     }
+
     componentDidUpdate() {
         if (typeof $.fn.fullpage !== 'undefined') {     
             $.fn.fullpage.destroy('all'); 
@@ -40,7 +40,6 @@ class Portfolio extends Component {
             ],
             menu: "#fixed-nav"
         });
-        console.log('update');
     }
 
     componentWillUnmount() {
@@ -70,7 +69,7 @@ class Portfolio extends Component {
 
     render() {
         return (
-            <div className="home"> 
+            <div className="home "> 
                 <NavToggle toggle={this.handleToggle}/>
                 {this.renderNav()}
             </div>

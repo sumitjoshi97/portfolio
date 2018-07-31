@@ -6,6 +6,7 @@ import './HomeAnimate.css';
 
 import HeroBackground from './HeroBackground/HeroBackground';
 
+
 class Home extends Component {
     render() {
         return (

@@ -16,7 +16,7 @@ class ProjectNatours extends Component {
                 theme={'#07a072'}
                 stacks = {['HTML', 'SASS']}
                 backImage={require('../../../assets/images/natours/natours-screenshot.jpg')}
-                linkLanuchProject="/#"
+                linkLanuchProject="/_natours"
                 screenshots = {[`${require('../../../assets/images/natours/natours.jpg')}`,
                     `${require('../../../assets/images/natours/modal.jpg')}`,
                     `${require('../../../assets/images/natours/navigation.jpg')}`]}

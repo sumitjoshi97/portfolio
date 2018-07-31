@@ -2,10 +2,6 @@ import React, {Component} from 'react';
 import Project from '../Project/Project';
 
 class ProjectEmaily extends Component {
-    componentDidMount() {
-        window.moveTo(0,0);
-    }
-
     render() {
         return (
             <Project 
@@ -20,12 +16,12 @@ class ProjectEmaily extends Component {
                 theme={'#3c40c6'}
                 stacks = {['React js', 'Redux', 'SASS', 'Node js', 'Express js', 'MongoDB', 'Adobe XD']}
                 backImage={require('../../../assets/images/emaily/emaily-full.jpg')}
-                linkLanuchProject="/#"
+                linkLanuchProject="https://bit.ly/_emaily"
                 screenshots = {[`${require('../../../assets/images/emaily/home_logged.jpg')}`,
                     `${require('../../../assets/images/emaily/surveys_logged_hover.jpg')}`,
                     `${require('../../../assets/images/emaily/new_survey.jpg')}`,
                     `${require('../../../assets/images/emaily/survey_summary.jpg')}`]}
-                projectPrev='smart-brain'
+                projectPrev='burger'
                 projectNext='natours'
                 />
         )
