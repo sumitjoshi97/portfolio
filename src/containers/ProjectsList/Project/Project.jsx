@@ -2,14 +2,18 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 import Icons from '../../../assets/svg/sprite.svg';
 import Header from './Header.jsx';
+import Footer from './Footer';
+import Radium from 'radium';
 import './Project.css';
 
 const Project = (props) => {
-
+    
+    // list of stack used in project
     const stackList = props.stacks.map((stack, index) => {
         return <li key={index}>{stack}</li>
     })
 
+    // screenshots list of project
     const shotsList = props.screenshots.map((shot, index) => {
         return (
             <div className="project-full__summary-shots" key={index}>
@@ -29,8 +33,16 @@ const Project = (props) => {
         backgroundColor: `${props.theme}`
     }
 
+    const linkStyle = {
+        ':hover': {
+            color: '#fff',
+            backgroundColor: `${props.theme}`,
+            border: `1.5px solid ${props.theme}`
+        }
+    }
+
     return (
-        <div className="project-full">
+        <div className="project-full transition-item list-page">
             <Link to="/projects" className="icon-back">
                 <svg
                     className="icon-back-logo"
@@ -57,10 +69,14 @@ const Project = (props) => {
             <div className="project-full__screenshot" style={backgroundStyle}></div>
 
             <div className="project-full__launch">
-                <a href={props.linkLanuchProject} className="project-full__launch--link">
+                <a 
+                    href={props.linkLanuchProject} 
+                    target="blank" 
+                    className="project-full__launch--link"
+                    style={linkStyle}>
                     Launch Project
                 </a>
-            </div>
+            </div> 
 
             {/* summary shots */}
             <div>
@@ -90,9 +106,9 @@ const Project = (props) => {
                     }}>Next</span>
                 </Link>
             </div>
-            <div style={{marginLeft: '1rem'}}>SUMIT</div>
+            <Footer theme={props.theme}/>
         </div>
     )
 }
 
-export default Project;
+export default Radium(Project);
