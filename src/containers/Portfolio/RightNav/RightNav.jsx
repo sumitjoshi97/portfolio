@@ -18,7 +18,7 @@ class RightNav extends Component {
                             <use xlinkHref={`${Icons}#icon-github`}></use>
                         </svg>
                     </a>
-                    <a href="https://linkedin.com/sumitjoshi" target="blank" className="social--item">
+                    <a href="https://www.linkedin.com/in/sumitjoshi97" target="blank" className="social--item">
                         <svg className="social__icon">
                             <use xlinkHref={`${Icons}#icon-linkedin`}></use>
                         </svg>

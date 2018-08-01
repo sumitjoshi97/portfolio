@@ -41,7 +41,7 @@ const Footer = (props) => {
                     </svg>
                 </a>
                 <a
-                    href="https://linkedin.com/sumitjoshi"
+                    href="https://www.linkedin.com/in/sumitjoshi97"
                     className="footer__links__link"
                     style={style.hoverStyle}
                     key="link3"
