@@ -31,7 +31,7 @@
     width: 100%;
     position: relative;
     color: #000;
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 4rem;
     &__header {
         height: 100vh;
@@ -50,7 +50,7 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: 20rem;
+                width: 25rem;
             }
             @include respond(tabPort) {
                 width: 100%;
@@ -67,11 +67,17 @@
             top: 50%;
             transform: translateY(-50%);
             padding: 2rem 8rem;
-            & h3 {
-                margin-bottom: 3rem;
-            }
-            & h2 {
+            &-secondary {
+                font-size: 1.5rem;
                 margin-bottom: 1rem;
+                text-transform: uppercase;
+                font-family: 'Oswald', sans-serif;
+            }
+            &-primary {
+                font-size: 6rem;
+                font-weight: 400;
+                margin-bottom: 6rem;
+
                 @include respond(tabPort) {
                     margin-bottom: 6rem;
                 }
@@ -117,6 +123,7 @@
         }
     }
 
+
     &__screenshot {
         height: 80vh;
         background-size: cover;
@@ -141,8 +148,9 @@
             -moz-transition: all 0.15s ease-in;
             -ms-transition: all 0.15s ease-in;
             -o-transition: all 0.15s ease-in;
-}
+        }
     }
+    
     &__summary-shots {
         background-color: #f7f7f7;
         padding-top: 25rem;
