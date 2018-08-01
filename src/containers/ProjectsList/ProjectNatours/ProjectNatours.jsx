@@ -10,13 +10,14 @@ class ProjectNatours extends Component {
             <Project 
                 projectType="Website"
                 projectName="Natours"
-                projectInfo="lorem i[psum"
-                headerImage={require('../../../assets/images/natours/natours-logo.svg')}
-                headerStyle={['#218c74', '#2ed573']}
-                theme={'#07a072'}
+                projectInfo="A single page website like a landing page for a fictional company named natours that offers tours in nature. 
+                            The design for this website is provided by Jonas Schmedtmann."
+                headerImage={require('../../../assets/images/natours/natours-logo.png')}
+                headerStyle={['#2ed573', '#03d843']}
+                theme={'#3fcf87'}
                 stacks = {['HTML', 'SASS']}
                 backImage={require('../../../assets/images/natours/natours-screenshot.jpg')}
-                linkLanuchProject="/_natours"
+                linkLanuchProject="https://bit/_natours"
                 screenshots = {[`${require('../../../assets/images/natours/natours.jpg')}`,
                     `${require('../../../assets/images/natours/modal.jpg')}`,
                     `${require('../../../assets/images/natours/navigation.jpg')}`]}

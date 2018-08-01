@@ -42,7 +42,7 @@ const Project = (props) => {
     }
 
     return (
-        <div className="project-full transition-item list-page">
+        <div className="project-full">
             <Link to="/projects" className="icon-back">
                 <svg
                     className="icon-back-logo"
@@ -57,6 +57,7 @@ const Project = (props) => {
                 projectInfo={props.projectInfo}
                 headerImage={props.headerImage}
                 headerStyle={props.headerStyle}
+                theme={props.theme}
             />
 
             <div className="project-full__stack" style={theme}>
@@ -65,8 +66,8 @@ const Project = (props) => {
                     {stackList}
                 </ul>
             </div>
-
-            <div className="project-full__screenshot" style={backgroundStyle}></div>
+      
+            <div className="project-full__screenshot" style={backgroundStyle} />
 
             <div className="project-full__launch">
                 <a 
