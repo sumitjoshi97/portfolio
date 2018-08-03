@@ -21,7 +21,7 @@ html {
 body {
   font-family: 'Montserrat', sans-serif;
   color: #FFF;
-  font-size: 2.2rem;
+  font-size: 2rem;
   line-height: 5.3rem; }
 
 .red {
@@ -33,28 +33,28 @@ body {
   font-weight: 700; }
 
 .back-cyan {
-  background-color: #16b; }
+  background-color: #0a39c5; }
 
 .back-blue {
-  background-color: #36f; }
+  background-color: #5352ed; }
 
 .back-red {
   background-color: #f03; }
 
 .back-purple {
-  background-color: #6c37ff; }
+  background-color: #00fc71; }
 
 .back-violet {
-  background-color: #7f00ff; }
+  background-color: #5f27cd; }
 
 .back-orange {
-  background-color: #ff4c0a; }
+  background-color: #ff3c00; }
 
 .back-yellow {
-  background-color: #e6c718; }
+  background-color: #f7b731; }
 
 .back-green {
-  background-color: #03bb56; }
+  background-color: #0047ca; }
 
 .back-grey {
   background-image: linear-gradient(to right bottom, #3d3d3d, #2c2c2c); }
@@ -77,11 +77,12 @@ body {
       opacity: 0; } }
 
 .heading-primary {
-  font-size: 7.65rem;
+  font-size: 9rem;
   font-weight: 400;
+  color: #fff;
   letter-spacing: 0.4rem;
   position: absolute;
-  line-height: 8rem;
+  line-height: 10rem;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(150%);
@@ -89,7 +90,7 @@ body {
   transition: transform 0.8s ease 1.2s, opacity 0.8s ease-in-out 1.2s; }
   @media only screen and (max-width: 1200px) {
     .heading-primary {
-      font-size: 6rem; } }
+      font-size: 7rem; } }
 
 ::selection {
   background-color: #000;
