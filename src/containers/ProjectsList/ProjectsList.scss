@@ -247,61 +247,6 @@
         }
         
     }
-//     &__link {
-//         position: absolute;
-//         bottom: 16%;
-//         left: 50%;
-//         transform: translate(-50%,0%);
-//         opacity: 0;
-//         padding: 0.5rem 5rem 0.5rem 2rem;
-//         border: 2px solid #fff;
-//         -webkit-transform: translate(-50%,0%);
-//         -moz-transform: translate(-50%,0%);
-//         -ms-transform: translate(-50%,0%);
-//         -o-transform: translate(-50%,0%);
-//         transition: transform 0.8s ease 0.8s, opacity 0.8s ease 1.2s;
-//         -webkit-transition: transform 0.8s ease 0.8s, opacity 0.8s ease 1.2s;
-//         -moz-transition: transform 0.8s ease 0.8s, opacity 0.8s ease 1.2s;
-//         -ms-transition: transform 0.8s ease 0.8s, opacity 0.8s ease 1.2s;
-//         -o-transition: transform 0.8s ease 0.8s, opacity 0.8s ease 1.2s;
-
-//         & a {
-//             &:link,
-//             &:visited {
-//                 position: relative;
-//                 font-size: 1.8rem;
-//                 color: #fff;
-//                 text-align: center;
-//                 text-decoration: none;
-//                 line-height: 1rem;
-//                 bottom: 0;
-
-//                 .icon-link {
-//                     position: absolute;
-//                     height: 3rem;
-//                     width: 4rem;
-//                     top: 50%;
-//                     padding-right: 1.2rem;
-//                     transform: translateY(-50%) !important;
-//                     fill: #fff;
-//                     margin-left: 1rem;
-//                     -webkit-transform: translateY(-50%) !important;
-//                     -moz-transform: translateY(-50%) !important;
-//                     -ms-transform: translateY(-50%) !important;
-//                     -o-transform: translateY(-50%) !important;
-// }
-
-//                 &:hover .icon-link {
-//                     animation: arrow-bounce infinite;
-//                     animation-duration: 0.6s;
-//                     animation-timing-function: ease-in-out            ;
-//                     -webkit-animation: arrow-bounce infinite;
-//                 }
-//             }
-            
-           
-//         }
-//     }
 }
 
 .fade {
