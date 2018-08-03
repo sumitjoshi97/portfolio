@@ -4,9 +4,11 @@ import './index.css';
 import App from './App';
 import 'fullpage.js/dist/jquery.fullpage.min.css';
 import 'fullpage.js/dist/jquery.fullpage.min.js';
+import {BrowserRouter as Router} from 'react-router-dom';
 
-import registerServiceWorker from './registerServiceWorker';
-// import Home from './containers/Home/Home';
-
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+const app = (
+    <Router>
+        <App/>
+    </Router>
+)
+ReactDOM.render(app , document.getElementById('root'));

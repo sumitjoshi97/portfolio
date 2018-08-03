@@ -37,6 +37,7 @@ class ProjectsList extends Component {
 
         return nextProps.location.pathname !== this.props.location.pathname
     }
+
     componentWillUnmount() {
         if (typeof $.fn.fullpage !== 'undefined') {
             $.fn.fullpage.destroy('all');
@@ -81,22 +82,21 @@ class ProjectsList extends Component {
                         </div>
 
                         {/* second projct */}
-                        <div className="slide back-purple fade">
+                        <div className="slide back-violet">
                             <div className="project">
                                 <img
                                     className="project__thumbnail"
                                     id="p2-thumbnail"
-                                    src={require("../../assets/images/natours/natour-project.jpg")}
-                                    alt="natours project"
+                                    src={require("../../assets/images/burger/burger-project.png")}
+                                    alt="smartBrain project"
                                 />
                                 <div className="project__info" id="p2-info">
-                                    <h6>Website</h6>
-                                    <h4>Natours</h4>
+                                    <h6>App</h6>
+                                    <h4>Burger Builder</h4>
                                 </div>
-
                             </div>
                             <div className="project__link" id="p2-link">
-                                <Link to="projects/natours">
+                                <Link to="projects/burger">
                                     See Project
                                     <svg className="icon-link">
                                         <use xlinkHref={`${Icons}#icon-arrow-right`}></use>
@@ -104,7 +104,7 @@ class ProjectsList extends Component {
                                 </Link>
                             </div>
                         </div>
-
+                        
                         {/* third project */}
                         <div className="slide back-yellow fade">
                             <div className="project">
@@ -129,29 +129,30 @@ class ProjectsList extends Component {
                             </div>
                         </div>
 
-                         {/* fourth project */}
-                         <div className="slide back-yellow fade">
+                        {/* fourth project */}
+                        <div className="slide back-green fade">
                             <div className="project">
                                 <img
                                     className="project__thumbnail"
                                     id="p4-thumbnail"
-                                    src={require("../../assets/images/smartBrain/smart-project.png")}
-                                    alt="smartBrain project"
+                                    src={require("../../assets/images/natours/natours-project.png")}
+                                    alt="natours project"
                                 />
                                 <div className="project__info" id="p4-info">
-                                    <h6>App</h6>
-                                    <h4>Smart-Brain</h4>
+                                    <h6>Website</h6>
+                                    <h4>Natours</h4>
                                 </div>
+
                             </div>
                             <div className="project__link" id="p4-link">
-                                <Link to="projects/smart-brain">
+                                <Link to="projects/natours">
                                     See Project
                                     <svg className="icon-link">
                                         <use xlinkHref={`${Icons}#icon-arrow-right`}></use>
                                     </svg>
                                 </Link>
                             </div>
-                        </div>
+                        </div>                      
                     </div>
                 </div>
             </div>

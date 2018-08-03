@@ -1,14 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Project from '../Project/Project';
-
-class ProjectSmartBrain extends Component {
-    componentDidMount() {
-        window.moveTo(0,0);
-    }
-    
-    render() {
-        return (
-            <Project 
+ 
+const ProjectSmartBrain = () => (
+    <Project 
                 projectType="App"
                 projectName="Smart Brain"
                 projectInfo="A face recognition web app that recognizes face from the input image. 
@@ -23,11 +17,9 @@ class ProjectSmartBrain extends Component {
                     `${require('../../../assets/images/smartBrain/signIn.jpg')}`,
                     `${require('../../../assets/images/smartBrain/input.jpg')}`,
                     `${require('../../../assets/images/smartBrain/entries.jpg')}`]}
-                projectPrev='natours'
-                projectNext='burger'
+                projectPrev='burger'
+                projectNext='natours'
                 />
-        )
-    }
-}
+)
 
-export default ProjectSmartBrain;   
+export default ProjectSmartBrain;

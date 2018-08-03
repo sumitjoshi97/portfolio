@@ -13,7 +13,7 @@ class Home extends Component {
             <div className="main" id="fullpage">
                 <div className="main__home section">
                     <HeroBackground/>
-                    <h1 className="heading-primary">Sumit Joshi</h1>
+                    <h1 className="heading-primary"><span>Sumit</span> Joshi</h1>
                 </div>
 
                 <div className="main__about section">
@@ -21,17 +21,12 @@ class Home extends Component {
 
                     <p className="main__about--text">
                         <span className="main__about--text--header red">Hi!</span>, I am
-                        <span className="green">
-                            &nbsp;Sumit Joshi</span>. I am a
-                        <span className="red">
-                            &nbsp;front-end developer / designer&nbsp;
-                        </span>
-                        based on Delhi, India. I have a passion for web design and love to develop web
-                        applications, websites for desktop and mobile devices. I fond of
-                        <span className="red">
-                            &nbsp;React js&nbsp;
-                        </span>
-                        and love to create UI/UX with it.
+                        <span className="green">&nbsp;Sumit Joshi</span>. I'm a
+                        <span className="red">&nbsp;front-end software developer&nbsp;</span>
+                        based in Delhi, India. I am comfortable throughout the stack, but my passion lies in front-end, at the intersection of code and design.
+                        <br/>
+                        Outside of code, I like to <span className="red">&nbsp;draw&nbsp;</span>, play 
+                        <span className="red">&nbsp;video games&nbsp;</span> and convert my ideas to video games.
                     </p>
 
                 </div>
@@ -46,7 +41,8 @@ class Home extends Component {
                         <li className="skills-list__item">html</li>
                         <li className="skills-list__item">css</li>
                         <li className="skills-list__item">sass</li>
-                        <li className="skills-list__item">javascript</li>
+                        <li className="skills-list__item">javascript es6</li>
+                        <li className="skills-list__item">jQuery</li>
                         <li className="skills-list__item">react.js</li>
                         <li className="skills-list__item">redux</li>
                         <li className="skills-list__item skills-list__heading red">back</li>
@@ -54,8 +50,11 @@ class Home extends Component {
                         <li className="skills-list__item">express.js</li>
                         <li className="skills-list__item">npm</li>
                         <li className="skills-list__item">mongoDB</li>
-                        <li className="skills-list__item">restfulAPI</li>
-                        <li className="skills-list__item skills-list__heading green">softwares</li>
+                        <li className="skills-list__item">mysql</li>
+                        <li className="skills-list__item">postresql</li>
+                        <li className="skills-list__item">rest</li>
+                        <li className="skills-list__item skills-list__heading green">tools</li>
+                        <li className="skills-list__item">git</li>
                         <li className="skills-list__item">adobe XD</li>
                         <li className="skills-list__item">adobe photoshop</li>
                         <li className="skills-list__item">adobe illustrator</li>
@@ -94,9 +93,9 @@ class Home extends Component {
                     <div className="main__projects--project2">
                         <div className="main__projects__background"></div>
                         <div className="project-text">
-                            <h2>Website</h2>
-                            <h1>Natours</h1>
-                            <Link className="project-link" to="/projects/natours">See Project</Link>
+                            <h2>App</h2>
+                            <h1>Burger Builder</h1>
+                            <Link className="project-link" to="/projects/burger">See Project</Link>
                         </div>
                     </div>
                 </div>
