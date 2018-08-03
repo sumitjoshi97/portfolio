@@ -11,6 +11,13 @@
     .bottom-nav__list__item {
       display: inline-block;
       margin: 2rem 3rem; }
+      .bottom-nav__list__item:first-of-type {
+        margin-left: 0; }
+      .bottom-nav__list__item:last-of-type {
+        margin-right: 0; }
+      @media only screen and (max-width: 900px) {
+        .bottom-nav__list__item {
+          display: none; } }
       .bottom-nav__list__item__link:link, .bottom-nav__list__item__link:visited {
         color: #fff;
         text-decoration: none; }
@@ -23,16 +30,18 @@
   margin-top: -7rem !important; }
   .fp-controlArrow.fp-prev {
     border: none;
-    width: 4.5rem !important;
-    height: 4.5rem !important;
+    width: 4rem !important;
+    height: 4rem !important;
+    margin-right: 0 !important;
     background-image: url(../../assets/svg/SVG/chevron-left.svg);
     background-repeat: no-repeat;
     background-size: cover;
     left: 4rem !important; }
   .fp-controlArrow.fp-next {
     border: none;
-    width: 4.5rem !important;
-    height: 4.5rem !important;
+    width: 4rem !important;
+    height: 4rem !important;
+    margin-left: 0 !important;
     background-image: url(../../assets/svg/SVG/chevron-right.svg);
     background-repeat: no-repeat;
     background-size: cover;
