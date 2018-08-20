@@ -8,7 +8,7 @@
         ; //600px
     }
     @if($breakpoint==tabPort) {
-        @media only screen and (max-width: 900) {
+        @media only screen and (max-width: 900px) {
             @content
         }
         ; //900px
@@ -32,9 +32,6 @@
     width:76%;
     margin: 0 auto;
     
-    @include respond(tabPort) {
-        width: 100%;
-    }
     //////////////////////////////////////
     // home section
     &__home {
@@ -48,12 +45,14 @@
         }
     } 
     
+
     //////////////////////////////////
     // about section
     &__about {
         height: 100vh;
         text-align: left;
         position: relative;
+
         &--text {
             width: 70%;
             margin: 0 auto;
@@ -63,7 +62,9 @@
             transform: translate(-50%, 50%);
             opacity: 0;
             transition: transform 1s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity 1s ease-in-out 0.8s;
-
+            @include respond(tabPort) {
+                width: 100%;
+            }
             &--header {
                 font-size: 6rem;
                 font-weight: 500;
@@ -77,6 +78,7 @@
         height: 100vh;
         position: relative;
 
+        
         &__heading {
             font-size: 5rem;
             position: absolute;
@@ -86,6 +88,10 @@
             opacity: 0;
             font-weight: 400;
             transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity .8s ease-in-out .8s;
+            -webkit-transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity .8s ease-in-out .8s;
+            -moz-transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity .8s ease-in-out .8s;
+            -ms-transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity .8s ease-in-out .8s;
+            -o-transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity .8s ease-in-out .8s;
         }
     }
     
@@ -96,24 +102,20 @@
         position: relative;
         font-size: 1.3rem;
         &__header {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            position: relative;
             text-align: center;
             opacity: 0;
             transition: opacity 1s ease 0.8s;
+
             &--link {
                 position: relative;
                 border: 2px solid #36f;
-                padding: 0rem 4.8rem 0 1.8rem;
+                padding: 1.5rem 4.8rem 1.5rem 1.8rem;
                 font-size: 1.8rem;
-                & a {
-                    position: relative;
-                    color: #fff;
-                    text-decoration: none;
+                color: #fff;
+                text-decoration: none;
 
-                    & .icon-projects {
+                & .icon-projects {
                         position: absolute;
                         top: 50%;
                         fill: #fff;
@@ -128,13 +130,11 @@
                         -o-transform: translateY(-50%);
                     }
 
-                    &:hover .icon-projects {
-                        animation: arrow-bounce infinite;
-                        animation-duration: 0.6s;
-                        animation-timing-function: cubic-bezier(0.16, 0.68, 0.43, 0.99);
-                    }
+                &:hover .icon-projects {
+                    animation: arrow-bounce infinite;
+                    animation-duration: 0.6s;
+                    animation-timing-function: cubic-bezier(0.16, 0.68, 0.43, 0.99);
                 }
-                
             }
         }
         &__background {
@@ -153,7 +153,7 @@
             -ms-transition: all 0.3s ease-in-out 0.2s;
             -o-transition: all 0.3s ease-in-out 0.2s;
             z-index: 0;
-} 
+        }        
         
         //recent project 1
         &--project1 {
@@ -231,7 +231,10 @@
     transform: translate(-50%, 20%);
     opacity: 0;
     transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 1.2s, opacity 0.8s ease-in-out 1.2s;
-
+    width: auto;
+    @include respond(tabPort) {
+        width: 100%;
+    }
     &__item {
         display: inline-block;
         margin-right: 2rem;

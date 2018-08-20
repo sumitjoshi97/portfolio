@@ -2,9 +2,6 @@
   position: fixed;
   width: 76%;
   margin: 0 auto; }
-  @media only screen and (max-width: 900) {
-    .main {
-      width: 100%; } }
   .main__home {
     position: relative;
     text-align: center; }
@@ -25,6 +22,9 @@
       transform: translate(-50%, 50%);
       opacity: 0;
       transition: transform 1s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity 1s ease-in-out 0.8s; }
+      @media only screen and (max-width: 900px) {
+        .main__about--text {
+          width: 100%; } }
       .main__about--text--header {
         font-size: 6rem;
         font-weight: 500; }
@@ -39,45 +39,44 @@
       transform: translate(-50%, 150%);
       opacity: 0;
       font-weight: 400;
-      transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity 0.8s ease-in-out 0.8s; }
+      transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity 0.8s ease-in-out 0.8s;
+      -webkit-transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity 0.8s ease-in-out 0.8s;
+      -moz-transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity 0.8s ease-in-out 0.8s;
+      -ms-transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity 0.8s ease-in-out 0.8s;
+      -o-transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity 0.8s ease-in-out 0.8s; }
   .main__projects {
     height: 100vh;
     position: relative;
     font-size: 1.3rem; }
     .main__projects__header {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      position: relative;
       text-align: center;
       opacity: 0;
       transition: opacity 1s ease 0.8s; }
       .main__projects__header--link {
         position: relative;
         border: 2px solid #36f;
-        padding: 0rem 4.8rem 0 1.8rem;
-        font-size: 1.8rem; }
-        .main__projects__header--link a {
-          position: relative;
-          color: #fff;
-          text-decoration: none; }
-          .main__projects__header--link a .icon-projects {
-            position: absolute;
-            top: 50%;
-            fill: #fff;
-            height: 3rem;
-            width: 3rem;
-            vertical-align: middle;
-            margin-left: 1rem;
-            transform: translateY(-50%);
-            -webkit-transform: translateY(-50%);
-            -moz-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            -o-transform: translateY(-50%); }
-          .main__projects__header--link a:hover .icon-projects {
-            animation: arrow-bounce infinite;
-            animation-duration: 0.6s;
-            animation-timing-function: cubic-bezier(0.16, 0.68, 0.43, 0.99); }
+        padding: 1.5rem 4.8rem 1.5rem 1.8rem;
+        font-size: 1.8rem;
+        color: #fff;
+        text-decoration: none; }
+        .main__projects__header--link .icon-projects {
+          position: absolute;
+          top: 50%;
+          fill: #fff;
+          height: 3rem;
+          width: 3rem;
+          vertical-align: middle;
+          margin-left: 1rem;
+          transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          -o-transform: translateY(-50%); }
+        .main__projects__header--link:hover .icon-projects {
+          animation: arrow-bounce infinite;
+          animation-duration: 0.6s;
+          animation-timing-function: cubic-bezier(0.16, 0.68, 0.43, 0.99); }
     .main__projects__background {
       position: absolute;
       height: 5rem;
@@ -152,7 +151,11 @@
   left: 50%;
   transform: translate(-50%, 20%);
   opacity: 0;
-  transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 1.2s, opacity 0.8s ease-in-out 1.2s; }
+  transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 1.2s, opacity 0.8s ease-in-out 1.2s;
+  width: auto; }
+  @media only screen and (max-width: 900px) {
+    .skills-list {
+      width: 100%; } }
   .skills-list__item {
     display: inline-block;
     margin-right: 2rem;

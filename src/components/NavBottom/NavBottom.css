@@ -17,7 +17,7 @@
         margin-right: 0; }
       @media only screen and (max-width: 900px) {
         .bottom-nav__list__item {
-          display: none; } }
+          margin: 2rem 2rem; } }
       .bottom-nav__list__item__link:link, .bottom-nav__list__item__link:visited {
         color: #fff;
         text-decoration: none; }
