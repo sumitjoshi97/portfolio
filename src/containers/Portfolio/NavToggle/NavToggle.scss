@@ -1,3 +1,5 @@
+@import '../../../sass/mixin.scss';
+
 .nav-toggle {
     width: 7rem;
     height: 7rem;
@@ -11,6 +13,13 @@
     cursor: pointer;
     z-index: 1000;
 
+    @include respond(tabPort) {
+        top: 8rem;
+        right: 0rem;
+    }
+    @include respond(phone) {
+        display: none;
+    }
     & span {
         position: relative;
         margin-top: 3.5rem;
@@ -42,12 +51,5 @@
     }
     &:hover span::after {
         top: 0.8rem;
-    }
-}
-
-@media only screen and (max-width: 900px) {
-    .nav-toggle {
-        top: 8rem;
-        right: 0rem;
     }
 }
