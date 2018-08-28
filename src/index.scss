@@ -1,37 +1,5 @@
-///////////////////////////////////////////////
-// variables
-$font-primary: 9rem;
-$font-secondary: 4rem;
-$base-font: 2rem;
-$color-white: #FFF;
-////////////////////////////////////////////////////
-//mixin for responsive queries
-@mixin respond($breakpoint) {
-    @if($breakpoint==phone) {
-        @media only screen and (max-width: 600px) {
-            @content
-        }
-        ; //600px
-    }
-    @if($breakpoint==tabPort) {
-        @media only screen and (max-width: 900px) {
-            @content
-        }
-        ; //900px
-    }
-    @if($breakpoint==tabLand) {
-        @media only screen and (max-width: 1200px) {
-            @content
-        }
-        ; //1200px
-    }
-    @if($breakpoint==bigDesk) {
-        @media only screen and (min-width: 1800px) {
-            @content
-        }
-        ; //1800px
-    }
-}
+@import './sass/mixin.scss';
+@import './sass/variables.scss';
 
 ///////////////////////////////////////////////
 // browser reset
@@ -53,16 +21,15 @@ html {
         font-size: 75%; //1rem= 12px
     }
     @include respond(tabLand) {
-        font-size: 55.25%; // 1rem = 9px
+        font-size: 56.25%; // 1rem = 9px
     }
     @include respond(tabPort) {
-        font-size: 42.5%; //1rem=8px
+        font-size: 50%; //1rem=8px
     }
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
-    // font-weight: 300;
     color: $color-white;
     font-size: $base-font;
     line-height: 5.3rem;
@@ -105,9 +72,6 @@ body {
     }
     &-green {
         background-color: #0047ca;
-    }
-    &-grey {
-        background-image: linear-gradient(to right bottom, #3d3d3d, #2c2c2c); // background-color: #333333;
     }
 }
 
