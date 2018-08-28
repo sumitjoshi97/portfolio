@@ -9,7 +9,7 @@
     position: relative; }
     @media only screen and (max-width: 900px) {
       .project-full__header {
-        height: 180vh; } }
+        height: 200vh; } }
     .project-full__header--image {
       width: 50%;
       display: inline-block;
@@ -25,16 +25,27 @@
       @media only screen and (max-width: 900px) {
         .project-full__header--image {
           width: 100%;
-          display: block;
           position: relative;
           height: 100vh; } }
     .project-full__header--text {
       display: inline-block;
-      width: 50%;
       position: absolute;
       top: 50%;
+      width: 50%;
       transform: translateY(-50%);
       padding: 2rem 8rem; }
+      @media only screen and (max-width: 900px) {
+        .project-full__header--text {
+          height: 100vh;
+          width: 100%;
+          text-align: center;
+          padding: 2rem 4rem;
+          padding-top: 45%;
+          transform: translateY(0);
+          -webkit-transform: translateY(0);
+          -moz-transform: translateY(0);
+          -ms-transform: translateY(0);
+          -o-transform: translateY(0); } }
       .project-full__header--text-secondary {
         font-size: 1.5rem;
         margin-bottom: 1rem;
@@ -47,16 +58,6 @@
         @media only screen and (max-width: 900px) {
           .project-full__header--text-primary {
             margin-bottom: 6rem; } }
-      @media only screen and (max-width: 900px) {
-        .project-full__header--text {
-          width: 100%;
-          display: block;
-          height: 50vh;
-          margin-top: 40%;
-          text-align: center; } }
-      @media only screen and (max-width: 600px) {
-        .project-full__header--text {
-          margin-top: 60%; } }
   .project-full__stack {
     color: #fff;
     padding: 15rem; }
@@ -137,9 +138,6 @@
     height: 20vh;
     width: 100%;
     position: relative; }
-    @media only screen and (max-width: 900px) {
-      .project-full__navigation {
-        height: 15vh; } }
     .project-full__navigation--section {
       display: inline-block;
       height: 4rem;
@@ -164,7 +162,6 @@
         animation-timing-function: ease-in-out; }
       .project-full__navigation--section span {
         position: absolute;
-        font-size: 1.5rem;
         color: #fff; }
 
 .icon-logo--prev {
@@ -205,6 +202,9 @@
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%); }
+  @media only screen and (max-width: 600px) {
+    .center {
+      display: none; } }
 
 .footer {
   display: flex;
