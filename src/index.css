@@ -13,10 +13,10 @@ html {
       font-size: 75%; } }
   @media only screen and (max-width: 1200px) {
     html {
-      font-size: 55.25%; } }
+      font-size: 56.25%; } }
   @media only screen and (max-width: 900px) {
     html {
-      font-size: 42.5%; } }
+      font-size: 50%; } }
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -55,9 +55,6 @@ body {
 
 .back-green {
   background-color: #0047ca; }
-
-.back-grey {
-  background-image: linear-gradient(to right bottom, #3d3d3d, #2c2c2c); }
 
 .bar-left {
   position: absolute;
