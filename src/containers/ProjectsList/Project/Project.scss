@@ -10,9 +10,12 @@
         height: 100vh;
         position: relative;
         @include respond(tabPort) {
+            height: 160vh;
+        }
+        @include respond(phone) {
             height: 200vh;
         }
-        &--image {
+        &__image {
             width: 50%;
             display: inline-block;
             position: absolute;
@@ -27,46 +30,51 @@
             }
             @include respond(tabPort) {
                 width: 100%;
-              
                 position: relative;
                 height: 100vh;
-                
             }
         }
-        &--text {
+        &__text {
             display: inline-block;
             position: absolute;
             top: 50%;
             width: 50%;
             transform: translateY(-50%);
             padding: 2rem 8rem;
-
             @include respond(tabPort) {
-                height: 100vh;
+                display: block;
+                height: 60vh;
                 width: 100%;
                 text-align: center;
-                padding: 2rem 4rem;
-                padding-top: 45%;
-                transform: translateY(0 );
-                -webkit-transform: translateY(0 );
-                -moz-transform: translateY(0 );
-                -ms-transform: translateY(0 );
-                -o-transform: translateY(0 );
+                padding: 4rem;
+                padding-top: 50%;
+                transform: translateY(0);
+                -webkit-transform: translateY(0);
+                -moz-transform: translateY(0);
+                -ms-transform: translateY(0);
+                -o-transform: translateY(0);
+            }
+            @include respond(phone) {
+                height: 100vh;
+                padding-top: 35%;
             }
 
-            &-secondary {
+            &--secondary {
                 font-size: 1.5rem;
                 margin-bottom: 1rem;
                 text-transform: uppercase;
                 font-family: 'Oswald', sans-serif;
             }
-            &-primary {
+            &--primary {
                 font-size: 6rem;
                 font-weight: 400;
                 margin-bottom: 6rem;
-
+                line-height: 1;
                 @include respond(tabPort) {
                     margin-bottom: 6rem;
+                }
+                @include respond(phone) {
+                    margin-bottom: 4rem;
                 }
             }
             
@@ -76,7 +84,7 @@
         color: #fff;
         padding: 15rem;
         @include respond(phone) {
-            padding: 15rem 5rem;
+            padding: 8rem 5rem;
         }
         & h3 {
             text-transform: uppercase;

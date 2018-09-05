@@ -9,25 +9,28 @@
     position: relative; }
     @media only screen and (max-width: 900px) {
       .project-full__header {
+        height: 160vh; } }
+    @media only screen and (max-width: 600px) {
+      .project-full__header {
         height: 200vh; } }
-    .project-full__header--image {
+    .project-full__header__image {
       width: 50%;
       display: inline-block;
       position: absolute;
       right: 0;
       height: 100%; }
-      .project-full__header--image img {
+      .project-full__header__image img {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 25rem; }
       @media only screen and (max-width: 900px) {
-        .project-full__header--image {
+        .project-full__header__image {
           width: 100%;
           position: relative;
           height: 100vh; } }
-    .project-full__header--text {
+    .project-full__header__text {
       display: inline-block;
       position: absolute;
       top: 50%;
@@ -35,35 +38,44 @@
       transform: translateY(-50%);
       padding: 2rem 8rem; }
       @media only screen and (max-width: 900px) {
-        .project-full__header--text {
-          height: 100vh;
+        .project-full__header__text {
+          display: block;
+          height: 60vh;
           width: 100%;
           text-align: center;
-          padding: 2rem 4rem;
-          padding-top: 45%;
+          padding: 4rem;
+          padding-top: 50%;
           transform: translateY(0);
           -webkit-transform: translateY(0);
           -moz-transform: translateY(0);
           -ms-transform: translateY(0);
           -o-transform: translateY(0); } }
-      .project-full__header--text-secondary {
+      @media only screen and (max-width: 600px) {
+        .project-full__header__text {
+          height: 100vh;
+          padding-top: 35%; } }
+      .project-full__header__text--secondary {
         font-size: 1.5rem;
         margin-bottom: 1rem;
         text-transform: uppercase;
         font-family: 'Oswald', sans-serif; }
-      .project-full__header--text-primary {
+      .project-full__header__text--primary {
         font-size: 6rem;
         font-weight: 400;
-        margin-bottom: 6rem; }
+        margin-bottom: 6rem;
+        line-height: 1; }
         @media only screen and (max-width: 900px) {
-          .project-full__header--text-primary {
+          .project-full__header__text--primary {
             margin-bottom: 6rem; } }
+        @media only screen and (max-width: 600px) {
+          .project-full__header__text--primary {
+            margin-bottom: 4rem; } }
   .project-full__stack {
     color: #fff;
     padding: 15rem; }
     @media only screen and (max-width: 600px) {
       .project-full__stack {
-        padding: 15rem 5rem; } }
+        padding: 8rem 5rem; } }
     .project-full__stack h3 {
       text-transform: uppercase;
       font-size: 1.6rem;
