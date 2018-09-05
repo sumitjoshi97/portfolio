@@ -67,8 +67,10 @@ const Project = (props) => {
                 </ul>
             </div>
       
+            {/* screenshot  */}
             <div className="project-full__screenshot" style={backgroundStyle} />
-
+                    
+            {/* project launch button */}
             <div className="project-full__launch">
                 <a 
                     href={props.linkLanuchProject} 
