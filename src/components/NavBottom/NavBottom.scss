@@ -14,15 +14,14 @@
             display: inline-block;
             margin: 2rem 3rem;
 
+            @media only screen and (max-width: 900px) {
+                margin: 2rem 2rem;
+            }
             &:first-of-type {
                 margin-left: 0;
             }
             &:last-of-type {
                 margin-right: 0;
-            }
-
-            @media only screen and (max-width: 900px) {
-                margin: 2rem 2rem;
             }
             &__link {
                 &:link,
@@ -40,9 +39,9 @@
 }
 
 .fp-controlArrow {
-    // border: none;
+    
     top: 100% !important;
-    margin-top: -7rem !important;
+    margin-top: -6.5rem !important;
     &.fp-prev{
         border: none;
         width: 4rem !important;
