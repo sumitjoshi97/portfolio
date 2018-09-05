@@ -2,9 +2,17 @@
   transform: translate(-50%, -50%);
   opacity: 1; }
 
+.fp-viewing-about .heading-primary {
+  transform: translate(-50%, -150%);
+  opacity: 0; }
+
 .fp-viewing-about .main__about--text {
   transform: translate(-50%, -50%);
   opacity: 1; }
+
+.fp-viewing-skills .main__about--text {
+  transform: translate(-50%, -150%);
+  opacity: 0; }
 
 .fp-viewing-skills .main__skills__heading {
   transform: translate(-50%, -50%);
@@ -14,8 +22,13 @@
   transform: translate(-50%, -50%);
   opacity: 1; }
 
+.fp-viewing-recents .main__skills__heading {
+  opacity: 0;
+  transform: translate(-50%, -150%); }
+
 .fp-viewing-recents .skills-list {
-  transform: translate(-50%, -50%); }
+  opacity: 0;
+  transform: translate(-50%, -150%); }
 
 .fp-viewing-recents .main__projects--project1 {
   transform: translate(-50%, -50%);
