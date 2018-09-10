@@ -12,16 +12,16 @@ const Header = (props) => {
     
     return (
         <div className="project-full__header">
-            <div className="project-full__header--text">
-                <h3 className="project-full__header--text-secondary" style={headerColor} >
+            <div className="project-full__header__text">
+                <h3 className="project-full__header__text--secondary" style={headerColor} >
                     {props.projectType}
                 </h3>
-                <h2 className="project-full__header--text-primary" >{props.projectName}</h2>
+                <h2 className="project-full__header__text--primary" >{props.projectName}</h2>
                 <p>
                     {props.projectInfo}
                 </p>
             </div>
-            <div className="project-full__header--image" style={headerStyle}>
+            <div className="project-full__header__image" style={headerStyle}>
                 <img src={props.headerImage} alt="" />
             </div>
         </div>

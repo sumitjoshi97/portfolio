@@ -9,7 +9,7 @@ const ProjectEmaily = () => (
                             to emails. One require to signup through google oauth to access the app. This
                             app uses sendgrid API to send emails, and stripe for adding credits in account
                             for sending emails."
-                headerImage={require('../../../assets/images/emaily/emaily-logo.svg')}
+                headerImage={require('../../../assets/images/portfolio/project1.svg')}
                 headerStyle={['#EA2027', '#ff0061']}
                 theme={'#3c40c6'}
                 stacks = {['React js', 'Redux', 'SASS', 'Node js', 'Express js', 'MongoDB', 'Adobe XD']}

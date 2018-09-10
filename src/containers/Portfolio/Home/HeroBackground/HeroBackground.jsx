@@ -3,7 +3,6 @@ import Parallax from 'parallax-js';
 import './HeroBackground.css';
 
 class HeroBackground extends Component {
-
     componentDidMount() {
         let scene = document.getElementById('scene');
         new Parallax(scene);
