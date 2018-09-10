@@ -1,5 +1,4 @@
 import React from 'react'
-import './NavLink.css';
 
 const NavLink = props => (
     <li className="left-nav__link-box--item" data-menuanchor={props.anchor}>
