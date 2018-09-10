@@ -52,19 +52,6 @@
     -ms-transform: translateY(-100%);
     -o-transform: translateY(-100%); } }
 
-.icon-back {
-  position: fixed;
-  top: 3rem;
-  left: 4rem;
-  width: 6rem;
-  height: 6rem;
-  z-index: 2000; }
-  .icon-back-logo {
-    position: absolute;
-    width: 4rem;
-    height: 4rem;
-    fill: #fff; }
-
 .backdrop {
   background-color: blue;
   position: fixed;

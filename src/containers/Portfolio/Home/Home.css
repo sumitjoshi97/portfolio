@@ -1,5 +1,4 @@
 .main {
-  position: fixed;
   width: 76%;
   margin: 0 auto; }
   .main__home {
@@ -25,12 +24,18 @@
       @media only screen and (max-width: 900px) {
         .main__about--text {
           width: 100%; } }
+      @media only screen and (max-width: 600px) {
+        .main__about--text {
+          top: 46%; } }
       .main__about--text--header {
         font-size: 6rem;
         font-weight: 500; }
   .main__skills {
     height: 100vh;
     position: relative; }
+    @media only screen and (max-width: 600px) {
+      .main__skills {
+        line-height: 2.2; } }
     .main__skills__heading {
       font-size: 5rem;
       position: absolute;
@@ -44,6 +49,9 @@
       -moz-transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity 0.8s ease-in-out 0.8s;
       -ms-transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity 0.8s ease-in-out 0.8s;
       -o-transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity 0.8s ease-in-out 0.8s; }
+      @media only screen and (max-width: 600px) {
+        .main__skills__heading {
+          top: 12%; } }
   .main__projects {
     height: 100vh;
     position: relative;
@@ -101,7 +109,7 @@
       width: 20rem;
       height: 20rem;
       opacity: 0;
-      background-image: url(../../../assets/images/emaily/emaily-logo.svg);
+      background-image: url(../../../assets/images/portfolio/project1.svg);
       background-position: center;
       background-size: 60%;
       background-repeat: no-repeat;
@@ -126,7 +134,7 @@
       width: 20rem;
       height: 20rem;
       opacity: 0;
-      background-image: url(../../../assets/images/burger/burger-logo.svg);
+      background-image: url(../../../assets/images/portfolio/project2.svg);
       background-position: center;
       background-size: 60%;
       background-repeat: no-repeat;
@@ -146,7 +154,6 @@
 .skills-list {
   list-style: none;
   position: absolute;
-  display: block;
   top: 50%;
   left: 50%;
   transform: translate(-50%, 20%);
@@ -163,6 +170,9 @@
   .skills-list__heading {
     font-size: 7rem;
     line-height: 5rem; }
+    @media only screen and (max-width: 600px) {
+      .skills-list__heading {
+        font-size: 6rem; } }
 
 .project-text {
   display: block;

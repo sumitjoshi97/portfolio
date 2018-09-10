@@ -1,35 +1,7 @@
-////////////////////////////////////////////////////
-//mixin for responsive queries
-@mixin respond($breakpoint) {
-    @if($breakpoint==phone) {
-        @media only screen and (max-width: 600px) {
-            @content
-        }
-        ; //600px
-    }
-    @if($breakpoint==tabPort) {
-        @media only screen and (max-width: 900px) {
-            @content
-        }
-        ; //900px
-    }
-    @if($breakpoint==tabLand) {
-        @media only screen and (max-width: 1200px) {
-            @content
-        }
-        ; //1200px
-    }
-    @if($breakpoint==bigDesk) {
-        @media only screen and (min-width: 1800px) {
-            @content
-        }
-        ; //1800px
-    }
-}
+@import '../../../../sass/mixin.scss';
 
 ////////////////////////////////////////
 //parallax - home
-
 #scene {
     height: 100vh;
     width: 100vw;
@@ -51,7 +23,7 @@
     height: 50%;
     width: 50%;
     top: 8% !important;
-    // left: 20rem !important;
+    left: 10% !important;
 
     @include respond(tabPort) {
         // opacity: 0;
@@ -63,9 +35,8 @@
     height: 60%;
     width: 60%;
     top: 20% !important;
-    
+    left: 15% !important; 
     @include respond(tabPort) {
-        // opacity: 0;
         top: 55% !important;
     }
 }
@@ -75,11 +46,11 @@
     height: 42%;
     width: 42%;
     top: 20% !important;
-    left: 50% !important;
+    left: 60% !important;
     opacity: 0.65;
     @include respond(tabPort) {
-        top: 35% !important;
-        left: 53% !important;
+        top: 38% !important;
+        left: 62% !important;
     }
 }
 

@@ -17,13 +17,15 @@
   position: absolute !important;
   height: 50%;
   width: 50%;
-  top: 8% !important; }
+  top: 8% !important;
+  left: 10% !important; }
 
 #g2 {
   position: absolute !important;
   height: 60%;
   width: 60%;
-  top: 20% !important; }
+  top: 20% !important;
+  left: 15% !important; }
   @media only screen and (max-width: 900px) {
     #g2 {
       top: 55% !important; } }
@@ -33,12 +35,12 @@
   height: 42%;
   width: 42%;
   top: 20% !important;
-  left: 50% !important;
+  left: 60% !important;
   opacity: 0.65; }
   @media only screen and (max-width: 900px) {
     #name {
-      top: 35% !important;
-      left: 53% !important; } }
+      top: 38% !important;
+      left: 62% !important; } }
 
 @keyframes scene-opacity {
   0% {

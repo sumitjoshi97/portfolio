@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 * {
   padding: 0;
   margin: 0;
@@ -21,8 +22,21 @@ html {
 body {
   font-family: 'Montserrat', sans-serif;
   color: #FFF;
-  font-size: 2rem;
-  line-height: 5.3rem; }
+  font-size: 1.8rem;
+  line-height: 4.6rem; }
+
+.icon-back {
+  position: fixed;
+  top: 3rem;
+  left: 4rem;
+  width: 6rem;
+  height: 6rem;
+  z-index: 2000; }
+  .icon-back-logo {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    fill: #fff; }
 
 .red {
   color: #ff0000;
@@ -32,23 +46,11 @@ body {
   color: #00ff00;
   font-weight: 700; }
 
-.back-cyan {
-  background-color: #0a39c5; }
-
-.back-blue {
-  background-color: #5352ed; }
-
 .back-red {
   background-color: #f03; }
 
-.back-purple {
-  background-color: #00fc71; }
-
 .back-violet {
   background-color: #5f27cd; }
-
-.back-orange {
-  background-color: #ff3c00; }
 
 .back-yellow {
   background-color: #f7b731; }

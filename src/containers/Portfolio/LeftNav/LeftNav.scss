@@ -31,7 +31,7 @@
     width: 12%;
     height: 100vh;
     position: fixed;
-
+    z-index: 4000;
     @include respond(tabPort) {
         width: 0%;
         display: none;

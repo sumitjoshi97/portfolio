@@ -95,22 +95,7 @@
 }
 
 
-// css
-.icon-back {
-    position: fixed;
-    top: 3rem;
-    left: 4rem;
-    width: 6rem;
-    height: 6rem;
-    z-index: 2000;
-    &-logo {
-        position: absolute;
-        width: 4rem;
-        height: 4rem;
-        fill: #fff;
-    }
-}
-
+//css
 .backdrop {
     background-color: blue;
     position: fixed;

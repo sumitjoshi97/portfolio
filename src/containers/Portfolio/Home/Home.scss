@@ -1,7 +1,6 @@
 @import '../../../sass/mixin.scss';
 
 .main {
-    position: fixed;
     width:76%;
     margin: 0 auto;
     
@@ -16,8 +15,7 @@
             display: block;
             font-weight: 700;
         }
-    } 
-    
+    }    
 
     //////////////////////////////////
     // about section
@@ -38,6 +36,9 @@
             @include respond(tabPort) {
                 width: 100%;
             }
+            @include respond(phone) {
+                top: 46%;
+            }
             &--header {
                 font-size: 6rem;
                 font-weight: 500;
@@ -50,7 +51,9 @@
     &__skills {
         height: 100vh;
         position: relative;
-
+        @include respond(phone) {
+            line-height: 2.2
+        }
         
         &__heading {
             font-size: 5rem;
@@ -65,6 +68,10 @@
             -moz-transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity .8s ease-in-out .8s;
             -ms-transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity .8s ease-in-out .8s;
             -o-transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity .8s ease-in-out .8s;
+            
+            @include respond(phone) {
+                top: 12%;
+            }
         }
     }
     
@@ -137,7 +144,7 @@
             width: 20rem;
             height: 20rem;
             opacity: 0;
-            background-image: url(../../../assets/images/emaily/emaily-logo.svg);
+            background-image: url(../../../assets/images/portfolio/project1.svg);
             background-position: center;
             background-size: 60%;
             background-repeat: no-repeat;
@@ -170,7 +177,7 @@
             width: 20rem;
             height: 20rem;
             opacity: 0;
-            background-image: url(../../../assets/images/burger/burger-logo.svg);
+            background-image: url(../../../assets/images/portfolio/project2.svg);
             background-position: center;
             background-size: 60%;
             background-repeat: no-repeat;
@@ -198,7 +205,6 @@
 .skills-list {
     list-style: none;
     position: absolute;
-    display: block;
     top: 50%;
     left: 50%;
     transform: translate(-50%, 20%);
@@ -217,6 +223,9 @@
     &__heading {
         font-size: 7rem;
         line-height: 5rem;
+        @include respond(phone) {
+            font-size: 6rem;
+        }
     }
 }
 
