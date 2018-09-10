@@ -8,8 +8,7 @@ import './PortFolio.css';
 
 const fullpageOptions = {
     anchors: ["home", "about", "skills", "recents"],
-    menu: "#fixed-nav",
-    css3: 'true'
+    menu: "#fixed-nav"
 }
 
 class Portfolio extends Component {
