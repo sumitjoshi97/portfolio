@@ -1,6 +1,6 @@
 import React from 'react'
 import Icons from '../../../assets/svg/sprite.svg'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import ReactFullpage from '@fullpage/react-fullpage'
 import './Home.css';
 import './HomeAnimate.css'
