@@ -1,18 +1,20 @@
-import React, { Component } from 'react';
-import asyncComponent from './hoc/AsyncComponent/AsyncComponent'
-import { Route, Switch } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Loadable from 'react-loadable';
 import ScrollToTop from './ScrollToTop';
 import Portfolio from './containers/Portfolio/PortFolio'
+import Loading from './components/Loading/Loading'
 
-const ProjectsList = asyncComponent(() => import('./containers/ProjectsList/ProjectsList').then(module => module.default))
-const ProjectEmaily = asyncComponent(() => import('./containers/ProjectsList/ProjectEmaily/ProjectEmaily').then(module => module.default))
-const ProjectNatours = asyncComponent(() => import('./containers/ProjectsList/ProjectNatours/ProjectNatours').then(module => module.default))
-const ProjectSmartBrain = asyncComponent(() => import('./containers/ProjectsList/ProjectSmartBrain/ProjectSmartBrain').then(module => module.default))
-const ProjectBurger = asyncComponent(() => import('./containers/ProjectsList/ProjectBurger/ProjectBurger').then(module => module.default))
+// async loading of components
+const ProjectsList = Loadable({ loader: () => import('./containers/ProjectsList/ProjectsList'), loading: Loading })
+const ProjectEmaily = Loadable({ loader: () => import('./containers/ProjectsList/ProjectEmaily/ProjectEmaily'), loading: Loading })
+const ProjectNatours = Loadable({ loader: () => import('./containers/ProjectsList/ProjectNatours/ProjectNatours'), loading: Loading })
+const ProjectSmartBrain = Loadable({ loader: () => import('./containers/ProjectsList/ProjectSmartBrain/ProjectSmartBrain'), loading: Loading })
+const ProjectBurger = Loadable({ loader: () => import('./containers/ProjectsList/ProjectBurger/ProjectBurger'), loading: Loading })
 
-class App extends Component {
-    render() {
-        return (
+const App = () => {
+    return (
+        <Router>
             <ScrollToTop>
                 <Switch>
                     <Route exact path="/projects" component={ProjectsList} />
@@ -23,8 +25,8 @@ class App extends Component {
                     <Route path="/" component={Portfolio} />
                 </Switch>
             </ScrollToTop>
-        );
-    }
+        </Router>
+    )
 }
 
-export default App;
+export default App
