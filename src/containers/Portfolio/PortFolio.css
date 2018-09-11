@@ -1,7 +1,11 @@
 .portfolio {
   background-image: linear-gradient(to right bottom, #160446, #00305e);
   position: fixed;
-  overflow: hidden; }
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  perspective: 1000;
+  -webkit-perspective: 1000; }
 
 .home {
   width: 100vw; }

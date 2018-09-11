@@ -1,32 +1,4 @@
-////////////////////////////////////////////////////
-//mixin for responsive queries
-@mixin respond($breakpoint) {
-    @if($breakpoint==phone) {
-        @media only screen and (max-width: 600px) {
-            @content
-        }
-        ; //600px
-    }
-    @if($breakpoint==tabPort) {
-        @media only screen and (max-width: 900px) {
-            @content
-        }
-        ; //900px
-    }
-    @if($breakpoint==tabLand) {
-        @media only screen and (max-width: 1200px) {
-            @content
-        }
-        ; //1200px
-    }
-    @if($breakpoint==bigDesk) {
-        @media only screen and (min-width: 1800px) {
-            @content
-        }
-        ; //1800px
-    }
-}
-
+@import '../../sass/mixin.scss';
 
 ///////////////////////////////
 //animations
@@ -51,7 +23,7 @@
         -moz-transform: translate(0,-50%);
         -ms-transform: translate(0,-50%);
         -o-transform: translate(0,-50%);
-}
+    }
 }
 @keyframes arrow-bounce-reverse {
     0% {
@@ -74,7 +46,7 @@
         -moz-transform: translate(0, -50%);
         -ms-transform: translate(0, -50%);
         -o-transform: translate(0, -50%);
-}
+    }
 }
 
 @keyframes translate-backdrop {
@@ -84,16 +56,15 @@
         -moz-transform: translateY(100%);
         -ms-transform: translateY(100%);
         -o-transform: translateY(100%);
-}
+    }
     100% {
         transform: translateY(-100%)    ;
         -webkit-transform: translateY(-100%);
         -moz-transform: translateY(-100%);
         -ms-transform: translateY(-100%);
         -o-transform: translateY(-100%);
+    }
 }
-}
-
 
 //css
 .backdrop {
@@ -113,7 +84,6 @@
 }
 
 .project {
-    // display: block;
     position: absolute;
     top: 38%;
     left: 50%;

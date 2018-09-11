@@ -32,7 +32,7 @@ const ProjectsList = () => (
             });
 
             return (
-                <div className="projects-scroll">
+                <div className="projects-list">
                     <Link to="/" className="icon-back">
                         <svg className="icon-back-logo">
                             <use xlinkHref={`${Icons}#icon-arrow-left`}></use>
@@ -44,7 +44,7 @@ const ProjectsList = () => (
                     <div className="section projects-all">
 
                         {/* first project */}
-                        <div className="slide back-red fade">
+                        <div className="slide back-red">
                             <div className="project">
                                 <img
                                     className="project__thumbnail"
@@ -92,7 +92,7 @@ const ProjectsList = () => (
                         </div>
 
                         {/* third project */}
-                        <div className="slide back-yellow fade">
+                        <div className="slide back-yellow">
                             <div className="project">
                                 <img
                                     className="project__thumbnail"
@@ -116,7 +116,7 @@ const ProjectsList = () => (
                         </div>
 
                         {/* fourth project */}
-                        <div className="slide back-green fade">
+                        <div className="slide back-green">
                             <div className="project">
                                 <img
                                     className="project__thumbnail"
