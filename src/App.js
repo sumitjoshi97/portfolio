@@ -7,6 +7,7 @@ import Loading from './components/Loading/Loading'
 
 // async loading of components
 const ProjectsList = Loadable({ loader: () => import('./containers/ProjectsList/ProjectsList'), loading: Loading })
+const ProjectCart = Loadable({ loader: () => import('./containers/ProjectsList/ProjectCart/ProjectCart'), loading: Loading })
 const ProjectEmaily = Loadable({ loader: () => import('./containers/ProjectsList/ProjectEmaily/ProjectEmaily'), loading: Loading })
 const ProjectNatours = Loadable({ loader: () => import('./containers/ProjectsList/ProjectNatours/ProjectNatours'), loading: Loading })
 const ProjectSmartBrain = Loadable({ loader: () => import('./containers/ProjectsList/ProjectSmartBrain/ProjectSmartBrain'), loading: Loading })
@@ -18,6 +19,7 @@ const App = () => {
             <ScrollToTop>
                 <Switch>
                     <Route exact path="/projects" component={ProjectsList} />
+                    <Route exact path="/projects/cart" component={ProjectCart} />
                     <Route exact path="/projects/emaily" component={ProjectEmaily} />
                     <Route exact path="/projects/natours" component={ProjectNatours} />
                     <Route exact path="/projects/smart-brain" component={ProjectSmartBrain} />
