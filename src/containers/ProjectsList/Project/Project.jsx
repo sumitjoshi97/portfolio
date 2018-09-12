@@ -18,11 +18,11 @@ const Project = (props) => {
     // screenshots list of project
     const shotsList = props.screenshots.map((shot, index) => {
         return (
-            <div className="project-full__summary-shots" key={index}>
+            <div className="project-full__summary-image" key={index}>
                 <img
                     src={shot}
                     alt="summary screenshot"
-                    className="project-full__summary-shots__image"/>
+                    className="project-full__summary-image__image"/>
             </div>
         )
     })
@@ -90,8 +90,8 @@ const Project = (props) => {
 
             {/* navigation */}
             <div className="project-full__navigation" style={theme}>
-                <Link to={`/projects/${props.projectPrev}`} className="project-full__navigation--section" style={{left: '4%'}}>
-                    <svg className="icon-logo--prev">
+                <Link to={`/projects/${props.projectPrev}`} className="project-full__navigation__section" style={{left: '4%'}}>
+                    <svg className="icon-logo icon-logo--prev">
                         <use xlinkHref={`${Icons}#icon-arrow-left`}></use>
                     </svg>
                     <span
@@ -101,8 +101,8 @@ const Project = (props) => {
                 </Link>
                 <div className="center">Projects</div>
 
-                <Link to={`/projects/${props.projectNext}`} className="project-full__navigation--section" style={{right: '4%'}}>
-                    <svg className="icon-logo--next">
+                <Link to={`/projects/${props.projectNext}`} className="project-full__navigation__section" style={{right: '4%'}}>
+                    <svg className="icon-logo icon-logo--next">
                         <use xlinkHref={`${Icons}#icon-arrow-right`}></use>
                     </svg>
                     <span
