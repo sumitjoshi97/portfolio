@@ -1,6 +1,7 @@
 @import './sass/mixin.scss';
 @import './sass/variables.scss';
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url("https://fonts.googleapis.com/css?family=Oswald");
 
 ///////////////////////////////////////////////
 // browser reset
@@ -77,6 +78,9 @@ body {
     }
     &-green {
         background-color: #0047ca;
+    }
+    &-orange {
+        background-color: #EE5A24;
     }
 }
 
