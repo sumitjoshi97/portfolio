@@ -149,7 +149,7 @@ const ProjectsList = () => (
                                     <img
                                         className="project__thumbnail"
                                         id="p5-thumbnail"
-                                        src={require("../../assets/images/cart/cart.svg")}
+                                        src={require("../../assets/images/cart/cart-project.png")}
                                         alt="natours project"
                                     />
                                     <div className="project__info" id="p5-info">
