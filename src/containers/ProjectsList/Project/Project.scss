@@ -6,21 +6,29 @@
     color: #000;
     font-size: 1.8rem;
     line-height: 4rem;
+
+
+    // hero - header section
     &__header {
         height: 100vh;
         position: relative;
+
         @include respond(tabPort) {
             height: 160vh;
         }
+
         @include respond(phone) {
             height: 200vh;
         }
+
+        // header image
         &__image {
             width: 50%;
             display: inline-block;
             position: absolute;
             right: 0;
             height: 100%;
+
             & img {
                 position: absolute;
                 top: 50%;
@@ -28,12 +36,15 @@
                 transform: translate(-50%, -50%);
                 width: 25rem;
             }
+
             @include respond(tabPort) {
                 width: 100%;
                 position: relative;
                 height: 100vh;
             }
         }
+
+        // header text
         &__text {
             display: inline-block;
             position: absolute;
@@ -41,6 +52,7 @@
             width: 50%;
             transform: translateY(-50%);
             padding: 2rem 8rem;
+
             @include respond(tabPort) {
                 display: block;
                 height: 60vh;
@@ -49,14 +61,11 @@
                 padding: 4rem;
                 padding-top: 50%;
                 transform: translateY(0);
-                -webkit-transform: translateY(0);
-                -moz-transform: translateY(0);
-                -ms-transform: translateY(0);
-                -o-transform: translateY(0);
             }
+
             @include respond(phone) {
                 height: 100vh;
-                padding-top: 35%;
+                padding-top: 30%;
             }
 
             &--secondary {
@@ -64,43 +73,54 @@
                 margin-bottom: 1rem;
                 text-transform: uppercase;
                 font-family: 'Oswald', sans-serif;
+
+                @include respond(phone) {
+                    margin-bottom: 0rem;
+                }
             }
+
             &--primary {
                 font-size: 6rem;
                 font-weight: 400;
-                margin-bottom: 6rem;
+                margin-bottom: 4rem;
                 line-height: 1;
-                @include respond(tabPort) {
-                    margin-bottom: 6rem;
-                }
+
                 @include respond(phone) {
-                    margin-bottom: 4rem;
+                    font-size: 4rem;
+                    margin-bottom: 2rem;
                 }
             }
-            
         }
     }
+
+    // project stack
     &__stack {
         color: #fff;
         padding: 15rem;
+
         @include respond(phone) {
             padding: 8rem 5rem;
         }
+
         & h3 {
             text-transform: uppercase;
             font-size: 1.6rem;
             color: #2b2b2b;
         }
+
         &--list {
             text-decoration: none;
             list-style: none;
             width: 50%;
+
             @include respond(tabPort) {
                 width: 100%;
             }
+
             & li {
                 font-size: 2.5rem;
                 display: inline-block;
+
                 &:not(:last-of-type) {
                     margin-right: 2rem;
                 }
@@ -109,6 +129,7 @@
     }
 
 
+    // background-screenshot
     &__screenshot {
         height: 80vh;
         background-size: cover;
@@ -119,9 +140,11 @@
         }
     }
 
+    // project launch button
     &__launch {
         text-align: center;
         padding: 20vh 0;
+
         &--link {
             font-size: 2rem;
             text-decoration: none;
@@ -129,30 +152,24 @@
             border: 1.5px solid #000;
             padding: 1.5rem 2rem;
             transition: all 0.15s ease-in;
-            -webkit-transition: all 0.15s ease-in;
-            -moz-transition: all 0.15s ease-in;
-            -ms-transition: all 0.15s ease-in;
-            -o-transition: all 0.15s ease-in;
         }
     }
-    
-    &__summary-shots {
+
+    // projects images
+    &__summary-image {
         background-color: #f7f7f7;
-        padding-top: 25rem;
+        padding: 25rem 0;
+
         @include respond(tabPort) {
-            padding-top: 20rem;
+            padding: 20rem 0;
         }
+
         @include respond(phone) {
-            padding-top: 12rem;
+            padding: 12rem 0;
         }
-        &:last-of-type {
-            padding-bottom: 25rem;
-            @include respond(tabPort) {
-                padding-bottom: 20rem;
-            }
-            @include respond(phone) {
-                padding-bottom: 12rem;
-            }
+
+        &:not(:first-of-type) {
+            padding-top: 0;
         }
 
         &__image {
@@ -161,26 +178,24 @@
             margin: 0 auto;
             border-radius: 0.8rem;
             box-shadow: 0 1rem 1.5rem rgba(#000, 0.05);
-            -webkit-border-radius: 0.8rem;
-            -moz-border-radius: 0.8rem;
-            -ms-border-radius: 0.8rem;
-            -o-border-radius: 0.8rem;
-            
+
             @include respond(tabPort) {
                 width: 80%;
             }
+
             @include respond(phone) {
                 width: 95%;
             }
         }
     }
+
+
     &__navigation {
         height: 20vh;
         width: 100%;
         position: relative;
-        
 
-        &--section {
+        &__section {
             display: inline-block;
             height: 4rem;
             width: 10rem;
@@ -188,10 +203,6 @@
             top: 50%;
             transform: translate(0, -50%);
             transition: all 1s ease-in-out;
-            -webkit-transform: translate(0, -50%);
-            -moz-transform: translate(0, -50%);
-            -ms-transform: translate(0, -50%);
-            -o-transform: translate(0, -50%);
 
             &:hover .icon-logo--prev {
                 animation: arrow-bounce-reverse infinite;
@@ -199,11 +210,12 @@
                 animation-duration: 0.6s;
                 animation-timing-function: ease-in-out
             }
+
             &:hover .icon-logo--next {
                 animation: arrow-bounce infinite;
                 -webkit-animation: arrow-bounce infinite;
                 animation-duration: 0.6s;
-                animation-timing-function: ease-in-out            ;
+                animation-timing-function: ease-in-out;
             }
 
             & span {
@@ -215,31 +227,19 @@
 }
 
 .icon-logo {
-    &--prev {
-        width: 3rem;
+    width: 3rem;
         height: 3rem;
         fill: #fff;
         position: absolute;
+        transform: translateY(-50%);
+    &--prev {
         top: 50%;
         left: 10%;
-        transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
-}
+    }
+
     &--next {
-        width: 3rem;
-        height: 3rem;
-        fill: #fff;
-        position: absolute;
         top: 50%;
         right: 10%;
-        transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
     }
 }
 
@@ -251,11 +251,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-
     @include respond(phone) {
         display: none;
     }
@@ -267,8 +262,10 @@
     padding: 0 4rem;
     justify-content: space-between;
     align-items: center;
+
     &__name {
         margin-right: auto;
+
         a {
             text-decoration: none;
             color: #000;
