@@ -11,10 +11,6 @@
 .fp-viewing-projects-0 #p1-link {
     transform: translate(-50%, -50%);
     opacity: 1;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
 }
 
 .fp-viewing-projects-1 #p2-info {
@@ -29,14 +25,6 @@
 
 .fp-viewing-projects-1 #p2-link {
     transform: translate(-50%, -50%);
-    opacity: 1;
-}
-
-.fp-viewing-projects-0 .fade {
-    opacity: 1;
-}
-
-.fp-viewing-projects-1 .fade {
     opacity: 1;
 }
 
@@ -58,34 +46,29 @@
 .fp-viewing-projects-3 #p4-info {
     transform: translate(50%, -50%);
     opacity: 1;
-    -webkit-transform: translate(50%, -50%);
-    -moz-transform: translate(50%, -50%);
-    -ms-transform: translate(50%, -50%);
-    -o-transform: translate(50%, -50%);
 }
 
 .fp-viewing-projects-3 #p4-thumbnail {
     transform: translate(-50%, -50%);
     opacity: 1;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
 }
 
 .fp-viewing-projects-3 #p4-link {
     transform: translate(-50%, -50%);
     opacity: 1;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
 }
 
-.fp-viewing-projects-2 .fade {
+.fp-viewing-projects-4 #p5-info {
+    transform: translate(50%, -50%);
     opacity: 1;
 }
 
-.fp-viewing-projects-3 .fade {
+.fp-viewing-projects-4 #p5-thumbnail {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.fp-viewing-projects-4 #p5-link {
+    transform: translate(-50%, -50%);
     opacity: 1;
 }
