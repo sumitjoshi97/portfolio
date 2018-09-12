@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald");
+@import '../../sass/mixin.scss';
 
 .bottom-nav {
     position: fixed;
@@ -9,15 +9,16 @@
     
     &__list {
         list-style: none;
-        font-size: 2rem;
-        font-family: 'Oswald', sans-serif;
-
         &__item {
             display: inline-block;
             margin: 2rem 3rem;
 
-            @media only screen and (max-width: 900px) {
+            @include respond (tabPort) {
                 margin: 2rem 2rem;
+            }
+
+            @include respond (phone) {
+                margin: 2rem 1rem;
             }
             &:first-of-type {
                 margin-left: 0;

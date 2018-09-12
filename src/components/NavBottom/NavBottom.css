@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald");
 .bottom-nav {
   position: fixed;
   bottom: 0;
@@ -6,15 +5,16 @@
   transform: translateX(-50%);
   z-index: 4000; }
   .bottom-nav__list {
-    list-style: none;
-    font-size: 2rem;
-    font-family: 'Oswald', sans-serif; }
+    list-style: none; }
     .bottom-nav__list__item {
       display: inline-block;
       margin: 2rem 3rem; }
       @media only screen and (max-width: 900px) {
         .bottom-nav__list__item {
           margin: 2rem 2rem; } }
+      @media only screen and (max-width: 600px) {
+        .bottom-nav__list__item {
+          margin: 2rem 1rem; } }
       .bottom-nav__list__item:first-of-type {
         margin-left: 0; }
       .bottom-nav__list__item:last-of-type {
