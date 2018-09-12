@@ -11,7 +11,7 @@ const ProjectCart = () => (
         headerStyle={['#341f97', '#5f27cd']}
         theme={'#5f27cd'}
         stacks = {['React js', 'Redux', 'SASS', 'Firebase']}
-        backImage={require('../../../assets/images/emaily/emaily-full.jpg')}
+        backImage={require('../../../assets/images/cart/screenshot.png')}
         linkLanuchProject="https://sumitjoshi97.github.io/cart"
         screenshots = {[ `${require('../../../assets/images/cart/home.jpg')}`,
             `${require('../../../assets/images/cart/filters.jpg')}`,
