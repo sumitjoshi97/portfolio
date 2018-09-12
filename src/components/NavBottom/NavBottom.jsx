@@ -16,6 +16,9 @@ const NavBottom = () => (
             <li className="bottom-nav__list__item">
                 <a className="bottom-nav__list__item__link" href="#projects/3">04</a>
             </li>
+            <li className="bottom-nav__list__item">
+                <a className="bottom-nav__list__item__link" href="#projects/4">05</a>
+            </li>
         </ul>
     </nav>
 )
