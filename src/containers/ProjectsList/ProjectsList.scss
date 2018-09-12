@@ -66,6 +66,14 @@
     }
 }
 
+//position - top - fix
+.projects-list {
+    .fullpage-wrapper{
+        top: 0 !important;
+        transform: translate3d(0px, 0px, 0px);
+    }
+}
+
 //css
 .backdrop {
     background-color: blue;
@@ -143,6 +151,7 @@
         text-align: center;
         box-shadow: 0 0.5rem 4rem rgba(#000, 0.3);
         opacity: 0;
+        transform: translate(0, 0);
         transition: transform 0.8s ease 0.8s, opacity 0.8s ease-in-out 0.8s;
         z-index: 1;
         @include respond(tabPort) {
