@@ -9,20 +9,23 @@ const Header = (props) => {
     const headerColor = {
         color: `${props.theme}`
     }
-    
+
     return (
         <div className="project-full__header">
-            <div className="project-full__header__text">
-                <h3 className="project-full__header__text--secondary" style={headerColor} >
-                    {props.projectType}
-                </h3>
-                <h2 className="project-full__header__text--primary" >{props.projectName}</h2>
-                <p>
-                    {props.projectInfo}
-                </p>
-            </div>
             <div className="project-full__header__image" style={headerStyle}>
                 <img src={props.headerImage} alt="" />
+            </div>
+            <div className="project-full__header__text">
+                <div className="project-full__header__text__content">
+                    <h3 className="project-full__header__text__content--secondary" style={headerColor} >
+                        {props.projectType}
+                    </h3>
+                    <h2 className="project-full__header__text__content--primary" >{props.projectName}</h2>
+                    <p>
+                        {props.projectInfo}
+                    </p>
+                </div>
+
             </div>
         </div>
     )
