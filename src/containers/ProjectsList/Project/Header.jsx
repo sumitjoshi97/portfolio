@@ -1,7 +1,6 @@
 import React from 'react'
 
-const Header = (props) => {
-
+const Header = props => {
     const headerStyle = {
         backgroundImage: `linear-gradient(120deg, ${props.headerStyle[0]}, ${props.headerStyle[1]})`
     }
@@ -25,10 +24,9 @@ const Header = (props) => {
                         {props.projectInfo}
                     </p>
                 </div>
-
             </div>
         </div>
     )
 }
 
-export default Header;
+export default Header
