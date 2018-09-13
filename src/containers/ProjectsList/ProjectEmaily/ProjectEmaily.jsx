@@ -19,7 +19,7 @@ const ProjectEmaily = () => (
             `${require('../../../assets/images/emaily/surveys_logged_hover.jpg')}`,
             `${require('../../../assets/images/emaily/new_survey.jpg')}`,
             `${require('../../../assets/images/emaily/survey_summary.jpg')}`]}
-        projectPrev='natours'
+        projectPrev='cart'
         projectNext='burger'
         />
 );
