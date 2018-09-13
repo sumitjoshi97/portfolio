@@ -9,7 +9,7 @@ const ProjectCart = () => (
                     at last purchase their order and check their previous orders."
         headerImage={require('../../../assets/images/cart/cart.svg')}
         headerStyle={['#341f97', '#5f27cd']}
-        theme={'#5f27cd'}
+        theme={'#36f'}
         stacks = {['React js', 'Redux', 'SASS', 'Firebase']}
         backImage={require('../../../assets/images/cart/screenshot.png')}
         linkLanuchProject="https://sumitjoshi97.github.io/cart"
