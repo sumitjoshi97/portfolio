@@ -13,6 +13,7 @@ const ProjectNatours = Loadable({ loader: () => import('./containers/ProjectsLis
 const ProjectSmartBrain = Loadable({ loader: () => import('./containers/ProjectsList/ProjectSmartBrain/ProjectSmartBrain'), loading: Loading })
 const ProjectBurger = Loadable({ loader: () => import('./containers/ProjectsList/ProjectBurger/ProjectBurger'), loading: Loading })
 
+// main App Component
 const App = () => {
     return (
         <Router>
