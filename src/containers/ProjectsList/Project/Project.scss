@@ -18,16 +18,15 @@
         }
 
         @include respond(phone) {
-            height: 200vh;
+            height: 180vh;
         }
 
         // header image
         &__image {
             width: 50%;
             display: inline-block;
-            position: absolute;
-            right: 0;
-            height: 100%;
+            position: relative;
+            height: 100vh;
 
             & img {
                 position: absolute;
@@ -38,6 +37,7 @@
             }
 
             @include respond(tabPort) {
+                display: block;
                 width: 100%;
                 position: relative;
                 height: 100vh;
@@ -47,47 +47,58 @@
         // header text
         &__text {
             display: inline-block;
-            position: absolute;
-            top: 50%;
+            position: relative;
             width: 50%;
-            transform: translateY(-50%);
-            padding: 2rem 8rem;
+            height: 100vh;
 
             @include respond(tabPort) {
-                display: block;
                 height: 60vh;
                 width: 100%;
-                text-align: center;
-                padding: 4rem;
-                padding-top: 50%;
-                transform: translateY(0);
             }
 
             @include respond(phone) {
-                height: 100vh;
-                padding-top: 30%;
+                height: 80vh;
             }
 
-            &--secondary {
-                font-size: 1.5rem;
-                margin-bottom: 1rem;
-                text-transform: uppercase;
-                font-family: 'Oswald', sans-serif;
+            &__content {
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                transform: translateY(-50%);
+                padding: 8rem;
 
-                @include respond(phone) {
-                    margin-bottom: 0rem;
+                @include respond(tabPort) {
+                    display: block;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
                 }
-            }
-
-            &--primary {
-                font-size: 6rem;
-                font-weight: 400;
-                margin-bottom: 4rem;
-                line-height: 1;
 
                 @include respond(phone) {
-                    font-size: 4rem;
-                    margin-bottom: 2rem;
+                    padding: 2rem;
+                }
+
+                &--secondary {
+                    font-size: 1.5rem;
+                    margin-bottom: 1rem;
+                    text-transform: uppercase;
+                    font-family: 'Oswald', sans-serif;
+
+                    @include respond(phone) {
+                        margin-bottom: 0rem;
+                    }
+                }
+
+                &--primary {
+                    font-size: 6rem;
+                    font-weight: 400;
+                    margin-bottom: 4rem;
+                    line-height: 1;
+
+                    @include respond(phone) {
+                        font-size: 4rem;
+                        margin-bottom: 3rem;
+                    }
                 }
             }
         }
@@ -228,10 +239,11 @@
 
 .icon-logo {
     width: 3rem;
-        height: 3rem;
-        fill: #fff;
-        position: absolute;
-        transform: translateY(-50%);
+    height: 3rem;
+    fill: #fff;
+    position: absolute;
+    transform: translateY(-50%);
+
     &--prev {
         top: 50%;
         left: 10%;
@@ -251,6 +263,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
     @include respond(phone) {
         display: none;
     }
