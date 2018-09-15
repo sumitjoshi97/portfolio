@@ -12,13 +12,16 @@ const ProjectEmaily = () => (
         headerImage={require('../../../assets/images/portfolio/project1.svg')}
         headerStyle={['#EA2027', '#ff0061']}
         theme={'#3c40c6'}
-        stacks = {['React js', 'Redux', 'SASS', 'Node js', 'Express js', 'MongoDB', 'Adobe XD']}
+        stacks = {['React js', 'Redux', 'D3 js', 'Node js', 'Express js', 'MongoDB', 'Adobe XD']}
         backImage={require('../../../assets/images/emaily/emaily-full.jpg')}
         linkLanuchProject="https://bit.ly/_Emaily"
-        screenshots = {[`${require('../../../assets/images/emaily/home_logged.jpg')}`,
-            `${require('../../../assets/images/emaily/surveys_logged_hover.jpg')}`,
+        screenshots = {[`${require('../../../assets/images/emaily/login.jpg')}`,
+            `${require('../../../assets/images/emaily/logged.jpg')}`,
+            `${require('../../../assets/images/emaily/surveys.jpg')}`,
             `${require('../../../assets/images/emaily/new_survey.jpg')}`,
-            `${require('../../../assets/images/emaily/survey_summary.jpg')}`]}
+            `${require('../../../assets/images/emaily/survey_summary.jpg')}`,
+            `${require('../../../assets/images/emaily/new_surveys.jpg')}`,
+            `${require('../../../assets/images/emaily/survey.jpg')}`]}
         projectPrev='cart'
         projectNext='burger'
         />
