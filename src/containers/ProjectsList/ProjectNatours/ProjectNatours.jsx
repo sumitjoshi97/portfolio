@@ -12,7 +12,7 @@ const ProjectNatours = () => (
         theme={'#00E676'}
         stacks = {['HTML', 'SASS']}
         backImage={require('../../../assets/images/natours/natours-screenshot.jpg')}
-        linkLanuchProject="https://bit/_natours"
+        linkLanuchProject="https://sumitjoshi97.github.io/natours"
         screenshots = {[`${require('../../../assets/images/natours/natours.jpg')}`,
             `${require('../../../assets/images/natours/modal.jpg')}`,
             `${require('../../../assets/images/natours/navigation.jpg')}`]}

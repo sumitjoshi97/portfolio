@@ -14,7 +14,7 @@ const ProjectEmaily = () => (
         theme={'#3c40c6'}
         stacks = {['React js', 'Redux', 'D3 js', 'Node js', 'Express js', 'MongoDB', 'Adobe XD']}
         backImage={require('../../../assets/images/emaily/emaily-full.jpg')}
-        linkLanuchProject="https://bit.ly/_Emaily"
+        linkLanuchProject="https://emaily-serve.herokuapp.com/"
         screenshots = {[`${require('../../../assets/images/emaily/login.jpg')}`,
             `${require('../../../assets/images/emaily/logged.jpg')}`,
             `${require('../../../assets/images/emaily/surveys.jpg')}`,

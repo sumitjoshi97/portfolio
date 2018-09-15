@@ -12,7 +12,7 @@ const ProjectSmartBrain = () => (
         theme={'#1e90ff'}
         stacks = {['React js', 'Node js', 'Express js', 'PostgreSQL']}
         backImage={require('../../../assets/images/smartBrain/screenshot.png')}
-        linkLanuchProject="http://bit.ly/_faceRe"
+        linkLanuchProject="https://sumitjoshi97.github.io/face_recognition"
         screenshots = {[`${require('../../../assets/images/smartBrain/register.jpg')}`,
             `${require('../../../assets/images/smartBrain/signIn.jpg')}`,
             `${require('../../../assets/images/smartBrain/input.jpg')}`,

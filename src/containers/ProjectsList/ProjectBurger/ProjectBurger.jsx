@@ -12,7 +12,7 @@ const ProjectBurger = () => (
         theme={'#f0932b'}
         stacks = {['React js', 'Redux', 'Firebase']}
         backImage={require('../../../assets/images/burger/screenshot.png')}
-        linkLanuchProject="https://bit.ly/_Burger"
+        linkLanuchProject="https://sumitjoshi97.github.io/burger_builder"
         screenshots = {[`${require('../../../assets/images/burger/initial.jpg')}`,
             `${require('../../../assets/images/burger/login.jpg')}`,
             `${require('../../../assets/images/burger/order.jpg')}`,
