@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Icons from '../../../assets/svg/sprite.svg';
 import Header from './Header.jsx';
 import Footer from './Footer';
@@ -9,26 +9,24 @@ import ReallySmoothScroll from 'really-smooth-scroll';
 ReallySmoothScroll.shim();
 
 const Project = (props) => {
-    
+
     // list of stack used in project
     const stackList = props.stacks.map((stack, index) => {
         return <li key={index}>{stack}</li>
     })
 
     // screenshots list of project
-    const shotsList = props.screenshots.map((shot, index) => {
-        return (
-            <div className="project-full__summary-image" key={index}>
-                <img
-                    src={shot}
-                    alt="summary screenshot"
-                    className="project-full__summary-image__image"/>
-            </div>
-        )
-    })
+    const shotsList = props.screenshots.map((shot, index) => (
+        <div className="project-full__summary-image" key={index}>
+            <img
+                src={shot}
+                alt="summary screenshot"
+                className="project-full__summary-image__image" />
+        </div>
+    ))
 
     const backgroundStyle = {
-        backgroundImage: `linear-gradient(to right, rgba(255,255,255, 0.6) 0%,  rgba(255,255,255, 0.6) 100%), url(${props.backImage})`   
+        backgroundImage: `linear-gradient(to right, rgba(255,255,255, 0.6) 0%,  rgba(255,255,255, 0.6) 100%), url(${props.backImage})`
     }
 
     const theme = {
@@ -68,20 +66,20 @@ const Project = (props) => {
                     {stackList}
                 </ul>
             </div>
-      
+
             {/* screenshot  */}
             <div className="project-full__screenshot" style={backgroundStyle} />
-                    
+
             {/* project launch button */}
             <div className="project-full__launch">
-                <a 
-                    href={props.linkLanuchProject} 
-                    target="blank" 
+                <a
+                    href={props.linkLanuchProject}
+                    target="blank"
                     className="project-full__launch--link"
                     style={linkStyle}>
                     Launch Project
                 </a>
-            </div> 
+            </div>
 
             {/* summary shots */}
             <div>
@@ -90,28 +88,33 @@ const Project = (props) => {
 
             {/* navigation */}
             <div className="project-full__navigation" style={theme}>
-                <Link to={`/projects/${props.projectPrev}`} className="project-full__navigation__section" style={{left: '4%'}}>
+            
+                {/* prev button */}
+                <Link to={`/projects/${props.projectPrev}`} className="project-full__navigation__section" style={{ left: '4%' }}>
                     <svg className="icon-logo icon-logo--prev">
                         <use xlinkHref={`${Icons}#icon-arrow-left`}></use>
                     </svg>
                     <span
                         style={{
-                        left: '6rem'
-                    }}>Prev</span>
+                            left: '6rem'
+                        }}>Prev</span>
                 </Link>
                 <div className="center">Projects</div>
 
-                <Link to={`/projects/${props.projectNext}`} className="project-full__navigation__section" style={{right: '4%'}}>
+                {/* next project button */}
+                <Link to={`/projects/${props.projectNext}`} className="project-full__navigation__section" style={{ right: '4%' }}>
                     <svg className="icon-logo icon-logo--next">
                         <use xlinkHref={`${Icons}#icon-arrow-right`}></use>
                     </svg>
                     <span
                         style={{
-                        right: '6rem'
-                    }}>Next</span>
+                            right: '6rem'
+                        }}>Next</span>
                 </Link>
             </div>
-            <Footer theme={props.theme}/>
+            
+            {/* footer */}
+            <Footer theme={props.theme} />
         </div>
     )
 }
