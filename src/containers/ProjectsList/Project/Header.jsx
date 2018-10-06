@@ -2,6 +2,36 @@ import React, { Component } from 'react'
 import { Spring } from 'react-spring'
 
 export class Header extends Component {
+  state = {
+    width: '50%'
+  }
+
+  componentDidMount() {
+    this.onResize()
+    window.addEventListener('resize', this.onResize)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize)
+  }
+
+  onResize = () => {
+    if (window.innerWidth <= 900) {
+      this.setState({ width: '100%' })
+    } else {
+      this.setState({ width: '50%' })
+    }
+    this.forceUpdate()
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    if (this.state.width !== nextState.width) {
+      return true
+    } else {
+      return false
+    }
+  }
+
   render() {
     // header style components
     const headerStyle = {
@@ -18,8 +48,7 @@ export class Header extends Component {
       <div className="project-full__header">
         <Spring
           from={{ opacity: 0, width: '0%' }}
-          to={{ opacity: 1, width: '50%' }}
-          >
+          to={{ opacity: 1, width: this.state.width }}>
           {({ opacity, width }) => (
             <div
               className="project-full__header__image"
