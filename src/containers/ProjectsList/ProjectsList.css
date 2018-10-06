@@ -137,11 +137,7 @@
     transform: translate(-50%, 30%);
     padding: 0rem 4.8rem 0 1.8rem;
     opacity: 0;
-    transition: transform 0.8s ease 0.8s, opacity 0.8s ease 1.2s;
-    -webkit-transition: transform 0.8s ease 0.8s, opacity 0.8s ease 1.2s;
-    -moz-transition: transform 0.8s ease 0.8s, opacity 0.8s ease 1.2s;
-    -ms-transition: transform 0.8s ease 0.8s, opacity 0.8s ease 1.2s;
-    -o-transition: transform 0.8s ease 0.8s, opacity 0.8s ease 1.2s; }
+    transition: transform 0.8s ease 0.8s, opacity 0.8s ease 1.2s; }
     .project__link a {
       position: relative;
       color: #fff;
@@ -154,11 +150,7 @@
         width: 3rem;
         vertical-align: middle;
         margin-left: 1rem;
-        transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -o-transform: translateY(-50%); }
+        transform: translateY(-50%); }
       .project__link a:hover .icon-link {
         animation: arrow-bounce infinite;
         animation-duration: 0.6s;

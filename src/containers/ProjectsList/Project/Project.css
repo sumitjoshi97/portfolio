@@ -1,3 +1,57 @@
+@keyframes arrow-bounce {
+  0% {
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%); }
+  50% {
+    transform: translate(0.6rem, -50%);
+    -webkit-transform: translate(0.6rem, -50%);
+    -moz-transform: translate(0.6rem, -50%);
+    -ms-transform: translate(0.6rem, -50%);
+    -o-transform: translate(0.6rem, -50%); }
+  100% {
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%); } }
+
+@keyframes arrow-bounce-reverse {
+  0% {
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%); }
+  50% {
+    transform: translate(-0.6rem, -50%);
+    -webkit-transform: translate(-0.6rem, -50%);
+    -moz-transform: translate(-0.6rem, -50%);
+    -ms-transform: translate(-0.6rem, -50%);
+    -o-transform: translate(-0.6rem, -50%); }
+  100% {
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%); } }
+
+@keyframes translate-backdrop {
+  0% {
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%); }
+  100% {
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%); } }
+
 .project-full {
   width: 100%;
   position: relative;

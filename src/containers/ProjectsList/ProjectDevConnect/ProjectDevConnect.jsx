@@ -5,10 +5,7 @@ const ProjectDevConnect = () => (
   <Project
     projectType="App"
     projectName="Dev Connect"
-    projectInfo="A feedback app based on MERN stack. In this app, one can create and send surveys
-                    to emails. One require to signup through google oauth to access the app. This
-                    app uses sendgrid API to send emails, and stripe for adding credits in account
-                    for sending emails."
+    projectInfo="Stack overflow like social network app, where devs can register, create profile and, share posts to help other devs. Devs can comment on posts shared and also delete their post or comment"
     headerImage={require('../../../assets/images/devConnect/devConnect.svg')}
     headerStyle={['#1B9CFC', '#3c40c6']}
     theme={'#22a6f3'}

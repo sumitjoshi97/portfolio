@@ -1,70 +1,5 @@
 @import '../../sass/mixin.scss';
-
-///////////////////////////////
-//animations
-@keyframes arrow-bounce {
-    0% {
-        transform: translate(0,-50%);
-        -webkit-transform: translate(0,-50%);
-        -moz-transform: translate(0,-50%);
-        -ms-transform: translate(0,-50%);
-        -o-transform: translate(0,-50%);
-}
-    50% {
-        transform: translate(0.6rem,-50%);
-        -webkit-transform: translate(0.6rem,-50%);
-        -moz-transform: translate(0.6rem,-50%);
-        -ms-transform: translate(0.6rem,-50%);
-        -o-transform: translate(0.6rem,-50%);
-}
-    100% {
-        transform: translate(0,-50%);
-        -webkit-transform: translate(0,-50%);
-        -moz-transform: translate(0,-50%);
-        -ms-transform: translate(0,-50%);
-        -o-transform: translate(0,-50%);
-    }
-}
-@keyframes arrow-bounce-reverse {
-    0% {
-        transform: translate(0, -50%);
-        -webkit-transform: translate(0, -50%);
-        -moz-transform: translate(0, -50%);
-        -ms-transform: translate(0, -50%);
-        -o-transform: translate(0, -50%);
-}
-    50% {
-        transform: translate(-.6rem, -50%);
-        -webkit-transform: translate(-.6rem, -50%);
-        -moz-transform: translate(-.6rem, -50%);
-        -ms-transform: translate(-.6rem, -50%);
-        -o-transform: translate(-.6rem, -50%);
-}
-    100% {
-        transform: translate(0, -50%);
-        -webkit-transform: translate(0, -50%);
-        -moz-transform: translate(0, -50%);
-        -ms-transform: translate(0, -50%);
-        -o-transform: translate(0, -50%);
-    }
-}
-
-@keyframes translate-backdrop {
-    0% {
-        transform: translateY(100%)    ;
-        -webkit-transform: translateY(100%);
-        -moz-transform: translateY(100%);
-        -ms-transform: translateY(100%);
-        -o-transform: translateY(100%);
-    }
-    100% {
-        transform: translateY(-100%)    ;
-        -webkit-transform: translateY(-100%);
-        -moz-transform: translateY(-100%);
-        -ms-transform: translateY(-100%);
-        -o-transform: translateY(-100%);
-    }
-}
+@import '../../sass//animation.scss';
 
 //position - top - fix
 .projects-list {
@@ -167,10 +102,6 @@
         padding: 0rem 4.8rem 0 1.8rem;
         opacity: 0;
         transition: transform 0.8s ease 0.8s, opacity 0.8s ease 1.2s;
-        -webkit-transition: transform 0.8s ease 0.8s, opacity 0.8s ease 1.2s;
-        -moz-transition: transform 0.8s ease 0.8s, opacity 0.8s ease 1.2s;
-        -ms-transition: transform 0.8s ease 0.8s, opacity 0.8s ease 1.2s;
-        -o-transition: transform 0.8s ease 0.8s, opacity 0.8s ease 1.2s;
         & a {
             position: relative;
             color: #fff;
@@ -185,10 +116,6 @@
                 vertical-align: middle;
                 margin-left: 1rem;
                 transform: translateY(-50%);
-                -webkit-transform: translateY(-50%);
-                -moz-transform: translateY(-50%);
-                -ms-transform: translateY(-50%);
-                -o-transform: translateY(-50%);
             }
 
             &:hover .icon-link {
@@ -197,6 +124,5 @@
                 animation-timing-function: cubic-bezier(0.16, 0.68, 0.43, 0.99);
             }
         }
-        
     }
 }
