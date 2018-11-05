@@ -40,11 +40,11 @@ body {
     fill: #fff; }
 
 .red {
-  color: #ff0000;
+  color: #ff2b1f;
   font-weight: 700; }
 
 .green {
-  color: #00ff00;
+  color: #1ef36c;
   font-weight: 700; }
 
 .back-red {
@@ -72,20 +72,20 @@ body {
   left: 5%;
   width: 1px;
   height: 60%;
-  background-color: #36f;
-  opacity: 0.65; }
+  background-color: #a8a8a8;
+  opacity: 1; }
   .bar-left::before {
     content: '';
     padding: 1.5rem 0.4rem;
-    background-color: #36f; }
+    background-color: #a8a8a8; }
   @media only screen and (max-width: 900px) {
     .bar-left {
       opacity: 0; } }
 
 .heading-primary {
   font-size: 9rem;
-  font-weight: 400;
-  color: #fff;
+  font-weight: 700;
+  color: #e6e6e6;
   letter-spacing: 0.4rem;
   position: absolute;
   line-height: 10rem;
