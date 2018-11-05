@@ -4,10 +4,6 @@
   .main__home {
     position: relative;
     text-align: center; }
-    .main__home span {
-      color: #36f;
-      display: block;
-      font-weight: 700; }
   .main__about {
     height: 100vh;
     text-align: left;
@@ -190,7 +186,8 @@
   -moz-transition: all 0.2s linear 0.3s;
   -ms-transition: all 0.2s linear 0.3s;
   -o-transition: all 0.2s linear 0.3s; }
-  .project-text h2, .project-text h1 {
+  .project-text h2,
+  .project-text h1 {
     font-weight: 400; }
 
 .project-link {
@@ -222,3 +219,19 @@
     display: block; }
     .recents-heading span:last-of-type {
       margin-bottom: 3.4rem; }
+
+.background-name {
+  position: absolute;
+  text-align: right;
+  font-size: 36rem;
+  text-transform: uppercase;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: -20rem;
+  opacity: 0.03;
+  font-weight: 700; }
+  .background-name span {
+    display: block;
+    right: 0;
+    margin-top: 30rem; }
