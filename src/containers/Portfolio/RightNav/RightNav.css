@@ -30,6 +30,8 @@
     .social--item:hover {
       animation-name: bounce-icon;
       animation-duration: 0.4s; }
+    .social--item:focus, .social--item:active {
+      outline: none; }
     @media only screen and (max-width: 900px) {
       .social--item {
         display: inline-block; } }

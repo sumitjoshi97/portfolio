@@ -36,6 +36,9 @@
                 animation-duration: 0.4s;
             }
         
+            &:focus, &:active {
+                outline: none;
+            }
             @include respond(tabPort) {
                 display: inline-block;
             }
