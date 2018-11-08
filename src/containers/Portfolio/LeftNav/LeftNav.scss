@@ -1,29 +1,15 @@
-////////////////////////////////////////////////////
-//mixin for responsive queries
-@mixin respond($breakpoint) {
-    @if($breakpoint==phone) {
-        @media only screen and (max-width: 37.5em) {
-            @content
-        }
-        ; //600px
+@import '../../../sass/mixin.scss';
+@import '../../../sass/variables.scss';
+
+
+@keyframes leftnav-translate {
+    0% {
+        transform: translate(-150%, -50%);
+        opacity: 0;
     }
-    @if($breakpoint==tabPort) {
-        @media only screen and (max-width: 56.5em) {
-            @content
-        }
-        ; //900px
-    }
-    @if($breakpoint==tabLand) {
-        @media only screen and (max-width: 75em) {
-            @content
-        }
-        ; //1200px
-    }
-    @if($breakpoint==bigDesk) {
-        @media only screen and (min-width: 112.5em) {
-            @content
-        }
-        ; //1800px
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
     }
 }
 
@@ -71,15 +57,19 @@
                     display: block;
                     position: absolute;
                     width: 2rem;
-                    height: 0.32rem;
+                    height: 0.2rem;
                     top: 50%;
                     background-color: #fff;
                     transition: all 1s;
                     color: #fff;
+                    outline: none;
                 }
                 &:hover span {
                     width: 4rem;
-                    background-color: #36f;
+                    background-color: $color-primary;
+                }
+                &:focus, &:active {
+                    outline: none;
                 }
             }
         }
@@ -88,16 +78,5 @@
 
 .active a span {
     width: 4rem;
-    background-color: #36f;
-}
-
-@keyframes leftnav-translate {
-    0% {
-        transform: translate(-150%, -50%);
-        opacity: 0;
-    }
-    100% {
-        transform: translate(-50%, -50%);
-        opacity: 1;
-    }
+    background-color: $color-primary;
 }

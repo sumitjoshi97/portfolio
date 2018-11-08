@@ -1,135 +1,144 @@
 @import './sass/mixin.scss';
 @import './sass/variables.scss';
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
-@import url("https://fonts.googleapis.com/css?family=Oswald");
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 
 ///////////////////////////////////////////////
 // browser reset
 * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  &::after,
+  &::before {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    &::after,
-    &::before {
-        padding: 0;
-        margin: 0;
-    }
+  }
 }
 
-//font size set 
+//font size set
 html {
-    font-size: 62.5%; //1rem = 10px 
-    @include respond(bigDesk) {
-        font-size: 75%; //1rem= 12px
-    }
-    @include respond(tabLand) {
-        font-size: 56.25%; // 1rem = 9px
-    }
-    @include respond(tabPort) {
-        font-size: 50%; //1rem=8px
-    }
+  font-size: 62.5%; //1rem = 10px
+  @include respond(bigDesk) {
+    font-size: 75%; //1rem= 12px
+  }
+  @include respond(tabLand) {
+    font-size: 56.25%; // 1rem = 9px
+  }
+  @include respond(tabPort) {
+    font-size: 50%; //1rem=8px
+  }
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    color: $color-white;
-    font-size: $base-font;
-    line-height: 4.6rem;
+  font-family: 'Montserrat', sans-serif;
+  color: $color-white;
+  font-size: $base-font;
+  line-height: 4.6rem;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 
 /////////////////////////////////////////////////
 // utility -classes
 
 .icon-back {
-    position: fixed;
-    top: 3rem;
-    left: 4rem;
-    width: 6rem;
-    height: 6rem;
-    z-index: 2000;
-    &-logo {
-        position: absolute;
-        width: 4rem;
-        height: 4rem;
-        fill: #fff;
-    }
+  position: fixed;
+  top: 3rem;
+  left: 4rem;
+  width: 6rem;
+  height: 6rem;
+  z-index: 2000;
+  &-logo {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    fill: #fff;
+  }
 }
 
 .red {
-    color: #ff2b1f;
-    font-weight: 700;
+  color: #ff2b1f;
+  font-weight: 700;
 }
 
 .green {
-    color: #1ef36c;
-    font-weight: 700;
+  color: #1ef36c;
+  font-weight: 700;
 }
 
-//background colors 
+//background colors
 .back {
-    &-red {
-        background-color: #f01800;
-    }
-    &-violet {
-        background-color: #5f27cd;
-    }
-    &-yellow {
-        background-color: #f7b731;
-    }
-    &-green {
-        background-color: #0047ca;
-    }
-    &-orange {
-        background-color: #00ACC1;
-    }
-    &-orch {
-        background-color: #f39c12;
-    }
+  &-red {
+    background-color: #f01800;
+  }
+  &-violet {
+    background-color: #5f27cd;
+  }
+  &-yellow {
+    background-color: #f7b731;
+  }
+  &-green {
+    background-color: #0047ca;
+  }
+  &-orange {
+    background-color: #00acc1;
+  }
+  &-orch {
+    background-color: #f39c12;
+  }
 }
 
 .bar-left {
-    position: absolute;
-    font-size: 2rem;
-    top: 20%;
-    left: 5%;
-    width: 1px;
-    height: 60%;
+  position: absolute;
+  font-size: 2rem;
+  top: 20%;
+  left: 5%;
+  width: 1px;
+  height: 60%;
+  background-color: #a8a8a8;
+  opacity: 1;
+  &::before {
+    content: '';
+    padding: 1.5rem 0.4rem;
     background-color: #a8a8a8;
-    opacity:1;
-    &::before {
-        content: '';
-        padding: 1.5rem 0.4rem;
-        background-color: #a8a8a8;
-    }
-    @include respond(tabPort) {
-        opacity: 0;
-    }
+  }
+  @include respond(tabPort) {
+    opacity: 0;
+  }
 }
 
-// @media only screen and (max-width:  )
 ///////////////////////////////////////////////
 //typography
 //heading h1
 .heading-primary {
-    font-size: $font-primary;
-    font-weight: 700;
-    color: #e6e6e6;
-    letter-spacing: 0.4rem;
-    position: absolute;
-    line-height: 10rem;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(150%);
-    opacity: 0;
-    transition: transform 0.8s ease 1.2s, opacity 0.8s ease-in-out 1.2s;
-    @include respond (tabLand) {
-        font-size: 7rem;
-    }
+  font-size: $font-primary;
+  font-weight: 700;
+  color: #e6e6e6;
+  // text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 1rem;
+  // position: absolute;
+  line-height: 10rem;
+  // top: 50%;
+  // left: 50%;
+  // transform: translateX(-50%) translateY(150%);
+  // opacity: 0;
+  // transition: transform 0.8s ease 1.2s, opacity 0.8s ease-in-out 1.2s;
+  span {
+    display: block;
+  }
+  @include respond(tabLand) {
+    font-size: 7rem;
+  }
 }
 
-//////////////////////////
-//text selection
-::selection {
-    background-color: #000;
-    color: #36f;
+.underline {
+  // position: relative;
+  // left: 50%;
+  // transform: translateX(-50%);
+  width: 40rem;
+  height: 0.2rem;
+  background: $color-white;
 }

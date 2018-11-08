@@ -24,7 +24,10 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: #FFF;
   font-size: 1.8rem;
-  line-height: 4.6rem; }
+  line-height: 4.6rem;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none; }
 
 .icon-back {
   position: fixed;
@@ -60,7 +63,7 @@ body {
   background-color: #0047ca; }
 
 .back-orange {
-  background-color: #00ACC1; }
+  background-color: #00acc1; }
 
 .back-orch {
   background-color: #f39c12; }
@@ -86,18 +89,16 @@ body {
   font-size: 9rem;
   font-weight: 700;
   color: #e6e6e6;
-  letter-spacing: 0.4rem;
-  position: absolute;
-  line-height: 10rem;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(150%);
-  opacity: 0;
-  transition: transform 0.8s ease 1.2s, opacity 0.8s ease-in-out 1.2s; }
+  text-align: left;
+  letter-spacing: 1rem;
+  line-height: 10rem; }
+  .heading-primary span {
+    display: block; }
   @media only screen and (max-width: 1200px) {
     .heading-primary {
       font-size: 7rem; } }
 
-::selection {
-  background-color: #000;
-  color: #36f; }
+.underline {
+  width: 40rem;
+  height: 0.2rem;
+  background: #FFF; }

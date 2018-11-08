@@ -1,5 +1,7 @@
+@import '../../sass/variables.scss';
+
 .portfolio {
-  background: #1a232e;
+  background: $background-primary;
   overflow: hidden;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
@@ -19,6 +21,6 @@
 .bar {
   height: 100vh;
   width: 0.1rem;
-  background-color: #fff;
+  background-color: $color-white;
   opacity: 0.035;
 }

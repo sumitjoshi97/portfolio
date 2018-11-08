@@ -1,15 +1,13 @@
 .nav-toggle {
   width: 7rem;
   height: 7rem;
-  border: 1.4px solid #ccc;
-  border-radius: 50%;
   position: fixed;
   text-align: center;
   top: 12%;
   right: 3rem;
   transform: translate(-50%, -50%);
   cursor: pointer;
-  z-index: 1000; }
+  z-index: 4000; }
   @media only screen and (max-width: 900px) {
     .nav-toggle {
       top: 8rem;
@@ -20,8 +18,11 @@
   .nav-toggle span {
     position: relative;
     margin-top: 3.5rem; }
+    .nav-toggle span {
+      width: 2rem; }
+    .nav-toggle span::before, .nav-toggle span::after {
+      width: 3rem; }
     .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after {
-      width: 2.2rem;
       height: .1rem;
       background-color: #fff;
       display: inline-block;
@@ -31,10 +32,10 @@
       position: absolute;
       left: 0; }
     .nav-toggle span::before {
-      top: -0.6rem; }
+      top: -1rem; }
     .nav-toggle span::after {
-      top: 0.6rem; }
+      top: 1rem; }
   .nav-toggle:hover span::before {
-    top: -0.8rem; }
+    left: 0.4rem; }
   .nav-toggle:hover span::after {
-    top: 0.8rem; }
+    left: 0.4rem; }
