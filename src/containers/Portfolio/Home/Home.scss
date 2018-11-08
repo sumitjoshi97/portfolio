@@ -9,19 +9,48 @@
   //////////////////////////////////////
   // header section
   &__header {
-    position: relative;
-    text-align: center;
-
     &__text {
       display: flex;
       flex-direction: column;
+      align-items: center;
+
+      &__primary {
+        font-size: $font-primary;
+      }
+
+      &__secondary {
+        font-size: $font-secondary;
+        color: $color-primary;
+        letter-spacing: 2rem;
+        margin-right: -2rem;
+      }
+
+      .underline-grp {
+        display: flex;
+        flex-direction: row;
+
+        .underline {
+          width: 40rem;
+          height: 0.2rem;
+          margin: 4rem 0;
+
+          &--white {
+            background-color: $color-white;
+          }
+
+          &--grey {
+            background-color: $color-primary;
+          }
+        }
+      }
+      .underline {
+      }
     }
   }
 
   //////////////////////////////////
   // about section
   &__about {
-    height: 100vh;
     text-align: left;
     position: relative;
 
@@ -101,7 +130,7 @@
         padding: 1rem 4.8rem 1rem 1.8rem;
         font-size: 1.8rem;
         color: $color-white;
-        text-decoration: none; 
+        text-decoration: none;
 
         & .icon-projects {
           position: absolute;

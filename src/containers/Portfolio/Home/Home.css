@@ -71,14 +71,29 @@
 .main {
   width: 76%;
   margin: 0 auto; }
-  .main__header {
-    position: relative;
-    text-align: center; }
-    .main__header__text {
+  .main__header__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .main__header__text__primary {
+      font-size: 6rem; }
+    .main__header__text__secondary {
+      font-size: 4rem;
+      color: #606c7a;
+      letter-spacing: 2rem;
+      margin-right: -2rem; }
+    .main__header__text .underline-grp {
       display: flex;
-      flex-direction: column; }
+      flex-direction: row; }
+      .main__header__text .underline-grp .underline {
+        width: 40rem;
+        height: 0.2rem;
+        margin: 4rem 0; }
+        .main__header__text .underline-grp .underline--white {
+          background-color: #FFF; }
+        .main__header__text .underline-grp .underline--grey {
+          background-color: #606c7a; }
   .main__about {
-    height: 100vh;
     text-align: left;
     position: relative; }
     .main__about--text {
@@ -132,7 +147,7 @@
       transition: opacity 1s ease 0.8s; }
       .main__projects__header--link {
         position: relative;
-        border: 2px solid #4e5763;
+        border: 2px solid #606c7a;
         padding: 1rem 4.8rem 1rem 1.8rem;
         font-size: 1.8rem;
         color: #FFF;
