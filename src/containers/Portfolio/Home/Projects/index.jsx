@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default () => (
   <div className="main__projects section">
-  <div className="background-name">
+    <div className="background-name">
       DEVEL
       <span>OPER</span>
     </div>
