@@ -16,6 +16,10 @@
 
       &__primary {
         font-size: $font-primary;
+        transform: translateY(150%);
+        opacity: 0;
+        transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s,
+        opacity 0.8s ease-in-out 0.8s;
       }
 
       &__secondary {
@@ -24,6 +28,10 @@
         text-transform: uppercase;
         letter-spacing: 2rem;
         margin-right: -2rem;
+        transform: translateY(150%);
+        opacity: 0;
+        transition: transform 1.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s,
+        opacity 1.8s ease-in-out 0.8s;
       }
 
       .underline-grp {

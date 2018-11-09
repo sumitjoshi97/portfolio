@@ -1,11 +1,19 @@
 ////////////////////////////////////////////////////////////////////
 //animations for sections
 
-.fp-viewing-home .heading-primary {
-    transform: translate(-50%, -50%);
+.fp-viewing-home .main__header__text__primary {
+    transform: translateY(0);
     opacity: 1;
 }
-.fp-viewing-about .heading-primary {
+.fp-viewing-about .main__header__text__primary {
+    transform: translate(-50%, -150%);
+    opacity: 0;
+}
+.fp-viewing-home .main__header__text__secondary {
+    transform: translateY(0);
+    opacity: 1;
+}
+.fp-viewing-about .main__header__text__secondary {
     transform: translate(-50%, -150%);
     opacity: 0;
 }

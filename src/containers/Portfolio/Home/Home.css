@@ -76,13 +76,19 @@
     flex-direction: column;
     align-items: center; }
     .main__header__text__primary {
-      font-size: 6rem; }
+      font-size: 6rem;
+      transform: translateY(150%);
+      opacity: 0;
+      transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity 0.8s ease-in-out 0.8s; }
     .main__header__text__secondary {
       font-size: 4rem;
       color: #606c7a;
       text-transform: uppercase;
       letter-spacing: 2rem;
-      margin-right: -2rem; }
+      margin-right: -2rem;
+      transform: translateY(150%);
+      opacity: 0;
+      transition: transform 1.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity 1.8s ease-in-out 0.8s; }
     .main__header__text .underline-grp {
       display: flex;
       flex-direction: row; }

@@ -84,21 +84,3 @@ body {
   @media only screen and (max-width: 900px) {
     .bar-left {
       opacity: 0; } }
-
-.heading-primary {
-  font-size: 9rem;
-  font-weight: 700;
-  color: #e6e6e6;
-  text-align: left;
-  letter-spacing: 1rem;
-  line-height: 10rem; }
-  .heading-primary span {
-    display: block; }
-  @media only screen and (max-width: 1200px) {
-    .heading-primary {
-      font-size: 7rem; } }
-
-.underline {
-  width: 40rem;
-  height: 0.2rem;
-  background: #FFF; }
