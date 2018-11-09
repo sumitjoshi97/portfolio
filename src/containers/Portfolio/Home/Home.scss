@@ -61,7 +61,7 @@
     text-align: left;
     position: relative;
 
-    &--text {
+    &__text {
       width: 70%;
       margin: 0 auto;
       position: absolute;
@@ -77,7 +77,7 @@
       @include respond(phone) {
         top: 46%;
       }
-      &--header {
+      &__header {
         font-size: 6rem;
         font-weight: 500;
       }

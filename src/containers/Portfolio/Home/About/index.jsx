@@ -6,8 +6,8 @@ export default () => (
       passio
       <span>nate</span>
     </div>
-    <p className="main__about--text">
-      <span className="main__about--text--header red">Hi!</span>, I am
+    <p className="main__about__text">
+      <span className="main__about__text__header red">Hi!</span>, I am
       <span className="green">&nbsp;Sumit Joshi</span>, a
       <span className="red">&nbsp;front-end software developer&nbsp;</span>
       based in Delhi, India. I am comfortable throughout the stack, but my
