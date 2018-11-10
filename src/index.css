@@ -40,7 +40,7 @@ body {
     position: absolute;
     width: 4rem;
     height: 4rem;
-    fill: #fff; }
+    fill: #FFF; }
 
 .red {
   color: #ff2b1f;
@@ -49,38 +49,3 @@ body {
 .green {
   color: #1ef36c;
   font-weight: 700; }
-
-.back-red {
-  background-color: #f01800; }
-
-.back-violet {
-  background-color: #5f27cd; }
-
-.back-yellow {
-  background-color: #f7b731; }
-
-.back-green {
-  background-color: #0047ca; }
-
-.back-orange {
-  background-color: #00acc1; }
-
-.back-orch {
-  background-color: #f39c12; }
-
-.bar-left {
-  position: absolute;
-  font-size: 2rem;
-  top: 20%;
-  left: 5%;
-  width: 1px;
-  height: 60%;
-  background-color: #a8a8a8;
-  opacity: 1; }
-  .bar-left::before {
-    content: '';
-    padding: 1.5rem 0.4rem;
-    background-color: #a8a8a8; }
-  @media only screen and (max-width: 900px) {
-    .bar-left {
-      opacity: 0; } }

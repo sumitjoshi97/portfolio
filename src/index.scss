@@ -54,7 +54,7 @@ body {
     position: absolute;
     width: 4rem;
     height: 4rem;
-    fill: #fff;
+    fill: $color-white;
   }
 }
 
@@ -66,26 +66,4 @@ body {
 .green {
   color: #1ef36c;
   font-weight: 700;
-}
-
-//background colors
-.back {
-  &-red {
-    background-color: #f01800;
-  }
-  &-violet {
-    background-color: #5f27cd;
-  }
-  &-yellow {
-    background-color: #f7b731;
-  }
-  &-green {
-    background-color: #0047ca;
-  }
-  &-orange {
-    background-color: #00acc1;
-  }
-  &-orch {
-    background-color: #f39c12;
-  }
 }
