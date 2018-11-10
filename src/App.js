@@ -1,35 +1,31 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Loadable from 'react-loadable';
-import ScrollToTop from './ScrollToTop';
-import Portfolio from './containers/Portfolio/PortFolio'
-import Loading from './components/Loading/Loading'
+import React, { Suspense } from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-// async loading of components
-const ProjectsList = Loadable({ loader: () => import('./containers/ProjectsList/ProjectsList'), loading: Loading })
-const ProjectCart = Loadable({ loader: () => import('./containers/ProjectsList/ProjectCart/ProjectCart'), loading: Loading })
-const ProjectEmaily = Loadable({ loader: () => import('./containers/ProjectsList/ProjectEmaily/ProjectEmaily'), loading: Loading })
-const ProjectSmartBrain = Loadable({ loader: () => import('./containers/ProjectsList/ProjectSmartBrain/ProjectSmartBrain'), loading: Loading })
-const ProjectBurger = Loadable({ loader: () => import('./containers/ProjectsList/ProjectBurger/ProjectBurger'), loading: Loading })
-const ProjectDevConnect = Loadable({ loader: () => import('./containers/ProjectsList/ProjectDevConnect/ProjectDevConnect'), loading: Loading })
+// import components and files
+import ScrollToTop from './ScrollToTop'
+import Loading from './components/Loading/Loading'
+import routes from './Routes'
 
 // main App Component
-const App = () => {
-    return (
-        <Router>
-            <ScrollToTop>
-                <Switch>
-                    <Route exact path="/projects" component={ProjectsList} />
-                    <Route exact path="/projects/cart" component={ProjectCart} />
-                    <Route exact path="/projects/emaily" component={ProjectEmaily} />
-                    <Route exact path="/projects/smart-brain" component={ProjectSmartBrain} />
-                    <Route exact path="/projects/dev-connect" component={ProjectDevConnect} />
-                    <Route path='/projects/burger' component={ProjectBurger} />
-                    <Route path="/" component={Portfolio} />
-                </Switch>
-            </ScrollToTop>
-        </Router>
-    )
-}
+const App = () => (
+  <Router>
+    <ScrollToTop>
+      <Switch>
+        {routes.map(route => (
+          <Route
+            key={route.path}
+            path={route.path}
+            exact
+            render={() => (
+              <Suspense fallback={<Loading />}>
+                <route.component />
+              </Suspense>
+            )}
+          />
+        ))}
+      </Switch>
+    </ScrollToTop>
+  </Router>
+)
 
 export default App
