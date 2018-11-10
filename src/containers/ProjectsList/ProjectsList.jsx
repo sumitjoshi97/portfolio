@@ -9,7 +9,8 @@ import './ProjectListAnimate.css'
 
 const fullpageProjectsOptions = {
   anchors: ['projects'],
-  callbacks: ['afterSlideLoad']
+  callbacks: ['afterSlideLoad'],
+  licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE'
 }
 
 const ProjectsList = () => (

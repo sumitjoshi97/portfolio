@@ -8,7 +8,8 @@ import './PortFolio.css'
 
 const fullpageOptions = {
   anchors: ['home', 'about', 'skills', 'recents'],
-  menu: '#fixed-nav'
+  menu: '#fixed-nav',
+  licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE'
 }
 
 class Portfolio extends Component {
