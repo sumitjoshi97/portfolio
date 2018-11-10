@@ -69,13 +69,13 @@
     opacity: 1; } }
 
 .navigation__backdrop {
-  background-color: #1a232e;
+  background-color: #161f2b;
   height: 100vh;
   width: 100%;
   z-index: 30; }
 
 .navigation__background {
-  background-image: radial-gradient(#2C3A47, #1a232e, #2C3A47);
+  background-image: radial-gradient(#2C3A47, #161f2b, #2C3A47);
   height: 6rem;
   width: 6rem;
   top: 7rem;
@@ -124,5 +124,5 @@
 
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;
-  color: #1a232e;
+  color: #161f2b;
   transform: translateX(1rem); }

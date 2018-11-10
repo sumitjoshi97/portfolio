@@ -3,7 +3,7 @@
   opacity: 1; }
 
 .fp-viewing-about .main__header__text__primary {
-  transform: translate(-50%, -150%);
+  transform: translateY(-150%);
   opacity: 0; }
 
 .fp-viewing-home .main__header__text__secondary {
@@ -11,14 +11,14 @@
   opacity: 1; }
 
 .fp-viewing-about .main__header__text__secondary {
-  transform: translate(-50%, -150%);
+  transform: translateY(-150%);
   opacity: 0; }
 
-.fp-viewing-about .main__about--text {
+.fp-viewing-about .main__about__text {
   transform: translate(-50%, -50%);
   opacity: 1; }
 
-.fp-viewing-skills .main__about--text {
+.fp-viewing-skills .main__about__text {
   transform: translate(-50%, -150%);
   opacity: 0; }
 

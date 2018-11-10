@@ -56,10 +56,10 @@
           outline: none; }
         .left-nav__link-box--item-link:hover span {
           width: 4rem;
-          background-color: #4e5763; }
+          background-color: #606c7a; }
         .left-nav__link-box--item-link:focus, .left-nav__link-box--item-link:active {
           outline: none; }
 
 .active a span {
   width: 4rem;
-  background-color: #4e5763; }
+  background-color: #606c7a; }

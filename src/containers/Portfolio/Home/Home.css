@@ -74,8 +74,11 @@
   .main__header__text {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    justify-content: center; }
     .main__header__text__primary {
+      text-align: center;
+      line-height: 1;
       font-size: 6rem;
       transform: translateY(150%);
       opacity: 0;
@@ -89,6 +92,10 @@
       transform: translateY(150%);
       opacity: 0;
       transition: transform 1.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity 1.8s ease-in-out 0.8s; }
+      @media only screen and (max-width: 600px) {
+        .main__header__text__secondary {
+          letter-spacing: 1.6rem;
+          margin-right: -1.6rem; } }
     .main__header__text .underline-grp {
       display: flex;
       flex-direction: row; }
@@ -103,7 +110,7 @@
   .main__about {
     text-align: left;
     position: relative; }
-    .main__about--text {
+    .main__about__text {
       width: 70%;
       margin: 0 auto;
       position: absolute;
@@ -113,20 +120,17 @@
       opacity: 0;
       transition: transform 1s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity 1s ease-in-out 0.8s; }
       @media only screen and (max-width: 900px) {
-        .main__about--text {
+        .main__about__text {
           width: 100%; } }
       @media only screen and (max-width: 600px) {
-        .main__about--text {
+        .main__about__text {
+          line-height: 4.2rem;
           top: 46%; } }
-      .main__about--text--header {
+      .main__about__text__header {
         font-size: 6rem;
         font-weight: 500; }
   .main__skills {
-    height: 100vh;
     position: relative; }
-    @media only screen and (max-width: 600px) {
-      .main__skills {
-        line-height: 2.2; } }
     .main__skills__heading {
       font-size: 5rem;
       position: absolute;
@@ -246,6 +250,9 @@
   @media only screen and (max-width: 900px) {
     .skills-list {
       width: 100%; } }
+  @media only screen and (max-width: 600px) {
+    .skills-list {
+      line-height: 2.2; } }
   .skills-list__item {
     display: inline-block;
     margin-right: 2rem;

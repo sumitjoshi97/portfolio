@@ -9,12 +9,15 @@
   //////////////////////////////////////
   // header section
   &__header {
+   
     &__text {
       display: flex;
       flex-direction: column;
       align-items: center;
-
+      justify-content: center;
       &__primary {
+        text-align: center;
+        line-height: 1;
         font-size: $font-primary;
         transform: translateY(150%);
         opacity: 0;
@@ -32,6 +35,11 @@
         opacity: 0;
         transition: transform 1.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s,
         opacity 1.8s ease-in-out 0.8s;
+ 
+        @include respond(phone) {
+          letter-spacing: 1.6rem;
+          margin-right: -1.6rem;
+        }
       }
 
       .underline-grp {
@@ -75,6 +83,7 @@
         width: 100%;
       }
       @include respond(phone) {
+        line-height: 4.2rem;
         top: 46%;
       }
       &__header {
@@ -87,11 +96,11 @@
   ////////////////////////////////////////////
   // skills section
   &__skills {
-    height: 100vh;
+    // height: 100vh;
     position: relative;
-    @include respond(phone) {
-      line-height: 2.2;
-    }
+    // @include respond(phone) {
+    //   line-height: 2.2;
+    // }
 
     &__heading {
       font-size: 5rem;
@@ -246,6 +255,9 @@
   width: auto;
   @include respond(tabPort) {
     width: 100%;
+  }
+  @include respond(phone) {
+    line-height: 2.2;
   }
   &__item {
     display: inline-block;

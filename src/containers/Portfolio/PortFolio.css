@@ -1,5 +1,5 @@
 .portfolio {
-  background: #1a232e;
+  background: #161f2b;
   overflow: hidden;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden; }
@@ -19,3 +19,12 @@
   width: 0.1rem;
   background-color: #FFF;
   opacity: 0.035; }
+  @media only screen and (max-width: 1200px) {
+    .bar:nth-of-type(1) {
+      display: none; } }
+  @media only screen and (max-width: 900px) {
+    .bar:nth-of-type(2) {
+      display: none; } }
+  @media only screen and (max-width: 600px) {
+    .bar:nth-of-type(3) {
+      display: none; } }
