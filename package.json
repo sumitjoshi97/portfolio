@@ -13,13 +13,9 @@
     "react-spring": "^5.9.2"
   },
   "scripts": {
-    "build:css": "node-sass-chokidar src/ -o src/",
-    "watch:css": "npm run build:css && node-sass-chokidar src/ -o src/ --watch --recursive",
-    "dev": "react-scripts start",
-    "start": "npm-run-all -p watch:css dev",
-    "build": "npm run build:css && react-scripts build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "deploy": "gh-pages -d build",
-    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
