@@ -1,6 +1,5 @@
 @import '../../../sass/mixin.scss';
 @import '../../../sass/variables.scss';
-@import '../../../sass/animation.scss';
 
 .main {
   width: 76%;
@@ -9,7 +8,6 @@
   //////////////////////////////////////
   // header section
   &__header {
-   
     &__text {
       display: flex;
       flex-direction: column;
@@ -22,7 +20,7 @@
         transform: translateY(150%);
         opacity: 0;
         transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s,
-        opacity 0.8s ease-in-out 0.8s;
+          opacity 0.8s ease-in-out 0.8s;
       }
 
       &__secondary {
@@ -34,8 +32,8 @@
         transform: translateY(150%);
         opacity: 0;
         transition: transform 1.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s,
-        opacity 1.8s ease-in-out 0.8s;
- 
+          opacity 1.8s ease-in-out 0.8s;
+
         @include respond(phone) {
           letter-spacing: 1.6rem;
           margin-right: -1.6rem;

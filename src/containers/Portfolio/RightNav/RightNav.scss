@@ -1,81 +1,79 @@
 @import '../../../sass/mixin.scss';
 
 .right-nav {
-    width: 7rem; 
-    position: fixed;
-    height: 30rem;
-    top: 50%;
-    right: 6rem;
-    transform: translateY(-50%);
+  width: 7rem;
+  position: fixed;
+  height: 30rem;
+  top: 50%;
+  right: 6rem;
+  transform: translateY(-50%);
 
-    @include respond(tabPort) {
-        top: 93%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 40rem;
-        height: 7rem;
-    }
+  @include respond(tabPort) {
+    top: 93%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40rem;
+    height: 7rem;
+  }
 }
 
 .social {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(50%, -50%);
-    text-align: center;
-    opacity: 0;
-    animation-name: social-translate;
-    animation-duration: 0.8s;
-    animation-delay: 0.2s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-        &--item {
-            display: block;
-            &:hover {
-                animation-name: bounce-icon;
-                animation-duration: 0.4s;
-            }
-        
-            &:focus, &:active {
-                outline: none;
-            }
-            @include respond(tabPort) {
-                display: inline-block;
-            }
-        }
-    &__icon {
-        width: 2.5rem;
-        height: 2.5rem;
-        margin: 1.5rem 0;
-        cursor: pointer;
-        fill: #fff;
-        stroke-width: 0;
-
-        @include respond(tabPort) {
-            margin: 0 2rem;
-        }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, -50%);
+  text-align: center;
+  opacity: 0;
+  animation-name: social-translate;
+  animation-duration: 0.8s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  &--item {
+    display: block;
+    &:hover {
+      animation-name: bounce-icon;
+      animation-duration: 0.4s;
     }
+
+    @include respond(tabPort) {
+      display: inline-block;
+    }
+  }
+  &__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 1.5rem 0;
+    cursor: pointer;
+    fill: #fff;
+
+    @include respond(tabPort) {
+      margin: 0 2rem;
+    }
+  }
 }
 
+//////////////////////////////////
+//animation keyframes
 @keyframes bounce-icon {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-4px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 @keyframes social-translate {
-    0% {
-        transform: translate(50%, -50%);
-        opacity: 0;
-    }
-    100% {
-        transform: translate(-50%, -50%);
-        opacity: 1;
-    }
+  0% {
+    transform: translate(50%, -50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
 }

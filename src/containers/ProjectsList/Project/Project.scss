@@ -1,10 +1,11 @@
 @import '../../../sass/mixin.scss';
-@import '../../../sass//animation.scss';
- 
+@import '../../../sass/variables.scss';
+//animations
+
 .project-full {
   width: 100%;
   position: relative;
-  color: #000;
+  color: $color-white;
   font-size: 1.8rem;
   line-height: 4rem;
 
@@ -167,7 +168,7 @@
 
   // projects images
   &__summary-image {
-    background-color: #f0f0f0;
+    background-color: #e2e1e1;
     padding: 25rem 0;
     @include respond(tabPort) {
       padding: 20rem 0;
@@ -199,12 +200,12 @@
       width: 100%;
       margin: 0 auto;
       border-radius: 0.8rem;
-      box-shadow: .5rem 1rem 1.5rem rgba(#000, 0.1);
+      box-shadow: 0.5rem 1rem 1.5rem rgba(#000, 0.1);
     }
     &__text {
-        text-align: center;
-        font-size: 75%;
-        font-style: italic;
+      text-align: center;
+      font-size: 75%;
+      font-style: italic;
     }
   }
 
