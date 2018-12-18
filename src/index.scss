@@ -67,3 +67,10 @@ body {
   color: #1ef36c;
   font-weight: 700;
 }
+
+a {
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
