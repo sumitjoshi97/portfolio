@@ -1,6 +1,4 @@
-import React, {Component} from 'react';
-import Icons from '../../../assets/svg/sprite.svg';
-import './RightNav.css';
+import './RightNav.scss'
 
 class RightNav extends Component {
     render() {

@@ -1,6 +1,4 @@
-import React, {Component} from 'react';
-import NavLink from '../../../components/NavLink/NavLink';
-import './LeftNav.css';
+import './LeftNav.scss'
 
 class LeftNav extends Component {
     render() {

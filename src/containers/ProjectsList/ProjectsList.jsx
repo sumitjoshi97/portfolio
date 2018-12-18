@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom'
 // import components and css files
 import ProjectsListItem from './ProjectsListItem/ProjectsListItem'
 import Icons from '../../assets/svg/sprite.svg'
-import './ProjectsList.css'
-import './ProjectListAnimate.css'
+import './ProjectsList.scss'
+import './ProjectListAnimate.scss'
 
 const fullpageProjectsOptions = {
   anchors: ['projects'],
@@ -21,7 +21,6 @@ const ProjectsList = () => (
     <ReactFullpage
       {...fullpageProjectsOptions}
       render={({ state, fullpageApi }) => {
-        // change nav color as per current slide
         if (state.callback === 'afterSlideLoad') {
           $('.bottom-nav__list__item.active').removeClass('active')
           $('.bottom-nav__list__item')
@@ -29,7 +28,7 @@ const ProjectsList = () => (
             .addClass('active')
         }
 
-        // mouse scroll feature
+        // horizontal mouse scroll
         $('.section').on('DOMMouseScroll mousewheel', function(e) {
           if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
             fullpageApi.moveSlideRight()

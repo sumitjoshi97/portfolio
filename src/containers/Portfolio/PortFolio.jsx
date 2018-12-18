@@ -4,7 +4,7 @@ import RightNav from './RightNav/RightNav'
 import Home from './Home/Home'
 import NavToggle from './NavToggle/NavToggle'
 import Navigation from './Navigation/Navigation'
-import './PortFolio.css'
+import './PortFolio.scss'
 
 const fullpageOptions = {
   anchors: ['home', 'about', 'skills', 'recents'],

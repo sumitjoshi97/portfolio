@@ -1,5 +1,4 @@
-import React from 'react';
-import './NavBottom.css';
+import './NavBottom.scss'
 
 const NavBottom = () => (
     <nav className="bottom-nav">

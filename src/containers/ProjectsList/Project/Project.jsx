@@ -4,7 +4,7 @@ import Icons from '../../../assets/svg/sprite.svg'
 import Header from './Header.jsx'
 import Footer from './Footer'
 import Radium from 'radium'
-import './Project.css'
+import './Project.scss'
 
 const Project = props => {
   // list of stack used in project
@@ -51,7 +51,8 @@ const Project = props => {
           className="icon-back-logo"
           style={{
             fill: 'black'
-          }}>
+          }}
+        >
           <use xlinkHref={`${Icons}#icon-arrow-left`} />
         </svg>
       </Link>
@@ -78,7 +79,8 @@ const Project = props => {
           href={props.linkLanuchProject}
           target="blank"
           className="project-full__launch--link"
-          style={linkStyle}>
+          style={linkStyle}
+        >
           Launch Project
         </a>
       </div>
@@ -92,14 +94,16 @@ const Project = props => {
         <Link
           to={`/projects/${props.projectPrev}`}
           className="project-full__navigation__section"
-          style={{ left: '4%' }}>
+          style={{ left: '4%' }}
+        >
           <svg className="icon-logo icon-logo--prev">
             <use xlinkHref={`${Icons}#icon-arrow-left`} />
           </svg>
           <span
             style={{
               left: '6rem'
-            }}>
+            }}
+          >
             Prev
           </span>
         </Link>
@@ -109,14 +113,16 @@ const Project = props => {
         <Link
           to={`/projects/${props.projectNext}`}
           className="project-full__navigation__section"
-          style={{ right: '4%' }}>
+          style={{ right: '4%' }}
+        >
           <svg className="icon-logo icon-logo--next">
             <use xlinkHref={`${Icons}#icon-arrow-right`} />
           </svg>
           <span
             style={{
               right: '6rem'
-            }}>
+            }}
+          >
             Next
           </span>
         </Link>
