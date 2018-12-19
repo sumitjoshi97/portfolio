@@ -16,7 +16,7 @@
         right: 0rem;
     }
     @include respond(phone) {
-        display: none;
+        top: 5rem;
     }
     & span {
         position: relative;
