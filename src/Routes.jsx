@@ -36,6 +36,12 @@ export default [
     path: '/projects/dev-connect'
   },
   {
+    component: lazy(() =>
+      import('./containers/ProjectsList/ProjectReactChat/ProjectReactChat')
+    ),
+    path: '/projects/react-chat'
+  },
+  {
     component: lazy(() => import('./containers/Portfolio/PortFolio')),
     path: '/'
   }
