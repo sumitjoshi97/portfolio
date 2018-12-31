@@ -50,36 +50,43 @@ const ProjectsList = () => (
 
             <div className="section projects-all">
               <ProjectsListItem
-                imgUrl={require('../../assets/images/devConnect/dev-project.png')}
+                imgUrl={require('../../assets/images/reactChat/chat-project.png')}
                 id="1"
+                projectTitle="React Chat"
+                link="react-chat"
+                backgroundColor="#1e90ff"
+              />
+              <ProjectsListItem
+                imgUrl={require('../../assets/images/devConnect/dev-project.png')}
+                id="2"
                 projectTitle="Dev Connect"
                 link="dev-connect"
                 backgroundColor="#f39c12"
               />
               <ProjectsListItem
                 imgUrl={require('../../assets/images/emaily/emaily-project.jpg')}
-                id="2"
+                id="3"
                 projectTitle="Emaily"
                 link="emaily"
                 backgroundColor="#ff1e1e"
               />
               <ProjectsListItem
                 imgUrl={require('../../assets/images/burger/burger-project.png')}
-                id="3"
+                id="4"
                 projectTitle="Burger Builder"
                 link="burger"
                 backgroundColor="#5f27cd"
               />
               <ProjectsListItem
                 imgUrl={require('../../assets/images/smartBrain/smart-project.png')}
-                id="4"
+                id="5"
                 projectTitle="SmartBrain"
                 link="smart-brain"
                 backgroundColor="#f7b731"
               />
               <ProjectsListItem
                 imgUrl={require('../../assets/images/cart/cart-project.png')}
-                id="5"
+                id="6"
                 projectTitle="Cart"
                 link="cart"
                 backgroundColor="#00acc1"
