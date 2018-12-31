@@ -44,7 +44,7 @@ const ProjectCart = () => (
       }
     ]}
     projectPrev="smart-brain"
-    projectNext="dev-connect"
+    projectNext="react-chat"
   />
 )
 

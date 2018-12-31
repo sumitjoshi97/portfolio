@@ -62,7 +62,7 @@ const ProjectDevConnect = () => (
         value: 'comments page'
       }
     ]}
-    projectPrev="cart"
+    projectPrev="react-chat"
     projectNext="emaily"
   />
 )
