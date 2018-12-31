@@ -13,7 +13,6 @@
   &__header {
     height: 100vh;
     position: relative;
-
     @include respond(tabPort) {
       height: 160vh;
     }
@@ -311,24 +310,26 @@
 ///////////////////////////////////////////
 //animation keyframes
 
-@keyframes background-scale {
+@keyframes arrow-bounce {
   0% {
-    transform: scale(1);
+    transform: translate(0, -50%);
+  }
+  50% {
+    transform: translate(0.6rem, -50%);
   }
   100% {
-    transform: scale(80);
+    transform: translate(0, -50%);
   }
 }
 
-@keyframes translate-nav {
+@keyframes arrow-bounce-reverse {
   0% {
-    left: 0%;
-    visibility: visible;
-    opacity: 0.2;
+    transform: translate(0, -50%);
+  }
+  50% {
+    transform: translate(-0.6rem, -50%);
   }
   100% {
-    left: 50%;
-    visibility: visible;
-    opacity: 1;
+    transform: translate(0, -50%);
   }
 }

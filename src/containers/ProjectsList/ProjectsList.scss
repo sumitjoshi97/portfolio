@@ -126,14 +126,6 @@
 
 ///////////////////////////////////////////////
 //animation keyframes
-@keyframes background-scale {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(80);
-  }
-}
 
 @keyframes translate-backdrop {
   0% {
@@ -141,5 +133,17 @@
   }
   100% {
     transform: translateY(-100%);
+  }
+}
+
+@keyframes arrow-bounce {
+  0% {
+    transform: translate(0, -50%);
+  }
+  50% {
+    transform: translate(0.6rem, -50%);
+  }
+  100% {
+    transform: translate(0, -50%);
   }
 }
