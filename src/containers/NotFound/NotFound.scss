@@ -1,0 +1,12 @@
+@import "../../sass/variables.scss";
+
+.not-found {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 4rem;
+  background-color: $background-primary;
+  color: $color-primary;
+}
