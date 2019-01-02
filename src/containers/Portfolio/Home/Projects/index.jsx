@@ -26,8 +26,8 @@ export default () => (
       <div className="main__projects__background" />
       <div className="project-text">
         <h2>App</h2>
-        <h1>Dev Connect</h1>
-        <Link className="project-link" to="/projects/dev-connect">
+        <h1>React Chat</h1>
+        <Link className="project-link" to="/projects/react-chat">
           See project
         </Link>
       </div>
@@ -36,8 +36,8 @@ export default () => (
       <div className="main__projects__background" />
       <div className="project-text">
         <h2>App</h2>
-        <h1>Emaily</h1>
-        <Link className="project-link" to="/projects/emaily">
+        <h1>Dev Conenct</h1>
+        <Link className="project-link" to="/projects/dev-connect">
           See Project
         </Link>
       </div>
