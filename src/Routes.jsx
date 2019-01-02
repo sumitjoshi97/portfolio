@@ -25,12 +25,6 @@ export default [
   },
   {
     component: lazy(() =>
-      import('./containers/ProjectsList/ProjectBurger/ProjectBurger')
-    ),
-    path: '/projects/burger'
-  },
-  {
-    component: lazy(() =>
       import('./containers/ProjectsList/ProjectDevConnect/ProjectDevConnect')
     ),
     path: '/projects/dev-connect'
