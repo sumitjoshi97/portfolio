@@ -71,22 +71,15 @@ const ProjectsList = () => (
                 backgroundColor="#ff1e1e"
               />
               <ProjectsListItem
-                imgUrl={require('../../assets/images/burger/burger-project.png')}
-                id="4"
-                projectTitle="Burger Builder"
-                link="burger"
-                backgroundColor="#5f27cd"
-              />
-              <ProjectsListItem
                 imgUrl={require('../../assets/images/smartBrain/smart-project.png')}
-                id="5"
+                id="4"
                 projectTitle="SmartBrain"
                 link="smart-brain"
                 backgroundColor="#f7b731"
               />
               <ProjectsListItem
                 imgUrl={require('../../assets/images/cart/cart-project.png')}
-                id="6"
+                id="5"
                 projectTitle="Cart"
                 link="cart"
                 backgroundColor="#00acc1"
