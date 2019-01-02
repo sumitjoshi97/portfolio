@@ -15,7 +15,7 @@ const App = () => (
           <Route
             key={route.path}
             path={route.path}
-            exact
+            exact={route.exact}
             render={() => (
               <Suspense fallback={<Loading />}>
                 <route.component />
