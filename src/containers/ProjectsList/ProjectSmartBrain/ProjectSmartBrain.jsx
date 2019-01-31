@@ -28,11 +28,12 @@ const ProjectSmartBrain = () => (
       },
       {
         image: `${require('../../../assets/images/smartBrain/entries.jpg')}`,
-        value: 'Entry count increased and Image recognized shown by blue box around face'
+        value:
+          'Entry count increased and Image recognized shown by blue box around face'
       }
     ]}
-    projectPrev="burger"
-    projectNext="cart"
+    projectPrev="cart"
+    projectNext="react-chat"
   />
 )
 

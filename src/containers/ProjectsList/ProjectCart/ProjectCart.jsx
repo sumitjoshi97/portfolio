@@ -43,8 +43,8 @@ const ProjectCart = () => (
         value: 'Page showing all orders by user'
       }
     ]}
-    projectPrev="smart-brain"
-    projectNext="react-chat"
+    projectPrev="emaily"
+    projectNext="smart-brain"
   />
 )
 

@@ -34,7 +34,7 @@ const ProjectBurger = () => (
         value: 'change theme'
       }
     ]}
-    projectPrev="cart"
+    projectPrev="smart-brain"
     projectNext="dev-connect"
   />
 )
