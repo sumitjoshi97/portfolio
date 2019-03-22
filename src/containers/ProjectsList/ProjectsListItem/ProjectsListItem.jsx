@@ -1,29 +1,40 @@
 import React from 'react'
-import Icons from '../../../assets/svg/sprite.svg'
 import { Link } from 'react-router-dom'
 
- const ProjectsListItem = props => {
+import './styles.scss'
+
+const ProjectsListItem = props => {
   return (
-    <div className="slide" style={{ backgroundColor: props.backgroundColor }}>
-      <div className="project">
+    <div className='slide' style={{ backgroundColor: props.backgroundColor }}>
+      <div className='project-list-item'>
         <img
-          className="project__thumbnail"
+          className='project-list-item__thumbnail'
           id={`p${props.id}-thumbnail`}
           src={props.imgUrl}
           alt={props.projectTitle}
         />
-        <div className="project__info" id={`p${props.id}-info`}>
-          <h6>App</h6>
-          <h4>{props.projectTitle}</h4>
+
+        <div className='project-list-item__info' id={`p${props.id}-info`}>
+          <div className='project-list-item__header'>
+            <h3
+              className='project-list-item__info__header--primary'
+              style={{ color: props.backgroundColor }}
+            >
+              App
+            </h3>
+            <h2 className='project-list-item__info__header--secondary'>
+              {props.projectTitle}
+            </h2>
+          </div>
+
+          <Link
+            to={`projects/${props.link}`}
+            className='project-list-item__info__link'
+          >
+            view project
+            <div className='project-list-item__info__link__bottom' />
+          </Link>
         </div>
-      </div>
-      <div className="project__link" id={`p${props.id}-link`}>
-        <Link to={`projects/${props.link}`}>
-          See Project
-          <svg className="icon-link">
-            <use xlinkHref={`${Icons}#icon-arrow-right`} />
-          </svg>
-        </Link>
       </div>
     </div>
   )
