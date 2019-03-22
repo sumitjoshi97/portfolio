@@ -1,4 +1,5 @@
-@import '../../sass/mixin.scss';
+@import "../../sass/mixin.scss";
+@import "../../sass/variables.scss";
 
 //position - top - fix
 .projects-list {
@@ -25,101 +26,36 @@
   position: relative;
 }
 
-.project {
-  position: absolute;
-  top: 38%;
-  left: 50%;
-  width: 95rem;
-  height: 35rem;
-  transform: translate(-50%, -50%);
-  z-index: 100;
-  margin: 0 auto;
+.box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+.bar {
+  height: 100vh;
+  width: 0.1rem;
+  background-color: $color-white;
+  color: #501fff;
+  opacity: 0.04;
+
+  @include respond(tabLand) {
+    &:nth-of-type(1) {
+      display: none;
+    }
+  }
   @include respond(tabPort) {
-    width: 80rem;
-    height: 47rem;
+    &:nth-of-type(2) {
+      display: none;
+    }
   }
+
   @include respond(phone) {
-    width: 100%;
-    height: 35%;
-  }
-
-  &__thumbnail {
-    width: 80rem;
-    height: 35rem;
-    position: absolute;
-    top: 50%;
-    left: 40%;
-    transform: translate(-50%, -30%);
-    box-shadow: 0 0.5rem 4rem rgba(#000, 0.3);
-    opacity: 0;
-    overflow: hidden;
-    transition: transform 0.8s ease 0.8s, opacity 0.8s ease-in-out 0.8s;
-
-    @include respond(tabPort) {
-      left: 50%;
-    }
-
-    @include respond(phone) {
-      width: 100%;
-      height: 70%;
-    }
-  }
-  &__info {
-    position: absolute;
-    width: 30rem;
-    height: 12rem;
-    right: 15rem;
-    top: 50%;
-    background-color: #fff;
-    margin-bottom: 3rem;
-    color: #000;
-    text-align: center;
-    box-shadow: 0 0.5rem 4rem rgba(#000, 0.3);
-    opacity: 0;
-    transform: translate(0, 0);
-    transition: transform 0.8s ease 0.8s, opacity 0.8s ease-in-out 0.8s;
-    z-index: 1;
-    @include respond(tabPort) {
-      width: 80rem;
-      right: 50%;
-      top: 100%;
-    }
-    @include respond(phone) {
-      width: 100%;
-      right: 50%;
-    }
-  }
-
-  &__link {
-    position: absolute;
-    border: 2px solid #fff;
-    bottom: 16%;
-    left: 50%;
-    transform: translate(-50%, 30%);
-    padding: 0rem 4.8rem 0 1.8rem;
-    opacity: 0;
-    transition: transform 0.8s ease 0.8s, opacity 0.8s ease 1.2s;
-    & a {
-      position: relative;
-      color: #fff;
-      text-decoration: none;
-
-      & .icon-link {
-        position: absolute;
-        top: 50%;
-        fill: #fff;
-        height: 3rem;
-        width: 3rem;
-        vertical-align: middle;
-        margin-left: 1rem;
-        transform: translateY(-50%);
-      }
-
-      &:hover .icon-link {
-        animation: arrow-bounce infinite;
-        animation-duration: 0.6s;
-        animation-timing-function: cubic-bezier(0.16, 0.68, 0.43, 0.99);
-      }
+    &:nth-of-type(3) {
+      display: none;
     }
   }
 }

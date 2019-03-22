@@ -1,7 +1,8 @@
-@import './sass/mixin.scss';
-@import './sass/variables.scss';
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
-@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import "./sass/mixin.scss";
+@import "./sass/variables.scss";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+@import url("https://fonts.googleapis.com/css?family=Oswald");
 
 ///////////////////////////////////////////////
 // browser reset
@@ -31,7 +32,7 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Raleway", "Montserrat", sans-serif;
   color: $color-white;
   font-size: $base-font;
   line-height: 4.6rem;

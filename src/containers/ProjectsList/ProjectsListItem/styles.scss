@@ -1,0 +1,120 @@
+@import "../../../sass/mixin.scss";
+
+.project-list-item {
+  // height: 100vh;
+  // position: relative;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 95rem;
+  height: 35rem;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  margin: 0 auto;
+  @include respond(tabPort) {
+    width: 80rem;
+    height: 47rem;
+  }
+  @include respond(phone) {
+    width: 100%;
+    height: 35%;
+  }
+
+  &__thumbnail {
+    width: 80rem;
+    height: 35rem;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -30%);
+    box-shadow: 0 0.5rem 4rem rgba(#000, 0.3);
+    opacity: 0;
+    overflow: hidden;
+    transition: transform 0.8s ease 0.8s, opacity 0.8s ease-in-out 0.8s;
+
+    @include respond(tabPort) {
+      left: 50%;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+      height: 70%;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 30rem;
+    height: 22rem;
+    right: 15rem;
+    top: 80%;
+    background-color: #fff;
+    padding: 2rem 5.5rem;
+    color: #000;
+    text-align: center;
+    box-shadow: 0 0.5rem 4rem rgba(#000, 0.3);
+    opacity: 0;
+    transform: translate(0, 0);
+    transition: transform 0.8s ease 0.8s, opacity 0.8s ease-in-out 0.8s;
+    z-index: 1;
+    @include respond(tabPort) {
+      flex-direction: row;
+      padding: 1rem 3rem;
+      height: 10rem;
+      width: 100%;
+      top: 46rem;
+      right: 50%;
+    }
+    @include respond(phone) {
+      right: 50%;
+      top: 28rem;
+    }
+
+    &__header {
+      &--primary {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        font-family: "Oswald";
+        letter-spacing: 4px;
+        @include respond(tabPort) {
+          display: none;
+        }
+      }
+
+      &--secondary {
+        font-size: 3rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        line-height: 3rem;
+      }
+    }
+    &__link {
+      display: inline-block;
+      font-size: 1.4rem;
+      font-weight: 700;
+      line-height: 3rem;
+      margin-bottom: 0.8rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #000;
+
+      &__bottom {
+        width: 10px;
+        height: 2px;
+        opacity: 0;
+        background: #000;
+        transition: all 0.2s linear;
+        transform-origin: left;
+      }
+
+      &:hover &__bottom {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+  }
+}
