@@ -45,44 +45,51 @@ const ProjectsList = () => (
               </svg>
             </Link>
 
-            <div className="backdrop" />
+            <div className='backdrop' />
             <NavBottom />
 
-            <div className="section projects-all">
+            <div className='section'>
+              <ProjectsListItem
+                imgUrl={require('../../assets/images/movierolls/movierolls-project.png')}
+                id='1'
+                projectTitle='Movie Rolls'
+                link='movie-rolls'
+                backgroundColor='#304FFE'
+              />
               <ProjectsListItem
                 imgUrl={require('../../assets/images/reactChat/chat-project.png')}
-                id="1"
-                projectTitle="React Chat"
-                link="react-chat"
-                backgroundColor="#1e90ff"
+                id='2'
+                projectTitle='React Chat'
+                link='react-chat'
+                backgroundColor='#2962FF'
               />
               <ProjectsListItem
                 imgUrl={require('../../assets/images/devConnect/dev-project.png')}
-                id="2"
-                projectTitle="Dev Connect"
-                link="dev-connect"
-                backgroundColor="#f39c12"
+                id='3'
+                projectTitle='Dev Connect'
+                link='dev-connect'
+                backgroundColor='#304FFE'
               />
               <ProjectsListItem
                 imgUrl={require('../../assets/images/emaily/emaily-project.jpg')}
-                id="3"
-                projectTitle="Emaily"
-                link="emaily"
-                backgroundColor="#ff1e1e"
+                id='4'
+                projectTitle='Emaily'
+                link='emaily'
+                backgroundColor='#2962FF'
               />
               <ProjectsListItem
                 imgUrl={require('../../assets/images/cart/cart-project.png')}
-                id="4"
-                projectTitle="Cart"
-                link="cart"
-                backgroundColor="#00acc1"
+                id='5'
+                projectTitle='Cart'
+                link='cart'
+                backgroundColor='#304FFE'
               />
               <ProjectsListItem
                 imgUrl={require('../../assets/images/smartBrain/smart-project.png')}
-                id="5"
-                projectTitle="SmartBrain"
-                link="smart-brain"
-                backgroundColor="#f7b731"
+                id='6'
+                projectTitle='SmartBrain'
+                link='smart-brain'
+                backgroundColor='#2962FF'
               />
             </div>
           </>

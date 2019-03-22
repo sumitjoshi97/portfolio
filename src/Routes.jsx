@@ -8,6 +8,13 @@ export default [
   },
   {
     component: lazy(() =>
+      import('./containers/ProjectsList/ProjectMovieRolls/ProjectMovieRolls')
+    ),
+    path: '/projects/movie-rolls',
+    exact: true
+  },
+  {
+    component: lazy(() =>
       import('./containers/ProjectsList/ProjectCart/ProjectCart')
     ),
     path: '/projects/cart',
@@ -32,6 +39,7 @@ export default [
       import('./containers/ProjectsList/ProjectDevConnect/ProjectDevConnect')
     ),
     path: '/projects/dev-connect',
+
     exact: true
   },
   {
