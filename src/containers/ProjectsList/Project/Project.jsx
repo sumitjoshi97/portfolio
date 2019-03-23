@@ -14,14 +14,14 @@ const Project = props => {
 
   // screenshots list of project
   const shotsList = props.screenshots.map((shot, index) => (
-    <div className="project-full__summary-image" key={index}>
-      <div className="project-full__summary-image__shot">
+    <div className='project__summary-image' key={index}>
+      <div className='project__summary-image__shot'>
         <img
           src={shot.image}
-          alt="summary screenshot"
-          className="project-full__summary-image__image"
+          alt='summary screenshot'
+          className='project__summary-image__image'
         />
-        <p className="project-full__summary-image__text">{shot.value}</p>
+        <p className='project__summary-image__text'>{shot.value}</p>
       </div>
     </div>
   ))
@@ -45,10 +45,10 @@ const Project = props => {
   }
 
   return (
-    <div className="project-full">
-      <Link to="/projects" className="icon-back">
+    <div className='project'>
+      <Link to='/projects' className='icon-back'>
         <svg
-          className="icon-back-logo"
+          className='icon-back-logo'
           style={{
             fill: 'black'
           }}
@@ -65,20 +65,20 @@ const Project = props => {
         theme={props.theme}
       />
 
-      <div className="project-full__stack" style={theme}>
+      <div className='project__stack' style={theme}>
         <h3>Stack</h3>
-        <ul className="project-full__stack--list">{stackList}</ul>
+        <ul className='project__stack--list'>{stackList}</ul>
       </div>
 
       {/* screenshot  */}
-      <div className="project-full__screenshot" style={backgroundStyle} />
+      <div className='project__screenshot' style={backgroundStyle} />
 
       {/* project launch button */}
-      <div className="project-full__launch">
+      <div className='project__launch'>
         <a
           href={props.linkLanuchProject}
-          target="blank"
-          className="project-full__launch--link"
+          target='blank'
+          className='project__launch--link'
           style={linkStyle}
         >
           Launch Project
@@ -89,14 +89,14 @@ const Project = props => {
       <div>{shotsList}</div>
 
       {/* navigation */}
-      <div className="project-full__navigation" style={theme}>
+      <div className='project__navigation' style={theme}>
         {/* prev button */}
         <Link
           to={`/projects/${props.projectPrev}`}
-          className="project-full__navigation__section"
+          className='project__navigation__section'
           style={{ left: '4%' }}
         >
-          <svg className="icon-logo icon-logo--prev">
+          <svg className='icon-logo icon-logo--prev'>
             <use xlinkHref={`${Icons}#icon-arrow-left`} />
           </svg>
           <span
@@ -107,15 +107,15 @@ const Project = props => {
             Prev
           </span>
         </Link>
-        <div className="center">Projects</div>
+        <div className='center'>Projects</div>
 
         {/* next project button */}
         <Link
           to={`/projects/${props.projectNext}`}
-          className="project-full__navigation__section"
+          className='project__navigation__section'
           style={{ right: '4%' }}
         >
-          <svg className="icon-logo icon-logo--next">
+          <svg className='icon-logo icon-logo--next'>
             <use xlinkHref={`${Icons}#icon-arrow-right`} />
           </svg>
           <span
