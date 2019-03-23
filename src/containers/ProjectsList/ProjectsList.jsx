@@ -39,8 +39,8 @@ const ProjectsList = () => (
 
         return (
           <>
-            <Link to="/" className="icon-back">
-              <svg className="icon-back-logo">
+            <Link to='/' className='icon-back'>
+              <svg className='icon-back-logo'>
                 <use xlinkHref={`${Icons}#icon-arrow-left`} />
               </svg>
             </Link>
@@ -49,6 +49,7 @@ const ProjectsList = () => (
             <NavBottom />
 
             <div className='section'>
+              {/* project - movie rolls, browse movies and shows  */}
               <ProjectsListItem
                 imgUrl={require('../../assets/images/movierolls/movierolls-project.png')}
                 id='1'
@@ -56,6 +57,8 @@ const ProjectsList = () => (
                 link='movie-rolls'
                 backgroundColor='#304FFE'
               />
+
+              {/* project - react chat app */}
               <ProjectsListItem
                 imgUrl={require('../../assets/images/reactChat/chat-project.png')}
                 id='2'
@@ -63,13 +66,17 @@ const ProjectsList = () => (
                 link='react-chat'
                 backgroundColor='#2962FF'
               />
+
+              {/* project - react shopping cart app */}
               <ProjectsListItem
-                imgUrl={require('../../assets/images/devConnect/dev-project.png')}
+                imgUrl={require('../../assets/images/cart/cart-project.png')}
                 id='3'
-                projectTitle='Dev Connect'
-                link='dev-connect'
+                projectTitle='Cart'
+                link='cart'
                 backgroundColor='#304FFE'
               />
+
+              {/* project - emaily survey, feedback app */}
               <ProjectsListItem
                 imgUrl={require('../../assets/images/emaily/emaily-project.jpg')}
                 id='4'
@@ -77,13 +84,17 @@ const ProjectsList = () => (
                 link='emaily'
                 backgroundColor='#2962FF'
               />
+
+              {/* project - dev connect - stackoverflow like web app   */}
               <ProjectsListItem
-                imgUrl={require('../../assets/images/cart/cart-project.png')}
+                imgUrl={require('../../assets/images/devConnect/dev-project.png')}
                 id='5'
-                projectTitle='Cart'
-                link='cart'
+                projectTitle='Dev Connect'
+                link='dev-connect'
                 backgroundColor='#304FFE'
               />
+
+              {/* project - smartbrain, recognize faces using ML */}
               <ProjectsListItem
                 imgUrl={require('../../assets/images/smartBrain/smart-project.png')}
                 id='6'
