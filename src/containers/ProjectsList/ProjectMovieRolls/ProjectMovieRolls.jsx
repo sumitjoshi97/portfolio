@@ -5,7 +5,8 @@ const ProjectMovieRolls = () => (
   <Project
     projectType='app'
     projectName='movie rolls'
-    projectInfo='A live chat web-app where user can login and chat in rooms, by creating their own rooms, adding members to rooms and lastly, chat with members through messages.'
+    projectInfo='App for browsing your favorite Movies and TV shows. Here, user can search for 
+                  favorite movies/tv shows, or discover movies/tv shows based on popularity, ratings, year'
     headerImage={require('../../../assets/images/movierolls/movierolls.svg')}
     headerStyle={['#1e90ff', '#304FFE']}
     theme={'#ff4e4e'}
@@ -39,7 +40,7 @@ const ProjectMovieRolls = () => (
       }
     ]}
     projectPrev='smart-brain'
-    projectNext='dev-connect'
+    projectNext='react-chat'
   />
 )
 

@@ -1,17 +1,17 @@
 import React from 'react'
 import Project from '../Project/Project'
 
-const ProjectBurger = () => (
+const ProjectReactChat = () => (
   <Project
-    projectType="App"
-    projectName="React Chat"
-    projectInfo="A live chat web-app where user can login and chat in rooms, by creating their own rooms, adding members to rooms and lastly, chat with members through messages."
+    projectType='App'
+    projectName='React Chat'
+    projectInfo='A live chat web-app where user can login and chat in rooms, by creating their own rooms, adding members to rooms and lastly, chat with members through messages.'
     headerImage={require('../../../assets/images/reactChat/chat.svg')}
     headerStyle={['#70a1ff', '#1e90ff']}
     theme={'#1e90ff'}
     stacks={['React js', 'Pusher', 'Sass', 'Node js', 'Express js']}
     backImage={require('../../../assets/images/reactChat/screenshot.png')}
-    linkLanuchProject="https://sumitjoshi97.github.io/react-slack"
+    linkLanuchProject='https://sumitjoshi97.github.io/react-slack'
     screenshots={[
       {
         image: `${require('../../../assets/images/reactChat/login.png')}`,
@@ -34,9 +34,9 @@ const ProjectBurger = () => (
         value: 'change theme'
       }
     ]}
-    projectPrev="smart-brain"
-    projectNext="dev-connect"
+    projectPrev='movie-rolls'
+    projectNext='cart'
   />
 )
 
-export default ProjectBurger
+export default ProjectReactChat

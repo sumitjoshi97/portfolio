@@ -3,9 +3,9 @@ import Project from '../Project/Project'
 
 const ProjectDevConnect = () => (
   <Project
-    projectType="App"
-    projectName="Dev Connect"
-    projectInfo="Stack overflow like social network app, where devs can register, create profile and, share posts to help other devs. Devs can comment on posts shared and also delete their post or comment"
+    projectType='App'
+    projectName='Dev Connect'
+    projectInfo='Stack overflow like social network app, where devs can register, create profile and, share posts to help other devs. Devs can comment on posts shared and also delete their post or comment'
     headerImage={require('../../../assets/images/devConnect/devConnect.svg')}
     headerStyle={['#1B9CFC', '#3c40c6']}
     theme={'#22a6f3'}
@@ -19,7 +19,7 @@ const ProjectDevConnect = () => (
       'MongoDB'
     ]}
     backImage={require('../../../assets/images/devConnect/screenshot.png')}
-    linkLanuchProject="https://dev-connects.herokuapp.com/"
+    linkLanuchProject='https://dev-connects.herokuapp.com/'
     screenshots={[
       {
         image: `${require('../../../assets/images/devConnect/landing.png')}`,
@@ -62,8 +62,8 @@ const ProjectDevConnect = () => (
         value: 'comments page'
       }
     ]}
-    projectPrev="react-chat"
-    projectNext="emaily"
+    projectPrev='emaily'
+    projectNext='smart-brain'
   />
 )
 

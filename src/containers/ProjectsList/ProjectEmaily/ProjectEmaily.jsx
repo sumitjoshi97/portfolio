@@ -3,12 +3,12 @@ import Project from '../Project/Project'
 
 const ProjectEmaily = () => (
   <Project
-    projectType="App"
-    projectName="Emaily"
-    projectInfo="A feedback app based on MERN stack. In this app, one can create and send surveys
+    projectType='App'
+    projectName='Emaily'
+    projectInfo='A feedback app based on MERN stack. In this app, one can create and send surveys
                     to emails. One require to signup through google oauth to access the app. This
                     app uses sendgrid API to send emails, and stripe for adding credits in account
-                    for sending emails."
+                    for sending emails.'
     headerImage={require('../../../assets/images/portfolio/project1.svg')}
     headerStyle={['#EA2027', '#ff0061']}
     theme={'#3c40c6'}
@@ -22,7 +22,7 @@ const ProjectEmaily = () => (
       'Adobe XD'
     ]}
     backImage={require('../../../assets/images/emaily/emaily-full.jpg')}
-    linkLanuchProject="https://emaily-serve.herokuapp.com/"
+    linkLanuchProject='https://emaily-serve.herokuapp.com/'
     screenshots={[
       {
         image: `${require('../../../assets/images/emaily/logged.jpg')}`,
@@ -49,8 +49,8 @@ const ProjectEmaily = () => (
         value: 'Survey summary page'
       }
     ]}
-    projectPrev="dev-connect"
-    projectNext="cart"
+    projectPrev='cart'
+    projectNext='dev-connect'
   />
 )
 
