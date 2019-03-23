@@ -45,26 +45,29 @@ export class Header extends Component {
     }
 
     return (
-      <div className="project-full__header">
+      <div className='project__header'>
         <Spring
           from={{ opacity: 0, width: '0%' }}
-          to={{ opacity: 1, width: this.state.width }}>
+          to={{ opacity: 1, width: this.state.width }}
+        >
           {({ opacity, width }) => (
             <div
-              className="project-full__header__image"
-              style={{ ...headerStyle, opacity, width }}>
-              <img src={this.props.headerImage} alt="" />
+              className='project__header__image'
+              style={{ ...headerStyle, opacity, width }}
+            >
+              <img src={this.props.headerImage} alt='' />
             </div>
           )}
         </Spring>
-        <div className="project-full__header__text">
-          <div className="project-full__header__text__content">
+        <div className='project__header__text'>
+          <div className='project__header__text__content'>
             <h3
-              className="project-full__header__text__content--secondary"
-              style={headerColor}>
+              className='project__header__text__content--secondary'
+              style={headerColor}
+            >
               {this.props.projectType}
             </h3>
-            <h2 className="project-full__header__text__content--primary">
+            <h2 className='project__header__text__content--primary'>
               {this.props.projectName}
             </h2>
             <p>{this.props.projectInfo}</p>
