@@ -6,6 +6,14 @@ import './styles.scss'
 const ProjectsListItem = props => {
   return (
     <div className='slide' style={{ backgroundColor: props.backgroundColor }}>
+      <div className='project-box'>
+        <div className='bar' />
+        <div className='bar' />
+        <div className='bar' />
+        <div className='bar' />
+        <div className='bar' />
+      </div>
+
       <div className='project-list-item'>
         <img
           className='project-list-item__thumbnail'
