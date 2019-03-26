@@ -17,7 +17,7 @@ const fullpageProjectsOptions = {
 }
 
 const ProjectsList = () => (
-  <div className="projects-list">
+  <div className='projects-list'>
     <ReactFullpage
       {...fullpageProjectsOptions}
       render={({ state, fullpageApi }) => {
@@ -53,54 +53,54 @@ const ProjectsList = () => (
               <ProjectsListItem
                 imgUrl={require('../../assets/images/movierolls/movierolls-project.png')}
                 id='1'
-                projectTitle='Movie Rolls'
+                title='Movie Rolls'
                 link='movie-rolls'
-                backgroundColor='#304FFE'
+                theme='#304FFE'
               />
 
               {/* project - react chat app */}
               <ProjectsListItem
                 imgUrl={require('../../assets/images/reactChat/chat-project.png')}
                 id='2'
-                projectTitle='React Chat'
+                title='React Chat'
                 link='react-chat'
-                backgroundColor='#2962FF'
+                theme='#2962FF'
               />
 
               {/* project - react shopping cart app */}
               <ProjectsListItem
                 imgUrl={require('../../assets/images/cart/cart-project.png')}
                 id='3'
-                projectTitle='Cart'
+                title='ShopCart'
                 link='cart'
-                backgroundColor='#304FFE'
+                theme='#304FFE'
               />
 
               {/* project - emaily survey, feedback app */}
               <ProjectsListItem
                 imgUrl={require('../../assets/images/emaily/emaily-project.jpg')}
                 id='4'
-                projectTitle='Emaily'
+                title='Emaily'
                 link='emaily'
-                backgroundColor='#2962FF'
+                theme='#2962FF'
               />
 
               {/* project - dev connect - stackoverflow like web app   */}
               <ProjectsListItem
                 imgUrl={require('../../assets/images/devConnect/dev-project.png')}
                 id='5'
-                projectTitle='Dev Connect'
+                title='Dev Connect'
                 link='dev-connect'
-                backgroundColor='#304FFE'
+                theme='#304FFE'
               />
 
               {/* project - smartbrain, recognize faces using ML */}
               <ProjectsListItem
                 imgUrl={require('../../assets/images/smartBrain/smart-project.png')}
                 id='6'
-                projectTitle='SmartBrain'
+                title='SmartBrain'
                 link='smart-brain'
-                backgroundColor='#2962FF'
+                theme='#2962FF'
               />
             </div>
           </>
