@@ -94,13 +94,15 @@
     position: relative;
 
     &__heading {
-      font-size: 5rem;
+      font-size: 4.2rem;
+      text-transform: capitalize;
+      font-weight: 700;
+      letter-spacing: 3px;
       position: absolute;
       top: 15%;
       left: 50%;
       transform: translate(-50%, 150%);
       opacity: 0;
-      font-weight: 400;
       transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity 0.8s ease-in-out 0.8s;
       @include respond(phone) {
         top: 12%;
@@ -149,11 +151,12 @@
         }
       }
     }
+
     &__background {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background-color: #0f0f0f;
+      background-color: #161616;
       visibility: hidden;
       opacity: 0;
       height: 4rem;
@@ -170,7 +173,7 @@
       width: 18rem;
       height: 18rem;
       opacity: 0;
-      background-image: url(../../../assets/images/reactChat/chat.svg);
+      background-image: url(../../../assets/images/movierolls/movierolls.svg);
       background-position: center;
       background-size: 60%;
       background-repeat: no-repeat;
@@ -188,6 +191,7 @@
         visibility: visible;
       }
     }
+
     &--project1:hover &__background {
       height: 100%;
       visibility: visible;
@@ -203,7 +207,7 @@
       width: 18rem;
       height: 18rem;
       opacity: 0;
-      background-image: url(../../../assets/images/devConnect/devConnect.svg);
+      background-image: url(../../../assets/images/reactChat/chat.svg);
       background-position: center;
       background-size: 60%;
       background-repeat: no-repeat;
@@ -237,12 +241,14 @@
   opacity: 0;
   transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 1.2s, opacity 0.8s ease-in-out 1.2s;
   width: auto;
+
   @include respond(tabPort) {
     width: 100%;
   }
   @include respond(phone) {
     line-height: 2.2;
   }
+
   &__item {
     display: inline-block;
     margin-right: 2rem;
@@ -252,13 +258,14 @@
   &__heading {
     font-size: 7rem;
     line-height: 5rem;
+
     @include respond(phone) {
       font-size: 6rem;
     }
   }
 }
 
-//////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
 //project container for text and link in recent projects
 .project {
   &-text {
@@ -281,6 +288,7 @@
       padding-top: 3rem;
     }
   }
+
   &-link {
     display: inline-block;
     font-size: 1.2rem;
@@ -292,6 +300,7 @@
     visibility: hidden;
     opacity: 0;
     transition: all 0.4s linear;
+
     .bottom {
       width: 10px;
       height: 1px;
