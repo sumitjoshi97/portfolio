@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 // import components and files
 import ScrollToTop from './ScrollToTop'
 import Loading from './components/Loading/Loading'
-import routes from './Routes'
+import routes from './routes'
 
 // main App Component
 const App = () => (
