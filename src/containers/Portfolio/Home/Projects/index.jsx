@@ -1,6 +1,8 @@
 import React from 'react'
-import Icons from '../../../../assets/svg/sprite.svg'
 import { Link } from 'react-router-dom'
+
+import ProjectItem from './ProjectItem'
+import Icons from '../../../../assets/svg/sprite.svg'
 
 export default () => (
   <div className='main__projects section'>
@@ -23,24 +25,10 @@ export default () => (
     </div>
 
     <div className='main__projects--project1'>
-      <div className='main__projects__background' />
-      <div className='project-text'>
-        <h1>React Chat</h1>
-        <Link className='project-link' to='/projects/react-chat'>
-          view project
-          <div className='bottom' />
-        </Link>
-      </div>
+      <ProjectItem title='movie rolls' projectLink='movie-rolls' />
     </div>
     <div className='main__projects--project2'>
-      <div className='main__projects__background' />
-      <div className='project-text'>
-        <h1>Dev Conenct</h1>
-        <Link className='project-link' to='/projects/dev-connect'>
-          view Project
-          <div className='bottom' />
-        </Link>
-      </div>
+      <ProjectItem title='react chat' projectLink='react-chat' />
     </div>
   </div>
 )
