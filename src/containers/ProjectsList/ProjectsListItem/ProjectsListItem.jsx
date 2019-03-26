@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 
 import './styles.scss'
 
-const ProjectsListItem = props => {
+const ProjectsListItem = ({ id, imgUrl, title, link, theme }) => {
   return (
-    <div className='slide' style={{ backgroundColor: props.backgroundColor }}>
+    <div className='slide' style={{ backgroundColor: theme }}>
       <div className='project-box'>
         <div className='bar' />
         <div className='bar' />
@@ -17,26 +17,26 @@ const ProjectsListItem = props => {
       <div className='project-list-item'>
         <img
           className='project-list-item__thumbnail'
-          id={`p${props.id}-thumbnail`}
-          src={props.imgUrl}
-          alt={props.projectTitle}
+          id={`p${id}-thumbnail`}
+          src={imgUrl}
+          alt={title}
         />
 
-        <div className='project-list-item__info' id={`p${props.id}-info`}>
+        <div className='project-list-item__info' id={`p${id}-info`}>
           <div className='project-list-item__header'>
             <h3
               className='project-list-item__info__header--primary'
-              style={{ color: props.backgroundColor }}
+              style={{ color: theme }}
             >
               App
             </h3>
             <h2 className='project-list-item__info__header--secondary'>
-              {props.projectTitle}
+              {title}
             </h2>
           </div>
 
           <Link
-            to={`projects/${props.link}`}
+            to={`projects/${link}`}
             className='project-list-item__info__link'
           >
             view project
