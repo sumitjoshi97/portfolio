@@ -1,0 +1,341 @@
+@import "../../sass/mixin.scss";
+@import "../../sass/variables.scss";
+
+.project {
+  width: 100%;
+  position: relative;
+  color: #000;
+  font-size: 1.8rem;
+  line-height: 4rem;
+
+  // hero - header section
+  &__header {
+    height: 100vh;
+    position: relative;
+    @include respond(tabPort) {
+      height: 160vh;
+    }
+
+    @include respond(phone) {
+      height: 180vh;
+    }
+
+    // header image
+    &__image {
+      width: 50%;
+      display: inline-block;
+      position: relative;
+      height: 100vh;
+
+      & img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 25rem;
+      }
+
+      @include respond(tabPort) {
+        display: block;
+        width: 100%;
+        position: relative;
+        height: 100vh;
+      }
+    }
+
+    // header text
+    &__text {
+      display: inline-block;
+      position: relative;
+      width: 50%;
+      height: 100vh;
+
+      @include respond(tabPort) {
+        height: 60vh;
+        width: 100%;
+      }
+
+      @include respond(phone) {
+        height: 80vh;
+      }
+
+      &__content {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+        padding: 8rem;
+
+        @include respond(tabPort) {
+          display: block;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+        }
+
+        @include respond(phone) {
+          padding: 2rem;
+        }
+
+        &--secondary {
+          font-size: 1.6rem;
+          margin-bottom: 1rem;
+          text-transform: uppercase;
+          letter-spacing: 4px;
+          font-family: "Oswald", sans-serif;
+
+          @include respond(phone) {
+            margin-bottom: 0rem;
+          }
+        }
+
+        &--primary {
+          font-size: 6rem;
+          font-weight: 400;
+          text-transform: capitalize;
+          letter-spacing: 2px;
+          margin-bottom: 4rem;
+          line-height: 1;
+
+          @include respond(phone) {
+            font-size: 4rem;
+            margin-bottom: 3rem;
+          }
+        }
+      }
+    }
+  }
+
+  // project stack
+  &__stack {
+    color: #fff;
+    padding: 15rem;
+
+    @include respond(phone) {
+      padding: 8rem 5rem;
+    }
+
+    & h3 {
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      font-family: "Oswald", sans-serif;
+      letter-spacing: 4px;
+      color: #2b2b2b;
+    }
+
+    &--list {
+      text-decoration: none;
+      list-style: none;
+      width: 50%;
+
+      @include respond(tabPort) {
+        width: 100%;
+      }
+
+      & li {
+        font-size: 2.5rem;
+        display: inline-block;
+
+        &:not(:last-of-type) {
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+
+  // background-screenshot
+  &__screenshot {
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include respond(tabPort) {
+      height: 100vh;
+    }
+  }
+
+  // project launch button
+  &__launch {
+    text-align: center;
+    padding: 20vh 0;
+
+    &--link {
+      font-size: 2rem;
+      text-decoration: none;
+      color: #000;
+      border: 1.5px solid #000;
+      padding: 1.5rem 2rem;
+      transition: all 0.15s ease-in;
+    }
+  }
+
+  // projects images
+  &__summary-image {
+    background-color: #f3f2f2;
+    padding: 25rem 0;
+    @include respond(tabPort) {
+      padding: 20rem 0;
+    }
+
+    @include respond(phone) {
+      padding: 12rem 0;
+    }
+
+    &:not(:first-of-type) {
+      padding-top: 0;
+    }
+
+    &__shot {
+      padding: 1rem;
+      width: 60%;
+      margin: 0 auto;
+      @include respond(tabPort) {
+        width: 80%;
+      }
+
+      @include respond(phone) {
+        width: 95%;
+      }
+    }
+
+    &__image {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 0.8rem;
+      box-shadow: 0.5rem 1rem 1.5rem rgba(#000, 0.1);
+    }
+    &__text {
+      text-align: center;
+      font-size: 75%;
+      font-style: italic;
+    }
+  }
+
+  &__navigation {
+    height: 24vh;
+    width: 100%;
+    position: relative;
+
+    &__section {
+      display: inline-block;
+      height: 4rem;
+      width: 10rem;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      transition: all 1s ease-in-out;
+
+      &:hover .icon-logo--prev {
+        animation: arrow-bounce-reverse infinite;
+        -webkit-animation: arrow-bounce-reverse infinite;
+        animation-duration: 0.6s;
+        animation-timing-function: ease-in-out;
+      }
+
+      &:hover .icon-logo--next {
+        animation: arrow-bounce infinite;
+        -webkit-animation: arrow-bounce infinite;
+        animation-duration: 0.6s;
+        animation-timing-function: ease-in-out;
+      }
+
+      & span {
+        position: absolute;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.icon-logo {
+  width: 3rem;
+  height: 3rem;
+  fill: #fff;
+  position: absolute;
+  transform: translateY(-50%);
+
+  &--prev {
+    top: 50%;
+    left: 10%;
+  }
+
+  &--next {
+    top: 50%;
+    right: 10%;
+  }
+}
+
+.center {
+  font-size: 4.5rem;
+  font-family: "Oswald";
+  letter-spacing: 4px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include respond(phone) {
+    display: none;
+  }
+}
+
+.footer {
+  display: flex;
+  height: 6rem;
+  padding: 0 4rem;
+  justify-content: space-between;
+  align-items: center;
+
+  &__name {
+    margin-right: auto;
+    letter-spacing: 2px;
+
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+  }
+
+  &__links {
+    &__link {
+      &__icon {
+        height: 2rem;
+        width: 2rem;
+        margin: 0 2rem;
+      }
+
+      &:hover &__icon {
+        fill: currentColor;
+      }
+    }
+  }
+}
+
+///////////////////////////////////////////
+//animation keyframes
+
+@keyframes arrow-bounce {
+  0% {
+    transform: translate(0, -50%);
+  }
+  50% {
+    transform: translate(0.6rem, -50%);
+  }
+  100% {
+    transform: translate(0, -50%);
+  }
+}
+
+@keyframes arrow-bounce-reverse {
+  0% {
+    transform: translate(0, -50%);
+  }
+  50% {
+    transform: translate(-0.6rem, -50%);
+  }
+  100% {
+    transform: translate(0, -50%);
+  }
+}

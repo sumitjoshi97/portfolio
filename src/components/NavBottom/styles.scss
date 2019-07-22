@@ -1,0 +1,69 @@
+@import "../../sass/mixin.scss";
+@import "../../sass/variables.scss";
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4000;
+
+  &__list {
+    list-style: none;
+    &__item {
+      display: inline-block;
+      margin: 2rem 3rem;
+
+      @include respond(tabPort) {
+        margin: 2rem 2rem;
+      }
+
+      @include respond(phone) {
+        margin: 2rem 0.7rem;
+      }
+      &:first-of-type {
+        margin-left: 0;
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+      &__link {
+        &:link,
+        &:visited {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.active .bottom-nav__list__item__link {
+  color: #000;
+}
+
+.fp-controlArrow {
+  top: 100% !important;
+  margin-top: -6.5rem !important;
+  &.fp-prev {
+    border: none;
+    width: 4rem !important;
+    height: 4rem !important;
+    margin-right: 0 !important;
+    background-image: url(../../assets/svg/SVG/chevron-left.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 4rem !important;
+  }
+
+  &.fp-next {
+    border: none;
+    width: 4rem !important;
+    height: 4rem !important;
+    margin-left: 0 !important;
+    background-image: url(../../assets/svg/SVG/chevron-right.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    right: 4rem !important;
+  }
+}
