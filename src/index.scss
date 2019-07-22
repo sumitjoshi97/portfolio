@@ -1,8 +1,8 @@
-@import "./sass/mixin.scss";
-@import "./sass/variables.scss";
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
-@import url("https://fonts.googleapis.com/css?family=Oswald");
+@import './sass/mixin.scss';
+@import './sass/variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 
 ///////////////////////////////////////////////
 // browser reset
@@ -10,6 +10,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  outline: 0 !important;
   &::after,
   &::before {
     padding: 0;
@@ -32,46 +34,47 @@ html {
 }
 
 body {
-  font-family: "Raleway", "Montserrat", sans-serif;
+  font-family: 'Raleway', 'Montserrat', sans-serif;
   color: $color-white;
   font-size: $base-font;
   line-height: 4.6rem;
+  letter-spacing: 1.2px;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
 }
 
+#root {
+  position: relative;
+}
+
 /////////////////////////////////////////////////
 // utility -classes
 
-.icon-back {
-  position: fixed;
-  top: 3rem;
-  left: 4rem;
-  width: 6rem;
-  height: 6rem;
-  z-index: 2000;
-  &-logo {
-    position: absolute;
-    width: 4rem;
-    height: 4rem;
-    fill: $color-white;
-  }
+.arrow {
 }
 
+// .icon-back {
+//   position: fixed;
+//   top: 3rem;
+//   left: 4rem;
+//   width: 6rem;
+//   height: 6rem;
+//   z-index: 2000;
+//   &-logo {
+//     position: absolute;
+//     width: 4rem;
+//     height: 4rem;
+//     fill: $color-white;
+//   }
+// }
+
 .red {
-  color: #ff2b1f;
+  color: #ed403a;
   font-weight: 700;
 }
 
 .green {
-  color: #1ef36c;
+  color: #16e0e7;
   font-weight: 700;
-}
-
-a {
-  &:focus,
-  &:active {
-    outline: none;
-  }
 }
