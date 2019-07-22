@@ -1,0 +1,16 @@
+@import '../../sass/mixin.scss';
+@import '../../sass/variables.scss';
+
+.left-nav {
+  position: fixed;
+  bottom: 4rem;
+  left: 4rem;
+  z-index: 400;
+
+  @include respond(tabPort) {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    // width: 40rem;
+  }
+}
