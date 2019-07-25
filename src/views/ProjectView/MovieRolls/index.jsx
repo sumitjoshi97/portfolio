@@ -12,7 +12,7 @@ const MovieRolls = () => (
     theme={'#ff4e4e'}
     stacks={['React js', 'Redux', 'Sass', 'Firebase']}
     backImage={require('../../../assets/images/movierolls/screenshot.png')}
-    linkLanuchProject="https://sumitjoshi97.github.io/movie-rolls"
+    projectViewLink="https://sumitjoshi97.github.io/movie-rolls"
     screenshots={[
       {
         image: `${require('../../../assets/images/movierolls/home.gif')}`,

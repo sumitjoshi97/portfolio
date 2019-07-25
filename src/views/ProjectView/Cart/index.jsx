@@ -12,7 +12,7 @@ const Cart = () => (
     theme={'#36f'}
     stacks={['React js', 'Redux', 'SASS', 'Firebase']}
     backImage={require('../../../assets/images/cart/screenshot.png')}
-    linkLanuchProject="https://sumitjoshi97.github.io/cart"
+    projectViewLink="https://sumitjoshi97.github.io/cart"
     screenshots={[
       {
         image: `${require('../../../assets/images/cart/home.jpg')}`,

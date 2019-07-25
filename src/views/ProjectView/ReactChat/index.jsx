@@ -11,7 +11,7 @@ const ReactChat = () => (
     theme={'#1e90ff'}
     stacks={['React js', 'Pusher', 'Sass', 'Node js', 'Express js']}
     backImage={require('../../../assets/images/reactChat/screenshot.png')}
-    linkLanuchProject="https://sumitjoshi97.github.io/react-slack"
+    projectViewLink="https://sumitjoshi97.github.io/react-slack"
     screenshots={[
       {
         image: `${require('../../../assets/images/reactChat/login.png')}`,

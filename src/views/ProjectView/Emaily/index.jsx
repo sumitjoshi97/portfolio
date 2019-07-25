@@ -22,7 +22,7 @@ const Emaily = () => (
       'Adobe XD',
     ]}
     backImage={require('../../../assets/images/emaily/emaily-full.jpg')}
-    linkLanuchProject="https://emaily-serve.herokuapp.com/"
+    projectViewLink="https://emaily-serve.herokuapp.com/"
     screenshots={[
       {
         image: `${require('../../../assets/images/emaily/logged.jpg')}`,

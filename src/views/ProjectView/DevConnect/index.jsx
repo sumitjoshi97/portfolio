@@ -19,7 +19,7 @@ const DevConnect = () => (
       'MongoDB',
     ]}
     backImage={require('../../../assets/images/devConnect/screenshot.png')}
-    linkLanuchProject="https://dev-connects.herokuapp.com/"
+    projectViewLink="https://dev-connects.herokuapp.com/"
     screenshots={[
       {
         image: `${require('../../../assets/images/devConnect/landing.png')}`,
