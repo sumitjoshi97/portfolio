@@ -1,11 +1,12 @@
-@import '../../sass/mixin.scss';
+@import "../../sass/mixin.scss";
+@import "../../sass/variables.scss";
 
-.social {
+.socials {
   list-style: none;
 
   &__item {
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 2.4rem;
+    height: 2.4rem;
     margin-bottom: 4rem;
     display: block;
 
@@ -20,32 +21,32 @@
     &__link {
       position: relative;
       overflow: hidden;
-      width: 2.2rem;
-      height: 2.2rem;
+      width: 2.4rem;
+      height: 2.4rem;
       display: block;
 
       &__icon {
         position: absolute;
         top: 0;
         left: 0;
-        width: 2.2rem;
-        height: 2.2rem;
-        cursor: pointer;
-        fill: #fff;
+        width: 2.4rem;
+        height: 2.4rem;
+        fill: $color-white;
 
         @include respond(tabPort) {
           margin: 0 2rem;
         }
       }
+
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         width: 100%;
         height: 105%;
         top: 105%;
         opacity: 1;
-        background: #16e0e7;
+        background: $color-green;
         z-index: 40;
         transition: top 0.5s ease-in-out;
         backface-visibility: hidden;
