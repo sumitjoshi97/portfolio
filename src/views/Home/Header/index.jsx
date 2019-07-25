@@ -9,11 +9,11 @@ export default () => (
     <div className="home__header__text">
       <h1 className="home__header__text__primary">Sumit Joshi</h1>
       <div className="underline-grp">
-        <div className="underline underline--white" />
-        <div className="underline underline--grey" />
+        <div className="underline underline--1" />
+        <div className="underline underline--2" />
       </div>
 
-      <h2 className="home__header__text__secondary">portfolio</h2>
+      <h2 className="home__header__text__secondary">a front-end engineer</h2>
     </div>
   </div>
 )
