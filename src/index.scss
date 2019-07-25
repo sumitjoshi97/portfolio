@@ -1,8 +1,6 @@
 @import './sass/mixin.scss';
 @import './sass/variables.scss';
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
-@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,800');
 
 ///////////////////////////////////////////////
 // browser reset
@@ -22,6 +20,7 @@
 //font size set
 html {
   font-size: 62.5%; //1rem = 10px
+  overflow: hidden;
   @include respond(bigDesk) {
     font-size: 75%; //1rem= 12px
   }
@@ -34,7 +33,7 @@ html {
 }
 
 body {
-  font-family: 'Raleway', 'Montserrat', sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: $color-white;
   font-size: $base-font;
   line-height: 4.6rem;
@@ -42,39 +41,4 @@ body {
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
-}
-
-#root {
-  position: relative;
-}
-
-/////////////////////////////////////////////////
-// utility -classes
-
-.arrow {
-}
-
-// .icon-back {
-//   position: fixed;
-//   top: 3rem;
-//   left: 4rem;
-//   width: 6rem;
-//   height: 6rem;
-//   z-index: 2000;
-//   &-logo {
-//     position: absolute;
-//     width: 4rem;
-//     height: 4rem;
-//     fill: $color-white;
-//   }
-// }
-
-.red {
-  color: #ed403a;
-  font-weight: 700;
-}
-
-.green {
-  color: #16e0e7;
-  font-weight: 700;
 }
