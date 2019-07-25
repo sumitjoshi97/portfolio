@@ -1,9 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
 import ProjectItem from './ProjectItem'
 import { ReactComponent as ArrowRight } from '../../../assets/svg/arrow-right.svg'
-import Icons from '../../../assets/svg/sprite.svg'
 
 export default () => (
   <div className="home__projects section">
@@ -18,13 +16,13 @@ export default () => (
         <span>Projects</span>
       </h3>
       <Link to="/projects" className="home__projects__header__link">
-        <span className="arrow-before">
-          <ArrowRight className="arrow" />
-        </span>
         <span className="home__projects__header__link__text">
           view all projects
         </span>
-        <span className="arrow-after">
+        <span className="home__projects__header__link__arrow--1">
+          <ArrowRight className="arrow" />
+        </span>
+        <span className="home__projects__header__link__arrow--2">
           <ArrowRight className="arrow" />
         </span>
       </Link>
