@@ -1,34 +1,31 @@
-@import "../../../sass/mixin.scss";
+@import '../../../sass/mixin.scss';
 
-.project-list-item {
+.project {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
-  width: 95rem;
-  height: 35rem;
+  width: 58vw;
+  height: 55vh;
   transform: translate(-50%, -50%);
-  z-index: 100;
-  margin: 0 auto;
-  @include respond(tabPort) {
-    width: 80rem;
-    height: 47rem;
-  }
-  @include respond(phone) {
-    width: 100%;
-    height: 35%;
-  }
+
+  // @include respond(tabPort) {
+  //   width: 80rem;
+  //   height: 47rem;
+  // }
+  // @include respond(phone) {
+  //   width: 100%;
+  //   height: 35%;
+  // }
 
   &__thumbnail {
-    width: 80rem;
-    height: 35rem;
     position: absolute;
-    top: 50%;
-    left: 40%;
-    transform: translate(-50%, -30%);
-    box-shadow: 0 0.5rem 4rem rgba(#000, 0.3);
+    top: 0;
+    left: 0;
+    bottom: 8rem;
+    right: 8rem;
+    transform: translate(0, 60px);
     opacity: 0;
-    overflow: hidden;
-    transition: transform 0.8s ease 0.8s, opacity 0.8s ease-in-out 0.8s;
+    transition: all 0.55s ease-in-out 0.6s;
 
     @include respond(tabPort) {
       left: 50%;
@@ -37,6 +34,20 @@
     @include respond(phone) {
       width: 100%;
       height: 70%;
+    }
+
+    &__image {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+      box-shadow: 0 0.3rem 2rem rgba(#000, 0.05);
     }
   }
 
@@ -48,17 +59,16 @@
     position: absolute;
     width: 30rem;
     height: 22rem;
-    right: 15rem;
-    top: 80%;
+    right: 0;
+    bottom: 0;
     background-color: #fff;
     padding: 2rem 5.5rem;
     color: #000;
     text-align: center;
-    box-shadow: 0 0.5rem 4rem rgba(#000, 0.3);
+    box-shadow: 0 0.3rem 2rem rgba(#000, 0.05);
+    transform: translateY(40px);
     opacity: 0;
-    transform: translate(0, 0);
-    transition: transform 0.8s ease 0.8s, opacity 0.8s ease-in-out 0.8s;
-    z-index: 1;
+    transition: all 0.55s ease-in-out 0.6s;
 
     @include respond(tabPort) {
       flex-direction: row;
@@ -77,8 +87,7 @@
       &--primary {
         font-size: 1.4rem;
         text-transform: uppercase;
-        font-family: "Oswald";
-        letter-spacing: 4px;
+        letter-spacing: 8px;
         @include respond(tabPort) {
           display: none;
         }
@@ -91,6 +100,7 @@
         line-height: 3rem;
       }
     }
+
     &__link {
       display: inline-block;
       font-size: 1.4rem;
@@ -114,35 +124,6 @@
       &:hover &__bottom {
         width: 100%;
         opacity: 1;
-      }
-    }
-  }
-}
-
-.project-box {
-  display: flex;
-  justify-content: space-evenly;
-
-  .bar {
-    height: 100vh;
-    width: 0.1rem;
-    background-color: #fff;
-    opacity: 0.09;
-
-    @include respond(tabLand) {
-      &:nth-of-type(1) {
-        display: none;
-      }
-    }
-    @include respond(tabPort) {
-      &:nth-of-type(2) {
-        display: none;
-      }
-    }
-
-    @include respond(phone) {
-      &:nth-of-type(3) {
-        display: none;
       }
     }
   }
