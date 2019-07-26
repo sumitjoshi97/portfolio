@@ -1,25 +1,27 @@
 import React from 'react'
-import Icons from '../../assets/svg/sprite.svg'
-import { Link as RouterLink } from 'react-router-dom'
 import Radium from 'radium'
 
-const Link = Radium(RouterLink)
+import { ReactComponent as Github } from '../../assets/svg/github.svg'
+import { ReactComponent as LinkedIn } from '../../assets/svg/linkedin.svg'
+import { ReactComponent as Mail } from '../../assets/svg/envelope.svg'
+
+import { Link as BrowserLink } from 'react-router-dom'
+
+const Link = Radium(BrowserLink)
 
 const Footer = props => {
-  const style = {
-    hoverStyle: {
-      textDecoration: 'none',
-      color: '#000',
-      ':hover': {
-        color: `${props.theme}`,
-      },
+  const hoverStyle = {
+    textDecoration: 'none',
+    color: '#000',
+    ':hover': {
+      color: `${props.theme}`,
     },
   }
 
   return (
     <div className="footer">
       <div className="footer__name">
-        <Link style={style.hoverStyle} key="text" to="/">
+        <Link style={hoverStyle} key="text" to="/">
           SUMIT
         </Link>
       </div>
@@ -28,34 +30,32 @@ const Footer = props => {
         <a
           href="mailto:dev.sumitjoshi@gmail.com"
           className="footer__links__link"
-          style={style.hoverStyle}
+          style={hoverStyle}
           key="link1"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <svg className="footer__links__link__icon">
-            <use xlinkHref={`${Icons}#icon-mail`} />
-          </svg>
+          <Mail className="footer__links__link__icon" />
         </a>
         <a
           href="https://github.com/sumitjoshi97"
           className="footer__links__link"
-          style={style.hoverStyle}
-          target="blank"
+          style={hoverStyle}
           key="link2"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <svg className="footer__links__link__icon">
-            <use xlinkHref={`${Icons}#icon-github`} />
-          </svg>
+          <Github className="footer__links__link__icon" />
         </a>
         <a
           href="https://www.linkedin.com/in/sumitjoshi97"
           className="footer__links__link"
-          style={style.hoverStyle}
+          style={hoverStyle}
           key="link3"
-          target="blank"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <svg className="footer__links__link__icon">
-            <use xlinkHref={`${Icons}#icon-linkedin`} />
-          </svg>
+          <LinkedIn className="footer__links__link__icon" />
         </a>
       </div>
     </div>

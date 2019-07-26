@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import { Spring } from 'react-spring'
+import { ReactComponent as ArrowRight } from '../../assets/svg/arrow-right.svg'
 
 export class Header extends Component {
   state = {
-    width: '50%'
+    width: '50%',
   }
 
   componentDidMount() {
@@ -37,40 +37,50 @@ export class Header extends Component {
     const headerStyle = {
       backgroundImage: `linear-gradient(120deg, ${this.props.headerStyle[0]}, ${
         this.props.headerStyle[1]
-      })`
+      })`,
     }
 
     const headerColor = {
-      color: `${this.props.theme}`
+      color: `${this.props.theme}`,
     }
 
     return (
-      <div className='project__header'>
-        <Spring
-          from={{ opacity: 0, width: '0%' }}
-          to={{ opacity: 1, width: this.state.width }}
+      <div className="project-view__header">
+        <div
+          className="project-view__header__image"
+          style={{ ...headerStyle, width: this.state.width }}
         >
-          {({ opacity, width }) => (
-            <div
-              className='project__header__image'
-              style={{ ...headerStyle, opacity, width }}
-            >
-              <img src={this.props.headerImage} alt='' />
-            </div>
-          )}
-        </Spring>
-        <div className='project__header__text'>
-          <div className='project__header__text__content'>
+          <img src={this.props.headerImage} alt="" />
+        </div>
+
+        <div className="project-view__header__text">
+          <div className="project-view__header__text__content">
             <h3
-              className='project__header__text__content--secondary'
+              className="project-view__header__text__content--secondary"
               style={headerColor}
             >
               {this.props.projectType}
             </h3>
-            <h2 className='project__header__text__content--primary'>
+            <h2 className="project-view__header__text__content--primary">
               {this.props.projectName}
             </h2>
             <p>{this.props.projectInfo}</p>
+            <a
+              href={this.props.projectLink}
+              target="_blank"
+              className="project-view__header__text__content__project-link"
+              rel="noopener noreferrer"
+            >
+              <span className="project-view__header__text__content__project-link__text">
+                View Project
+              </span>
+              <span className="project-view__header__text__content__project-link__arrow--1">
+                <ArrowRight className="projects-arrow" />
+              </span>
+              <span className="project-view__header__text__content__project-link__arrow--2">
+                <ArrowRight className="projects-arrow" />
+              </span>
+            </a>
           </div>
         </div>
       </div>
