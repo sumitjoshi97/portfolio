@@ -1,0 +1,47 @@
+@import '../../sass/mixin.scss';
+@import '../../sass/variables.scss';
+
+.nav-link {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 10px;
+  margin: 2.2rem 0;
+  @include respond(tabPort) {
+    // margin: 2rem 2rem;
+  }
+
+  @include respond(phone) {
+    // margin: 2rem 0.7rem;
+  }
+
+  &__anchor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    span {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 8px;
+      height: 2px;
+      border-radius: 100px;
+      background: rgba($color-white, 1);
+      transition: all 0.4s ease-in-out;
+    }
+    &:hover span {
+      width: 20px;
+      height: 3px;
+      background: rgba($color-green, 0.7);
+    }
+  }
+}
+
+.active .nav-link__anchor span {
+  width: 20px;
+  height: 3px;
+  background-color: $color-green;
+}
