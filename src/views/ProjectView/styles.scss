@@ -1,13 +1,16 @@
 @import "../../sass/mixin.scss";
 @import "../../sass/variables.scss";
 
-.project {
-  width: 100%;
+.project-view {
   position: relative;
-  color: #000;
   font-size: 1.8rem;
   line-height: 4rem;
-
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+  background: #fff;
+  color: #000;
   // hero - header section
   &__header {
     height: 100vh;
@@ -65,7 +68,6 @@
         width: 100%;
         transform: translateY(-50%);
         padding: 8rem;
-
         @include respond(tabPort) {
           display: block;
           left: 50%;
@@ -75,18 +77,6 @@
 
         @include respond(phone) {
           padding: 2rem;
-        }
-
-        &--secondary {
-          font-size: 1.6rem;
-          margin-bottom: 1rem;
-          text-transform: uppercase;
-          letter-spacing: 4px;
-          font-family: "Oswald", sans-serif;
-
-          @include respond(phone) {
-            margin-bottom: 0rem;
-          }
         }
 
         &--primary {
@@ -100,6 +90,67 @@
           @include respond(phone) {
             font-size: 4rem;
             margin-bottom: 3rem;
+          }
+        }
+
+        &--secondary {
+          font-size: 1.4rem;
+          margin-bottom: 1rem;
+          text-transform: uppercase;
+          letter-spacing: 8px;
+
+          @include respond(phone) {
+            margin-bottom: 0rem;
+          }
+        }
+
+        &__project-link {
+          position: relative;
+          display: inline-block;
+          margin-top: 3rem;
+          text-decoration: none;
+
+          &__arrow--1,
+          &__arrow--2 {
+            position: absolute;
+            height: 100%;
+            width: 3rem;
+            left: 100%;
+            overflow: hidden;
+            .projects-arrow {
+              position: absolute;
+              left: 4px;
+              height: 100%;
+              width: 2.5rem;
+              fill: #2b2b2b;
+              transition: 0.31s cubic-bezier(0.7, 0.3, 0, 1);
+            }
+          }
+
+          &__arrow--1 {
+            .projects-arrow {
+              transform: translateX(0);
+            }
+          }
+          &__arrow--2 {
+            .projects-arrow {
+              transform: translateX(-30px);
+            }
+          }
+
+          &:hover &__arrow--1 .projects-arrow {
+            transform: translateX(30px);
+          }
+
+          &:hover &__arrow--2 .projects-arrow {
+            transform: translateX(0);
+          }
+
+          &__text {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: #2b2b2b;
           }
         }
       }
@@ -117,9 +168,8 @@
 
     & h3 {
       text-transform: uppercase;
-      font-size: 1.6rem;
-      font-family: "Oswald", sans-serif;
-      letter-spacing: 4px;
+      font-size: 1.4rem;
+      letter-spacing: 8px;
       color: #2b2b2b;
     }
 
@@ -133,7 +183,7 @@
       }
 
       & li {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         display: inline-block;
 
         &:not(:last-of-type) {
@@ -144,28 +194,23 @@
   }
 
   // background-screenshot
+
   &__screenshot {
     height: 80vh;
-    background-size: cover;
-    background-repeat: no-repeat;
+    position: relative;
+
+    &__background {
+      position: absolute;
+      width: 100%;
+      height: 800px;
+      top: -80px;
+      left: 0;
+      transform: translateZ(-1px) scale(1.5);
+      z-index: -1;
+    }
 
     @include respond(tabPort) {
       height: 100vh;
-    }
-  }
-
-  // project launch button
-  &__launch {
-    text-align: center;
-    padding: 20vh 0;
-
-    &--link {
-      font-size: 2rem;
-      text-decoration: none;
-      color: #000;
-      border: 1.5px solid #000;
-      padding: 1.5rem 2rem;
-      transition: all 0.15s ease-in;
     }
   }
 
@@ -187,7 +232,7 @@
 
     &__shot {
       padding: 1rem;
-      width: 60%;
+      width: 65%;
       margin: 0 auto;
       @include respond(tabPort) {
         width: 80%;
@@ -213,71 +258,119 @@
   }
 
   &__navigation {
-    height: 24vh;
+    height: 34vh;
     width: 100%;
     position: relative;
 
-    &__section {
-      display: inline-block;
-      height: 4rem;
-      width: 10rem;
+    &__header {
+      font-size: 5.4rem;
+      color: rgba($color-white, 0.4);
+      font-weight: 700;
+      letter-spacing: 3.2px;
+      text-transform: uppercase;
       position: absolute;
       top: 50%;
-      transform: translate(0, -50%);
-      transition: all 1s ease-in-out;
+      left: 50%;
+      transform: translate(-50%, -50%);
 
-      &:hover .icon-logo--prev {
-        animation: arrow-bounce-reverse infinite;
-        -webkit-animation: arrow-bounce-reverse infinite;
-        animation-duration: 0.6s;
-        animation-timing-function: ease-in-out;
-      }
-
-      &:hover .icon-logo--next {
-        animation: arrow-bounce infinite;
-        -webkit-animation: arrow-bounce infinite;
-        animation-duration: 0.6s;
-        animation-timing-function: ease-in-out;
-      }
-
-      & span {
-        position: absolute;
-        color: #fff;
+      @include respond(phone) {
+        display: none;
       }
     }
-  }
-}
 
-.icon-logo {
-  width: 3rem;
-  height: 3rem;
-  fill: #fff;
-  position: absolute;
-  transform: translateY(-50%);
+    &__prev,
+    &__next {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      text-decoration: none;
+      height: 4rem;
+      width: 3rem;
+      transform: translate(0, -50%);
 
-  &--prev {
-    top: 50%;
-    left: 10%;
-  }
+      &__arrow--1,
+      &__arrow--2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
 
-  &--next {
-    top: 50%;
-    right: 10%;
-  }
-}
+      .projects-arrow {
+        position: absolute;
+        height: 100%;
+        width: 2.5rem;
+        fill: $color-white;
+        transition: 0.31s cubic-bezier(0.7, 0.3, 0, 1);
+      }
 
-.center {
-  font-size: 4.5rem;
-  font-family: "Oswald";
-  letter-spacing: 4px;
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+      &__text {
+        position: absolute;
+        top: 0;
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $color-white;
+      }
+    }
 
-  @include respond(phone) {
-    display: none;
+    &__prev {
+      left: 12rem;
+
+      &__text {
+        left: 4rem;
+      }
+
+      &__arrow--1 {
+        .projects-arrow {
+          transform: translateX(0);
+        }
+      }
+
+      &__arrow--2 {
+        .projects-arrow {
+          transform: translateX(3rem);
+        }
+      }
+
+      &:hover &__arrow--1 .projects-arrow {
+        transform: translateX(-3rem);
+      }
+
+      &:hover &__arrow--2 .projects-arrow {
+        transform: translateX(0);
+      }
+    }
+
+    &__next {
+      right: 12rem;
+      &__text {
+        right: 4rem;
+      }
+      &__arrow--1 {
+        .projects-arrow {
+          transform: translateX(0);
+          transition: 0.31s cubic-bezier(0.7, 0.3, 0, 1);
+        }
+      }
+
+      &__arrow--2 {
+        .projects-arrow {
+          transform: translateX(-3rem);
+          transition: 0.31s cubic-bezier(0.7, 0.3, 0, 1);
+        }
+      }
+
+      &:hover &__arrow--1 .projects-arrow {
+        transform: translateX(3rem);
+      }
+
+      &:hover &__arrow--2 .projects-arrow {
+        transform: translateX(0);
+      }
+    }
   }
 }
 
@@ -310,32 +403,5 @@
         fill: currentColor;
       }
     }
-  }
-}
-
-///////////////////////////////////////////
-//animation keyframes
-
-@keyframes arrow-bounce {
-  0% {
-    transform: translate(0, -50%);
-  }
-  50% {
-    transform: translate(0.6rem, -50%);
-  }
-  100% {
-    transform: translate(0, -50%);
-  }
-}
-
-@keyframes arrow-bounce-reverse {
-  0% {
-    transform: translate(0, -50%);
-  }
-  50% {
-    transform: translate(-0.6rem, -50%);
-  }
-  100% {
-    transform: translate(0, -50%);
   }
 }
