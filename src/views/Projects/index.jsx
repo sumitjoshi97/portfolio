@@ -57,8 +57,10 @@ const ProjectsList = () => (
                 link="movie-rolls"
                 theme="#304FFE"
               />
+            </div>
 
               {/* project - react chat app */}
+            <div className="section">
               <Project
                 imgUrl={require('../../assets/images/reactChat/chat-project.png')}
                 id="2"
@@ -66,8 +68,10 @@ const ProjectsList = () => (
                 link="react-chat"
                 theme="#2962FF"
               />
+            </div>
 
               {/* project - react shopping cart app */}
+            <div className="section">
               <Project
                 imgUrl={require('../../assets/images/cart/cart-project.png')}
                 id="3"
@@ -75,8 +79,10 @@ const ProjectsList = () => (
                 link="cart"
                 theme="#304FFE"
               />
+            </div>
 
               {/* project - emaily survey, feedback app */}
+            <div className="section">
               <Project
                 imgUrl={require('../../assets/images/emaily/emaily-project.jpg')}
                 id="4"
@@ -84,8 +90,10 @@ const ProjectsList = () => (
                 link="emaily"
                 theme="#2962FF"
               />
+            </div>
 
               {/* project - dev connect - stackoverflow like web app   */}
+            <div className="section">
               <Project
                 imgUrl={require('../../assets/images/devConnect/dev-project.png')}
                 id="5"
@@ -93,8 +101,10 @@ const ProjectsList = () => (
                 link="dev-connect"
                 theme="#304FFE"
               />
+            </div>
 
               {/* project - smartbrain, recognize faces using ML */}
+            <div className="section">
               <Project
                 imgUrl={require('../../assets/images/smartBrain/smart-project.png')}
                 id="6"
@@ -103,7 +113,7 @@ const ProjectsList = () => (
                 theme="#2962FF"
               />
             </div>
-          </>
+          </div>
         )
       }}
     />
