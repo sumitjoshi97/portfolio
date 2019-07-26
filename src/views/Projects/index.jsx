@@ -1,55 +1,38 @@
 import React from 'react'
-// import NavBottom from '../../components/NavBottom/NavBottom'
 import ReactFullpage from '@fullpage/react-fullpage'
-// import $ from 'jquery'
-// import { Link } from 'react-router-dom'
 
-// import components and css files
+import AnimateTransition from '../../components/AnimateTransition'
+import SectionsNav from '../../components/SectionsNav'
 import Project from './Project'
 
-// import Icons from '../../assets/svg/sprite.svg'
 import './styles.scss'
-import './ProjectListAnimate.scss'
+import './animate.scss'
+
+const navs = [
+  { link: '#0', anchor: '0' },
+  { link: '#1', anchor: '1' },
+  { link: '#2', anchor: '2' },
+  { link: '#3', anchor: '3' },
+  { link: '#4', anchor: '4' },
+  { link: '#5', anchor: '5' },
+]
 
 const projectsOptions = {
-  anchors: ['projects'],
+  anchors: ['0', '1', '2', '3', '4', '5'],
+  menu: '.sections-nav',
   licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
 }
 
-const ProjectsList = () => (
-  <div className="projects-list">
+const Projects = () => (
+  <AnimateTransition>
+    <SectionsNav navs={navs} />
     <ReactFullpage
       {...projectsOptions}
       render={() => {
-        //   if (state.callback === 'afterSlideLoad') {
-        //     $('.bottom-nav__list__item.active').removeClass('active')
-        //     $('.bottom-nav__list__item')
-        //       .eq(state.destination.index)
-        //       .addClass('active')
-        //   }
-
-        // // horizontal mouse scroll
-        // $('.section').on('DOMMouseScroll mousewheel', function(e) {
-        //   if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
-        //     fullpageApi.moveSlideRight()
-        //   } else {
-        //     fullpageApi.moveSlideLeft()
-        //   }
-        // })
-
         return (
-          <>
-            {/* <Link to="/" className="icon-back">
-              <svg className="icon-back-logo">
-                <use xlinkHref={`${Icons}#icon-arrow-left`} />
-              </svg>
-            </Link> */}
-
-            {/* <div className="backdrop" /> */}
-            {/* <NavBottom /> */}
-
+          <div className="projects">
+            {/* project - movie rolls, browse movies and shows  */}
             <div className="section">
-              {/* project - movie rolls, browse movies and shows  */}
               <Project
                 imgUrl={require('../../assets/images/movierolls/movierolls-project.png')}
                 id="1"
@@ -59,7 +42,7 @@ const ProjectsList = () => (
               />
             </div>
 
-              {/* project - react chat app */}
+            {/* project - react chat app */}
             <div className="section">
               <Project
                 imgUrl={require('../../assets/images/reactChat/chat-project.png')}
@@ -70,7 +53,7 @@ const ProjectsList = () => (
               />
             </div>
 
-              {/* project - react shopping cart app */}
+            {/* project - react shopping cart app */}
             <div className="section">
               <Project
                 imgUrl={require('../../assets/images/cart/cart-project.png')}
@@ -81,7 +64,7 @@ const ProjectsList = () => (
               />
             </div>
 
-              {/* project - emaily survey, feedback app */}
+            {/* project - emaily survey, feedback app */}
             <div className="section">
               <Project
                 imgUrl={require('../../assets/images/emaily/emaily-project.jpg')}
@@ -92,7 +75,7 @@ const ProjectsList = () => (
               />
             </div>
 
-              {/* project - dev connect - stackoverflow like web app   */}
+            {/* project - dev connect - stackoverflow like web app   */}
             <div className="section">
               <Project
                 imgUrl={require('../../assets/images/devConnect/dev-project.png')}
@@ -103,7 +86,7 @@ const ProjectsList = () => (
               />
             </div>
 
-              {/* project - smartbrain, recognize faces using ML */}
+            {/* project - smartbrain, recognize faces using ML */}
             <div className="section">
               <Project
                 imgUrl={require('../../assets/images/smartBrain/smart-project.png')}
@@ -117,7 +100,7 @@ const ProjectsList = () => (
         )
       }}
     />
-  </div>
+  </AnimateTransition>
 )
 
-export default ProjectsList
+export default Projects
