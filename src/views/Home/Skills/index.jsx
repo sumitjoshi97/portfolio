@@ -10,21 +10,27 @@ const Skills = ({ front, back, tools }) => (
     </div>
 
     <h2 className="home__skills__heading">skills</h2>
-    <ul className="skills-list">
+    <ul className="home__skills__list">
       {/* front-end skills */}
-      <li className="skills-list__item skills-list__heading green">front</li>
+      <li className="home__skills__list__item home__skills__list__heading green">
+        front
+      </li>
       {front.map(skill => (
         <SkillItem key={skill} skill={skill} />
       ))}
 
       {/* back-end skills */}
-      <li className="skills-list__item skills-list__heading red">back</li>
+      <li className="home__skills__list__item home__skills__list__heading red">
+        back
+      </li>
       {back.map(skill => (
         <SkillItem key={skill} skill={skill} />
       ))}
 
       {/* tools skills */}
-      <li className="skills-list__item skills-list__heading green">tools</li>
+      <li className="home__skills__list__item home__skills__list__heading green">
+        tools
+      </li>
       {tools.map(skill => (
         <SkillItem key={skill} skill={skill} />
       ))}
