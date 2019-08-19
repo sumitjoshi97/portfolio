@@ -1,13 +1,15 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, lazy } from 'react'
 import { Route, Switch } from 'react-router-dom'
 
 import NavBar from '../components/NavBar'
-import Home from '../views/Home'
-import Projects from '../views/Projects'
 import ScrollToTop from '../utils/ScrollToTop'
 import Loading from '../components/Loading'
-import routes from './Routes'
+import projectRoutes from './Routes'
 import LeftNav from '../components/LeftNav'
+
+const Home = lazy(() => import('../views/Home'))
+const Projects = lazy(() => import('../views/Projects'))
+const NotFound = lazy(() => import('../views/NotFound/‌index'))
 
 export default function App() {
   return (
@@ -23,7 +25,7 @@ export default function App() {
       <ScrollToTop>
         <Suspense fallback={<Loading />}>
           <Switch>
-            {routes.map(route => (
+            {projectRoutes.map(route => (
               <Route
                 key={route.path}
                 path={route.path}
@@ -37,6 +39,7 @@ export default function App() {
               <Route exact path="/projects" component={Projects} />
               <Route exact path="/" component={Home} />
             </>
+            <Route path="" component={NotFound} />
           </Switch>
         </Suspense>
       </ScrollToTop>
