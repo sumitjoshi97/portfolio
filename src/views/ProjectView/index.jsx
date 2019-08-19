@@ -46,10 +46,10 @@ export default function ProjectView(props) {
           <ArrowLeft className="arrow" />
         </Link>
         <Header
-          projectType={props.projectType}
           projectName={props.projectName}
           projectInfo={props.projectInfo}
-          projectLink={props.projectViewLink}
+          codeLink={props.codeLink}
+          projectLink={props.projectLink}
           headerImage={props.headerImage}
           headerStyle={props.headerStyle}
           theme={props.theme}
