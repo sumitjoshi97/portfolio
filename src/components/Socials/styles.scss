@@ -1,5 +1,5 @@
-@import "../../sass/mixin.scss";
-@import "../../sass/variables.scss";
+@import '../../sass/mixin.scss';
+@import '../../sass/variables.scss';
 
 .socials {
   list-style: none;
@@ -15,6 +15,7 @@
     }
 
     @include respond(tabPort) {
+      margin: 0 2rem;
       display: inline-block;
     }
 
@@ -32,14 +33,10 @@
         width: 2.4rem;
         height: 2.4rem;
         fill: $color-white;
-
-        @include respond(tabPort) {
-          margin: 0 2rem;
-        }
       }
 
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         left: 0;
         width: 100%;

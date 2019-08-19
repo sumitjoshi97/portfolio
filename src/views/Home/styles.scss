@@ -1,5 +1,5 @@
-@import '../../sass/mixin.scss';
-@import '../../sass/variables.scss';
+@import "../../sass/mixin.scss";
+@import "../../sass/variables.scss";
 
 .home {
   background: $background-primary;
@@ -13,15 +13,19 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      text-align: center;
       &__primary {
         line-height: 1;
-        letter-spacing: 1rem;
+        letter-spacing: 10px;
         font-size: $font-primary;
         font-weight: 400;
         transform: translateY(150%);
         opacity: 0;
-        transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s,
-          opacity 0.8s ease-in-out 0.8s;
+        transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity 0.8s ease-in-out 0.8s;
+
+        @include respond(phone) {
+          letter-spacing: 6px;
+        }
       }
 
       &__secondary {
@@ -32,11 +36,10 @@
         margin-right: -2rem;
         transform: translateY(150%);
         opacity: 0;
-        transition: transform 1.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s,
-          opacity 1.8s ease-in-out 0.8s;
+        transition: transform 1.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity 1.8s ease-in-out 0.8s;
 
         @include respond(phone) {
-          letter-spacing: 1.6rem;
+          letter-spacing: 1.4rem;
           margin-right: -1.6rem;
         }
       }
@@ -65,9 +68,6 @@
   //////////////////////////////////
   // about section
   &__about {
-    text-align: left;
-    position: relative;
-
     &__text {
       margin: 0 auto;
       position: absolute;
@@ -75,18 +75,18 @@
       left: 50%;
       transform: translate(-50%, 50%);
       opacity: 0;
-      transition: transform 1s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s,
-        opacity 1s ease-in-out 0.8s;
+      transition: transform 1s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity 1s ease-in-out 0.8s;
       @include respond(tabPort) {
-        width: 100%;
+        width: 80%;
       }
       @include respond(phone) {
-        line-height: 4.2rem;
-        top: 46%;
+        line-height: 3.4rem;
+        top: 50%;
       }
+
       &__header {
-        font-size: 6rem;
-        font-weight: 500;
+        font-size: $font-secondary;
+        font-weight: 400;
       }
     }
   }
@@ -97,19 +97,51 @@
     position: relative;
 
     &__heading {
-      font-size: 4.2rem;
-      text-transform: capitalize;
-      font-weight: 700;
-      letter-spacing: 3px;
+      font-size: 4rem;
+      font-weight: 600;
+      letter-spacing: 4px;
       position: absolute;
-      top: 15%;
+      top: 20%;
       left: 50%;
       transform: translate(-50%, 150%);
       opacity: 0;
-      transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s,
-        opacity 0.8s ease-in-out 0.8s;
+      transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 0.8s, opacity 0.8s ease-in-out 0.8s;
       @include respond(phone) {
-        top: 12%;
+        top: 17%;
+      }
+    }
+
+    &__list {
+      list-style: none;
+      position: absolute;
+      top: 48%;
+      left: 50%;
+      transform: translate(-50%, 20%);
+      opacity: 0;
+      transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 1.2s, opacity 0.8s ease-in-out 1.2s;
+      width: auto;
+      @include respond(tabPort) {
+        width: 80%;
+      }
+
+      @include respond(phone) {
+        line-height: 3.6rem;
+        top: 50%;
+      }
+
+      &__item {
+        display: inline-block;
+        margin-right: 2rem;
+        vertical-align: middle;
+      }
+
+      &__heading {
+        font-size: 5rem;
+        line-height: 5rem;
+        font-weight: 700;
+        @include respond(phone) {
+          font-size: 4rem;
+        }
       }
     }
   }
@@ -152,10 +184,12 @@
           width: 4rem;
           backface-visibility: hidden;
           overflow: hidden;
+
           .arrow {
             position: absolute;
             height: 100%;
             width: 2.5rem;
+            left: 0;
             fill: $color-white;
             transition: 0.31s cubic-bezier(0.7, 0.3, 0, 1);
           }
@@ -208,8 +242,7 @@
       background-position: center;
       background-size: 60%;
       background-repeat: no-repeat;
-      transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 1.6s,
-        opacity 0.8s ease-in-out 1.6s;
+      transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 1.6s, opacity 0.8s ease-in-out 1.6s;
       cursor: pointer;
 
       &:hover .project-text {
@@ -243,8 +276,7 @@
       background-position: center;
       background-size: 60%;
       background-repeat: no-repeat;
-      transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 1.6s,
-        opacity 0.8s ease-in-out 1.6s;
+      transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 1.6s, opacity 0.8s ease-in-out 1.6s;
       &:hover .project-text {
         transform: translateX(0px);
         visibility: visible;
@@ -265,39 +297,6 @@
 
 //////////////////////////////////////////////////////////////////////
 //list of skills - table
-.skills-list {
-  list-style: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 20%);
-  opacity: 0;
-  transition: transform 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99) 1.2s,
-    opacity 0.8s ease-in-out 1.2s;
-  width: auto;
-
-  @include respond(tabPort) {
-    width: 100%;
-  }
-  @include respond(phone) {
-    line-height: 2.2;
-  }
-
-  &__item {
-    display: inline-block;
-    margin-right: 2rem;
-    vertical-align: text-top;
-  }
-
-  &__heading {
-    font-size: 5rem;
-    line-height: 5rem;
-
-    @include respond(phone) {
-      font-size: 6rem;
-    }
-  }
-}
 
 ///////////////////////////////////////////////////////////////////
 //project container for text and link in recent projects

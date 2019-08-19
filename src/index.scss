@@ -1,6 +1,6 @@
-@import './sass/mixin.scss';
-@import './sass/variables.scss';
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,800');
+@import "./sass/mixin.scss";
+@import "./sass/variables.scss";
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,600,800");
 
 ///////////////////////////////////////////////
 // browser reset
@@ -33,7 +33,7 @@ html {
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   color: $color-white;
   font-size: $base-font;
   line-height: 4.6rem;
@@ -41,4 +41,14 @@ body {
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
+}
+
+.red {
+  color: $color-red;
+  font-weight: 600;
+}
+
+.green {
+  color: $color-green;
+  font-weight: 600;
 }

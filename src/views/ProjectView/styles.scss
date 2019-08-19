@@ -11,6 +11,7 @@
   perspective: 2px;
   background: #fff;
   color: #000;
+
   // hero - header section
   &__header {
     height: 100vh;
@@ -56,6 +57,7 @@
       @include respond(tabPort) {
         height: 60vh;
         width: 100%;
+        backface-visibility: hidden;
       }
 
       @include respond(phone) {
@@ -104,53 +106,65 @@
           }
         }
 
-        &__project-link {
-          position: relative;
-          display: inline-block;
-          margin-top: 3rem;
-          text-decoration: none;
-
-          &__arrow--1,
-          &__arrow--2 {
-            position: absolute;
-            height: 100%;
-            width: 3rem;
-            left: 100%;
-            overflow: hidden;
-            .projects-arrow {
-              position: absolute;
-              left: 4px;
-              height: 100%;
-              width: 2.5rem;
-              fill: #2b2b2b;
-              transition: 0.31s cubic-bezier(0.7, 0.3, 0, 1);
-            }
+        // header action buttons -------------
+        &__cta {
+          @include respond(tabPort) {
+            margin-left: -3rem;
           }
 
-          &__arrow--1 {
-            .projects-arrow {
+          &__code-link,
+          &__project-link {
+            position: relative;
+            display: inline-block;
+            margin-top: 3rem;
+            text-decoration: none;
+
+            &__arrow--1,
+            &__arrow--2 {
+              position: absolute;
+              height: 100%;
+              width: 3rem;
+              left: 100%;
+              overflow: hidden;
+              .projects-arrow {
+                position: absolute;
+                left: 4px;
+                height: 100%;
+                width: 2.5rem;
+                fill: #2b2b2b;
+                transition: 0.31s cubic-bezier(0.7, 0.3, 0, 1);
+              }
+            }
+
+            &__arrow--1 {
+              .projects-arrow {
+                transform: translateX(0);
+              }
+            }
+            &__arrow--2 {
+              .projects-arrow {
+                transform: translateX(-30px);
+              }
+            }
+
+            &:hover &__arrow--1 .projects-arrow {
+              transform: translateX(30px);
+            }
+
+            &:hover &__arrow--2 .projects-arrow {
               transform: translateX(0);
             }
-          }
-          &__arrow--2 {
-            .projects-arrow {
-              transform: translateX(-30px);
+
+            &__text {
+              text-transform: uppercase;
+              font-weight: 700;
+              font-size: 1.6rem;
+              color: #2b2b2b;
             }
           }
 
-          &:hover &__arrow--1 .projects-arrow {
-            transform: translateX(30px);
-          }
-
-          &:hover &__arrow--2 .projects-arrow {
-            transform: translateX(0);
-          }
-
-          &__text {
-            text-transform: uppercase;
-            font-weight: 700;
-            font-size: 1.6rem;
-            color: #2b2b2b;
+          &__project-link {
+            margin-left: 6rem;
           }
         }
       }
@@ -212,6 +226,11 @@
     @include respond(tabPort) {
       height: 100vh;
     }
+
+    @include respond(phone) {
+      top: 80px;
+      transform: translateZ(-1) scale(1);
+    }
   }
 
   // projects images
@@ -261,6 +280,10 @@
     height: 34vh;
     width: 100%;
     position: relative;
+
+    @include respond(phone) {
+      height: 26vh;
+    }
 
     &__header {
       font-size: 5.4rem;
@@ -319,6 +342,10 @@
     &__prev {
       left: 12rem;
 
+      @include respond(phone) {
+        left: 4rem;
+      }
+
       &__text {
         left: 4rem;
       }
@@ -346,6 +373,11 @@
 
     &__next {
       right: 12rem;
+
+      @include respond(phone) {
+        right: 4rem;
+      }
+
       &__text {
         right: 4rem;
       }
@@ -403,5 +435,19 @@
         fill: currentColor;
       }
     }
+  }
+}
+
+.icon-back {
+  position: fixed;
+  top: 4rem;
+  left: 4rem;
+  height: 4rem;
+  width: 4rem;
+  z-index: 100;
+  .arrow {
+    height: 100%;
+    width: 100%;
+    fill: #000;
   }
 }

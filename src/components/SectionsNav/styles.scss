@@ -2,6 +2,7 @@
 @import '../../sass/variables.scss';
 
 .sections-nav {
+  display: block;
   position: fixed;
   top: 50%;
   transform: translate(0, -50%);
@@ -16,6 +17,10 @@
 
   &__list {
     list-style: none;
+  }
+
+  @include respond(tabPort) {
+    display: none;
   }
 }
 
