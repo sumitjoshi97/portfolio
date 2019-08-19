@@ -12,7 +12,8 @@ const Cart = () => (
     theme={'#36f'}
     stacks={['React js', 'Redux', 'SASS', 'Firebase']}
     backImage={require('../../../assets/images/cart/screenshot.png')}
-    projectViewLink="https://sumitjoshi97.github.io/cart"
+    codeLink="/cart"
+    projectLink="https://sumitjoshi97.github.io/cart"
     screenshots={[
       {
         image: `${require('../../../assets/images/cart/home.jpg')}`,

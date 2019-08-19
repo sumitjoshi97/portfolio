@@ -12,7 +12,8 @@ const SmartBrain = () => (
     theme={'#1e90ff'}
     stacks={['React js', 'Node js', 'Express js', 'PostgreSQL']}
     backImage={require('../../../assets/images/smartBrain/screenshot.png')}
-    projectViewLink="https://sumitjoshi97.github.io/face_recognition"
+    codeLink="/face_recognition"
+    projectLink="https://sumitjoshi97.github.io/face_recognition"
     screenshots={[
       {
         image: `${require('../../../assets/images/smartBrain/register.jpg')}`,

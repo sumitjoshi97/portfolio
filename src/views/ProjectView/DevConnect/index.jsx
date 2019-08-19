@@ -8,7 +8,7 @@ const DevConnect = () => (
     projectInfo="Stack overflow like social network app, where devs can register, create profile and, share posts to help other devs. Devs can comment on posts shared and also delete their post or comment"
     headerImage={require('../../../assets/images/devConnect/devConnect.svg')}
     headerStyle={['#1B9CFC', '#3c40c6']}
-    theme={'#22a6f3'}
+    theme={'#4a09e3'}
     stacks={[
       'React js',
       'Redux',
@@ -19,7 +19,8 @@ const DevConnect = () => (
       'MongoDB',
     ]}
     backImage={require('../../../assets/images/devConnect/screenshot.png')}
-    projectViewLink="https://dev-connects.herokuapp.com/"
+    codeLink="/dev_connect"
+    projectLink="https://dev-connects.herokuapp.com/"
     screenshots={[
       {
         image: `${require('../../../assets/images/devConnect/landing.png')}`,
@@ -50,7 +51,7 @@ const DevConnect = () => (
         value: 'list of all developers profile',
       },
       {
-        image: `${require('../../../assets/images/devConnect/profile.png')}`,
+        image: `${require('../../../assets/images/devConnect/profile.jpg')}`,
         value: 'developer profile page',
       },
       {
@@ -58,7 +59,7 @@ const DevConnect = () => (
         value: 'feeds page',
       },
       {
-        image: `${require('../../../assets/images/devConnect/comments.png')}`,
+        image: `${require('../../../assets/images/devConnect/comment.jpg')}`,
         value: 'comments page',
       },
     ]}

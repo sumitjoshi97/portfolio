@@ -12,7 +12,8 @@ const MovieRolls = () => (
     theme={'#ff4e4e'}
     stacks={['React js', 'Redux', 'Sass', 'Firebase']}
     backImage={require('../../../assets/images/movierolls/screenshot.png')}
-    projectViewLink="https://sumitjoshi97.github.io/movie-rolls"
+    codeLink="/movie-rolls"
+    projectLink="https://sumitjoshi97.github.io/movie-rolls"
     screenshots={[
       {
         image: `${require('../../../assets/images/movierolls/home.gif')}`,
