@@ -31,8 +31,4 @@ export default [
     path: '/projects/react-chat',
     exact: true,
   },
-  // {
-  //   component: lazy(() => import('../views/NotFound')),
-  //   path: '',
-  // },
 ]
