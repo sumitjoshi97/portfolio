@@ -11,34 +11,36 @@ import './styles.scss'
 import './animate.scss'
 
 const frontSkills = [
-  'html',
-  'css',
-  'scss',
-  'javascript',
-  'es6+',
-  'react.js',
-  'redux',
-  'd3.js',
+  'html5',
+  'CSS3',
+  'SASS',
+  'JavaScript',
+  'ES6+',
+  'React.js',
+  'Redux',
+  'D3.js',
   'jest',
+  'webpack',
 ]
 
 const backSkills = [
-  'node.js',
-  'express.js',
+  'Node.js',
+  'Express.js',
   'npm',
   'mongoDB',
+  'sql',
   'mySQL',
   'postgreSQL',
+  'REST',
   'graphQL',
 ]
 
 const toolSkills = [
   'git',
   'github',
-  'adobe XD',
-  'adobe illustrator',
+  'figma',
   'adobe photoshop',
-  'visual studio code',
+  'adobe illustrator',
 ]
 
 const navs = [
